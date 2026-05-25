@@ -557,3 +557,250 @@ export default function TuVegasTickets() {
     const kidsAge = newAns.groupGender;
     const isYoungFamily = newAns.tripType==="family" && (kidsAge==="under6"||kidsAge==="kids");
     const maxDays = {["1-2"]:3,["3-4"]:4,["5-7"]:7,["1week"]:8}[newAns.days]||4;
+    const freeResults = FREE_EXPERIENCES.filter(f => {
+      if(isYoungFamily && f.id==="f3") return false;
+      if(newAns.tripType==="family" && kidsAge==="under6" && f.time==="Después de las 8pm") return false;
+      if(f.tags && f.tags.includes("kids") && newAns.tripType!=="family") return false;
+      if(f.tags && f.tags.includes("family") && newAns.tripType!=="family") return false;
+      if((newAns.budget==="vip"||newAns.budget==="high") && f.tags && f.tags.includes("budget")) return false;
+      return true;
+    }).reduce((acc, f) => {
+      const hasFountains = acc.some(x=>x.id==="f1");
+      const hasConservatory = acc.some(x=>x.id==="f2");
+      if(f.id==="f2" && hasFountains) return acc;
+      if(f.id==="f1" && hasConservatory) return acc;
+      if(acc.length>=maxDays) return acc;
+      return [...acc, f];
+    }, []);
+
+    setItinerary(results);
+    setFreeExp(freeResults);
+    const fallback = `Llegas a Las Vegas con una energía que la ciudad reconoce al instante. No eres turista — eres exactamente el tipo de viajero para el que esta ciudad fue construida. Tu itinerario está listo.`;
+    setAiStory(fallback);
+    setLoading(false);
+    setStep(totalSteps+1);
+
+    const tripLabels={solo:"viajero/a solo/a",couple:"pareja",group:"grupo de amigos",family:"familia",bachelorette:"despedida de soltera/o",work:"viajero/a de negocios"};
+    const genderLabels={girls:"mujer",guys:"hombre",lgbtq:"viajero/a LGBTQ+",mixed:"",under6:"familia con pequeños",kids:"familia con niños",teens:"familia con adolescentes",mixedages:"familia"};
+    const vibeLabels={dark:"atraído/a por el lado oscuro y misterioso de Vegas",luxury:"buscador/a de lujo puro",adventure:"buscador/a de emociones",casino:"amante del casino y los deportes",romantic:"romántico/a empedernido/a","first-timer":"experimentando Vegas por primera vez",girlswild:"lista para una noche salvaje",girlsspa:"buscando lujo y relajación",girlsadventure:"viajera aventurera",girlsmix:"buscando la mezcla perfecta",thrill:"ávido/a de aventura y adrenalina",show:"amante del entretenimiento en vivo",explore:"explorador/a de corazón",relaxed:"buscando experiencias tranquilas y divertidas",nightout:"aquí para la vida nocturna"};
+    const budgetDesc={budget:"busca la mejor experiencia al menor costo",mid:"equilibra el gasto conscientemente",high:"viaja cómodamente sin preocuparse demasiado por los precios",vip:"el costo nunca es el factor decisivo — solo lo mejor"}[newAns.budget]||"";
+    const genderPrefix=genderLabels[newAns.groupGender]||"";
+    const travelerType=genderPrefix?`${genderPrefix} ${tripLabels[newAns.tripType]||""}`.trim():tripLabels[newAns.tripType]||"viajero/a";
+    const vibeDesc=vibeLabels[Array.isArray(newAns.vibe)?newAns.vibe[0]:newAns.vibe]||"";
+    const interestDesc=Array.isArray(newAns.interest)?newAns.interest.join(" y "):newAns.interest||"";
+
+    fetch("/api/briefing",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({travelerType,vibeDesc,interestDesc,budgetDesc,season:newAns.season,days:newAns.days,timeOfDay:newAns.timeOfDay})
+    }).then(r=>r.json()).then(data=>{
+      if(data.text&&data.text.length>30){setAiStory(data.text);if(data.title)setAiTitle(data.title);}
+      setAiReady(true);
+    }).catch(err=>{console.error("Briefing error:",err);setAiReady(true);});
+  }
+
+  const seasonLabels={winter:"Invierno",spring:"Primavera",summer:"Verano",fall:"Otoño"};
+  const daysLabels={"1-2":"3 días","3-4":"4 días","5-7":"7 días","1week":"8 días"};
+
+  return (
+    <div style={{minHeight:"100vh",background:"#fdf6f0",fontFamily:"'Georgia',serif",color:"#1a1a1a",overflow:"hidden",position:"relative"}}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;600&display=swap');
+        @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes pulse{0%,100%{opacity:.15}50%{opacity:.7}}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        @keyframes flicker{0%,88%,90%,92%,100%{opacity:1}89%,91%{opacity:.4}}
+        @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+        @keyframes sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}
+        *{box-sizing:border-box}
+        ::-webkit-scrollbar{width:3px}
+        ::-webkit-scrollbar-thumb{background:#2ecc71;border-radius:2px}
+        a:hover{opacity:.85!important;transition:opacity .2s}
+        body{background:#fdf6f0}
+      `}</style>
+      {[...Array(30)].map((_,i)=>(
+        <div key={i} style={{position:"fixed",borderRadius:"50%",pointerEvents:"none",width:`${(i%3)+1}px`,height:`${(i%3)+1}px`,background:["#2ecc71","#f0c040","#a8d8a8","#c0c0c0","#27ae60"][i%5],left:`${(i*3.7)%100}%`,top:`${(i*7.1)%100}%`,animation:`pulse ${2+(i%4)}s ease-in-out infinite`,animationDelay:`${i*0.18}s`,opacity:.4}}/>
+      ))}
+      <div style={{maxWidth:"680px",margin:"0 auto",padding:"28px 18px",position:"relative"}}>
+        <div style={{textAlign:"center",marginBottom:"36px",animation:"fadeUp .6s ease"}}>
+          <div style={{fontSize:"0.85rem",letterSpacing:"0.45em",color:"#c0392b",marginBottom:"10px",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>✦ TU GUÍA SECRETA ✦</div>
+          <h1 style={{fontSize:"clamp(2rem,7vw,3.4rem)",margin:"0 0 6px",fontFamily:"'Playfair Display',serif",fontWeight:700,background:"linear-gradient(135deg,#c0392b 0%,#e74c3c 40%,#b8860b 75%,#c0392b 100%)",backgroundSize:"200% auto",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",animation:"flicker 9s infinite, shimmer 5s linear infinite",lineHeight:1.1,letterSpacing:"0.02em"}}>TU VEGAS TICKETS</h1>
+          <p style={{color:"#7a1a1a",fontSize:"0.9rem",margin:0,letterSpacing:"0.12em",fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>Lo que Vegas no pone en los folletos</p>
+        </div>
+        {step===0&&(
+          <div style={{animation:"fadeUp .6s ease .2s both"}}>
+            <div style={{background:"#ffffff",border:"1px solid #e0e8e2",borderRadius:"22px",padding:"40px 28px",textAlign:"center",marginBottom:"24px",boxShadow:"0 4px 24px rgba(26,107,58,.07)"}}>
+              <div style={{fontSize:"3rem",marginBottom:"20px",animation:"sway 3s ease-in-out infinite"}}>🎰</div>
+              <h2 style={{fontSize:"1.45rem",color:"#1a1a1a",margin:"0 0 18px",fontFamily:"'Playfair Display',serif",fontWeight:700,lineHeight:1.4}}>Hay un lado de Las Vegas que <em style={{color:"#1a6b3a",fontStyle:"italic"}}>la mayoría nunca descubre.</em></h2>
+              <p style={{color:"#333",lineHeight:1.9,margin:"0 0 10px",fontSize:"0.95rem",fontFamily:"'DM Sans',sans-serif"}}>Responde unas preguntas y revelaremos tu perfil de viajero — luego construimos un itinerario tan único como tú.</p>
+              <p style={{color:"#888",fontSize:"0.83rem",margin:0,fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>Rápido, personal, gratis.</p>
+            </div>
+            <button onClick={handleNext} style={{width:"100%",padding:"20px",borderRadius:"14px",border:"none",background:"linear-gradient(135deg,#27ae60,#2ecc71,#f0c040)",color:"#0a1a0f",fontSize:"1rem",fontWeight:"700",cursor:"pointer",letterSpacing:"0.1em",textTransform:"uppercase",boxShadow:"0 8px 32px rgba(46,204,113,.4)",fontFamily:"'DM Sans',sans-serif",transition:"all .25s"}}
+              onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-3px)";e.currentTarget.style.boxShadow="0 14px 44px rgba(46,204,113,.6)"}}
+              onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="0 8px 32px rgba(46,204,113,.4)"}}>
+              REVELAR MI ITINERARIO SECRETO →
+            </button>
+            <p style={{textAlign:"center",color:"#1a6b3a",fontSize:"0.82rem",margin:"14px 0 0",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>✨ Incluye joyas ocultas que solo conocen los locales</p>
+          </div>
+        )}
+        {step>=1&&step<=totalSteps&&!loading&&(
+          <div key={step} style={{animation:"fadeUp .35s ease"}}>
+            <div style={{marginBottom:"26px"}}>
+              <div style={{height:"2px",background:"rgba(0,0,0,.08)",borderRadius:"2px"}}>
+                <div style={{height:"100%",borderRadius:"2px",background:"linear-gradient(90deg,#1a6b3a,#27ae60,#b8860b)",width:`${(step/totalSteps)*100}%`,transition:"width .5s ease"}}/>
+              </div>
+            </div>
+            <h2 style={{fontSize:"1.4rem",color:"#1a1a1a",margin:"0 0 5px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>{currentQ.question}</h2>
+            <p style={{color:"#1a6b3a",fontSize:"0.82rem",margin:"0 0 18px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>{currentQ.subtitle}</p>
+            {currentQ.multi&&(
+              <div style={{background:"rgba(184,134,11,.12)",border:"2px solid rgba(184,134,11,.5)",borderRadius:"10px",padding:"12px 16px",marginBottom:"14px",display:"flex",alignItems:"center",gap:"10px"}}>
+                <span style={{fontSize:"1.1rem"}}>✨</span>
+                <span style={{color:"#7a5c00",fontSize:"0.92rem",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>
+                  {multiCount===0?`Elige hasta ${currentQ.max} — cubrimos todas`:multiCount<currentQ.max?`${multiCount} elegida(s) — elige una más`:`${multiCount} elegidas — ¡listo!`}
+                </span>
+              </div>
+            )}
+            <div style={{display:"grid",gridTemplateColumns:currentQ.cols===3?"repeat(3,1fr)":"repeat(2,1fr)",gap:"10px",marginBottom:"20px"}}>
+              {currentQ.options.map(opt=>{
+                const isSel=currentQ.multi?Array.isArray(selected)&&selected.includes(opt.v):selected===opt.v;
+                const isDisabled=currentQ.multi&&!isSel&&multiCount>=(currentQ.max||2);
+                return (
+                  <button key={opt.v} onClick={()=>!isDisabled&&handleSelect(opt.v)} style={{padding:"16px 12px",borderRadius:"14px",border:"none",cursor:isDisabled?"not-allowed":"pointer",background:isSel?"linear-gradient(135deg,#f0faf4,#fffde7)":"#ffffff",outline:isSel?"2px solid #1a6b3a":"1.5px solid #e0e8e2",opacity:isDisabled&&!isSel?.4:1,color:"#1a1a1a",textAlign:"left",transition:"all .2s",transform:isSel?"scale(1.03)":"scale(1)",boxShadow:isSel?"0 4px 16px rgba(26,107,58,.12)":"0 2px 8px rgba(0,0,0,.04)"}}>
+                    <div style={{fontSize:"1.4rem",marginBottom:"6px"}}>{opt.emoji}</div>
+                    <div style={{fontWeight:"700",fontSize:"0.92rem",marginBottom:"4px",color:isSel?"#1a6b3a":"#1a1a1a",fontFamily:"'DM Sans',sans-serif"}}>{opt.label}</div>
+                    <div style={{color:"#666",fontSize:"0.78rem",lineHeight:1.5,fontFamily:"'DM Sans',sans-serif"}}>{opt.desc}</div>
+                    {isSel&&<div style={{marginTop:"6px",color:"#1a6b3a",fontSize:"0.75rem"}}>✓</div>}
+                  </button>
+                );
+              })}
+            </div>
+            <div style={{position:"sticky",bottom:"16px",zIndex:100,marginTop:"16px"}}>
+              <button onClick={handleNext} disabled={!canContinue} style={{width:"100%",padding:"16px",borderRadius:"12px",border:"none",background:canContinue?"linear-gradient(135deg,#1a6b3a,#27ae60,#b8860b)":"#e8e8e8",color:canContinue?"#fff":"#999",fontSize:"0.92rem",fontWeight:"700",cursor:canContinue?"pointer":"not-allowed",letterSpacing:"0.08em",textTransform:"uppercase",transition:"all .3s",fontFamily:"'DM Sans',sans-serif",boxShadow:canContinue?"0 6px 24px rgba(26,107,58,.4)":"none"}}>
+                {step===totalSteps?"🔓 Desbloquear Mi Itinerario":canContinue?"Continuar →":"Selecciona una opción"}
+              </button>
+            </div>
+          </div>
+        )}
+        {loading&&(
+          <div style={{textAlign:"center",padding:"60px 0",animation:"fadeUp .4s ease"}}>
+            <div style={{position:"relative",width:"70px",height:"70px",margin:"0 auto 24px"}}>
+              {[0,1,2].map(i=>(<div key={i} style={{position:"absolute",inset:`${i*8}px`,borderRadius:"50%",border:"2px solid transparent",borderTopColor:i%2===0?"#2ecc71":"#f0c040",animation:`spin ${1+i*.5}s linear infinite ${i%2?"reverse":""}`}}/>))}
+            </div>
+            <p style={{color:"#2ecc71",fontSize:"0.95rem",margin:"0 0 6px",fontFamily:"'DM Sans',sans-serif"}}>Accediendo al underground...</p>
+            <p style={{color:"#5a9a6a",fontSize:"0.78rem",fontFamily:"'DM Sans',sans-serif"}}>Construyendo tu itinerario secreto de Vegas</p>
+          </div>
+        )}
+        {step===totalSteps+1&&!loading&&(
+          <div style={{animation:"fadeUp .5s ease"}}>
+            <div style={{background:"linear-gradient(135deg,#1a0a0a,#0d1a10)",border:"1px solid rgba(240,192,64,.2)",borderLeft:"3px solid #c0392b",borderRadius:"18px",padding:"24px",marginBottom:"18px",boxShadow:"0 4px 24px rgba(0,0,0,.15)"}}>
+              <div style={{color:"#c0392b",fontSize:"0.6rem",letterSpacing:"0.25em",marginBottom:"12px",fontFamily:"'DM Sans',sans-serif"}}>✦ TU PERFIL DE VIAJERO/A</div>
+              {!aiReady?(
+                <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"8px 0"}}>
+                  <div style={{position:"relative",width:"28px",height:"28px",flexShrink:0}}>
+                    {[0,1,2].map(i=>(<div key={i} style={{position:"absolute",inset:`${i*4}px`,borderRadius:"50%",border:"1.5px solid transparent",borderTopColor:i%2===0?"#c0392b":"#f0c040",animation:`spin ${0.8+i*.3}s linear infinite ${i%2?"reverse":""}`}}/>))}
+                  </div>
+                  <div>
+                    <p style={{color:"#f0c040",fontSize:"0.8rem",margin:"0 0 3px",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>Analizando tu perfil de viajero...</p>
+                    <p style={{color:"#888",fontSize:"0.72rem",margin:0,fontFamily:"'DM Sans',sans-serif"}}>Tu revelación personal aparecerá en unos segundos ✨</p>
+                  </div>
+                </div>
+              ):(
+                <div style={{animation:"fadeUp .5s ease"}}>
+                  {aiTitle&&(<div style={{marginBottom:"14px"}}><span style={{fontSize:"0.63rem",letterSpacing:"0.18em",color:"#888",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>Arquetipo de Viajero</span><div style={{fontSize:"1.08rem",fontWeight:"700",color:"#f0c040",fontFamily:"'Playfair Display',serif",marginTop:"4px"}}>{aiTitle}</div></div>)}
+                  {aiStory.split("\n\n").filter(p=>p.trim()).map((para,i,arr)=>(
+                    <p key={i} style={{color:"#ddd",lineHeight:1.9,margin:"0 0 14px 0",fontStyle:"italic",fontSize:"0.92rem",fontFamily:"'DM Sans',sans-serif"}}>{i===0?"\"":""}{para}{i===arr.length-1?"\"":""}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:"6px",marginBottom:"24px"}}>
+              {[`${seasonLabels[answers.season]} en Vegas`,`Viaje de ${daysLabels[answers.days]}`].map(b=>(<div key={b} style={{background:"rgba(46,204,113,.08)",border:"1px solid rgba(46,204,113,.2)",borderRadius:"20px",padding:"5px 14px",color:"#2ecc71",fontSize:"0.72rem",letterSpacing:"0.06em",fontFamily:"'DM Sans',sans-serif"}}>{b}</div>))}
+            </div>
+            <h2 style={{color:"#1a1a1a",fontSize:"1.2rem",margin:"0 0 4px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>Tu Itinerario</h2>
+            <p style={{color:"#666",fontSize:"0.78rem",margin:"0 0 4px",fontFamily:"'DM Sans',sans-serif"}}>Reserva directamente — enlaces abajo</p>
+            <p style={{color:"#999",fontSize:"0.68rem",margin:"0 0 18px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>* Los precios son referenciales y están sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso. No nos hacemos responsables por variaciones en el precio al momento de la reserva.</p>
+            <div style={{display:"flex",flexDirection:"column",gap:"22px",marginBottom:"30px"}}>
+              {(()=>{
+                const combined=[];
+                const dayPairs=Math.ceil(itinerary.length/2);
+                let freeIdx=0;
+                for(let d=0;d<dayPairs;d++){
+                  const dayExp=itinerary[d*2];
+                  const nightExp=itinerary[d*2+1];
+                  const freeForThisDay=freeExp[freeIdx]||null;
+                  if(freeForThisDay) freeIdx++;
+                  combined.push(
+                    <div key={`day-${d+1}`}>
+                      <div style={{color:"#1a6b3a",fontSize:"1rem",fontWeight:"700",letterSpacing:"0.06em",margin:"0 0 10px",fontFamily:"'Playfair Display',serif",borderBottom:"1px solid #d4e8da",paddingBottom:"6px"}}>Día {d+1}</div>
+                      <div style={{display:"flex",flexDirection:"column",gap:"10px"}}>
+                        {dayExp&&<ExperienceCard key={dayExp.id} exp={dayExp} index={d*2} isFree={false} timeLabel="🌅 Día"/>}
+                        {freeForThisDay&&<ExperienceCard key={freeForThisDay.id} exp={freeForThisDay} index={d*2} isFree={true}/>}
+                        {nightExp&&<ExperienceCard key={nightExp.id} exp={nightExp} index={d*2+1} isFree={false} timeLabel="🌙 Noche"/>}
+                      </div>
+                    </div>
+                  );
+                }
+                return combined;
+              })()}
+            </div>
+            {answers.tripType==="family"&&(
+              <div style={{background:"rgba(240,192,64,.05)",border:"1px solid rgba(240,192,64,.15)",borderRadius:"16px",padding:"20px",marginBottom:"24px"}}>
+                <div style={{color:"#f0c040",fontSize:"0.62rem",letterSpacing:"0.2em",marginBottom:"12px",fontFamily:"'DM Sans',sans-serif"}}>✦ CONSEJOS — VEGAS CON NIÑOS</div>
+                <div style={{display:"flex",flexDirection:"column",gap:"8px"}}>
+                  {[{emoji:"🎂",tip:"La edad importa en Vegas — los menores de 21 no pueden sentarse en barras ni quedarse en casinos."},{emoji:"☀️",tip:"Evita junio-septiembre si es posible. El calor supera los 40°C y agota a los niños rápidamente."},{emoji:"💧",tip:"Lleva botellas de agua siempre. El aire seco del desierto deshidrata a los niños más rápido de lo que esperas."},{emoji:"🎰",tip:"Los niños pueden caminar por los casinos pero no pueden detenerse ni sentarse — incluso con un adulto."},{emoji:"🌅",tip:"Planifica actividades al aire libre por la mañana (antes de las 10am) y regresa al interior durante el pico de calor."},{emoji:"🚗",tip:"Considera alquilar un coche — mucho más fácil con niños pequeños que caminar por el Strip."}].map((item,i)=>(
+                    <div key={i} style={{display:"flex",gap:"10px",alignItems:"flex-start"}}>
+                      <span style={{fontSize:"1rem",minWidth:"24px"}}>{item.emoji}</span>
+                      <p style={{color:"#7ec8a0",fontSize:"0.78rem",lineHeight:1.6,margin:0,fontFamily:"'DM Sans',sans-serif"}}>{item.tip}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div style={{marginBottom:"22px"}}>
+              <p style={{color:"#1a1a1a",fontSize:"0.85rem",margin:"0 0 10px",textAlign:"center",fontWeight:"600",fontFamily:"'DM Sans',sans-serif"}}>¿Conoces a alguien que lo necesita? ¡Compártelo!</p>
+              <div style={{display:"flex",gap:"8px"}}>
+                <button onClick={()=>{const t="¿Vas a Las Vegas? Descubre tu perfil de viajero 🎰\n"+window.location.href;if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>alert("¡Copiado!")).catch(()=>prompt("Copia:",t));}else{prompt("Copia:",t);}}} style={{flex:1,padding:"13px",borderRadius:"9px",border:"1.5px solid #d4e8da",background:"#fff",color:"#333",fontSize:"0.82rem",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",fontWeight:"600"}}>🔗 Copiar Enlace</button>
+                <button onClick={()=>{const t="¿Vas a Las Vegas? Descubre tu perfil de viajero 🎰";if(navigator.share){navigator.share({title:"Tu Vegas Tickets",text:t,url:window.location.href});}else{prompt("Copia:",t+"\n"+window.location.href);}}} style={{flex:1,padding:"13px",borderRadius:"9px",border:"none",background:"linear-gradient(135deg,#1a6b3a,#27ae60)",color:"#fff",fontSize:"0.82rem",cursor:"pointer",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>💬 Compartir con Amigos</button>
+              </div>
+            </div>
+            <div style={{background:"linear-gradient(135deg,#fffde7,#fff8e1)",border:"2px solid #e6c200",borderRadius:"14px",padding:"22px",marginBottom:"18px",textAlign:"center"}}>
+              <p style={{color:"#1a1a1a",fontSize:"0.92rem",margin:"0 0 6px",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>🎰 ¿Falta algo en tu itinerario?</p>
+              <p style={{color:"#555",fontSize:"0.8rem",margin:"0 0 16px",fontFamily:"'DM Sans',sans-serif"}}>Las Vegas te espera con los brazos abiertos.</p>
+              <a href="mailto:unveiledvegas@gmail.com?subject=Feedback Tu Vegas Tickets" style={{display:"inline-block",padding:"12px 28px",borderRadius:"9px",background:"linear-gradient(135deg,#b8860b,#f0c040)",color:"#fff",fontSize:"0.85rem",textDecoration:"none",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>Deja Tu Opinión →</a>
+            </div>
+            <button onClick={()=>{setStep(0);setAnswers({});setSelected(null);setAiStory("");setAiTitle("");setAiReady(false);setItinerary([]);setFreeExp([]);}} style={{width:"100%",padding:"16px",borderRadius:"10px",background:"linear-gradient(135deg,#1a6b3a,#27ae60)",border:"none",color:"#fff",fontSize:"0.9rem",fontWeight:"700",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",boxShadow:"0 4px 16px rgba(26,107,58,.3)"}}>↩ Empezar de Nuevo — Crear Otro Itinerario</button>
+            <p style={{textAlign:"center",color:"#bbb",fontSize:"0.65rem",marginTop:"16px",fontFamily:"'DM Sans',sans-serif"}}>Los enlaces de reserva pueden incluir asociaciones de afiliados · Precios sujetos a disponibilidad</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ExperienceCard({exp,index,isFree,timeLabel}){
+  const [hov,setHov]=useState(false);
+  return (
+    <div onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)} style={{background:hov?"#f0faf4":"#ffffff",border:hov?`1px solid ${isFree?"#27ae60":"#1a6b3a"}`:"1px solid #e0e8e2",borderRadius:"15px",padding:"18px",transition:"all .3s",transform:hov?"translateY(-2px)":"none",animation:`fadeUp .5s ease ${index*.07}s both`,boxShadow:hov?"0 6px 24px rgba(26,107,58,.1)":"0 2px 8px rgba(0,0,0,.04)"}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:"10px"}}>
+        <div style={{display:"flex",gap:"12px",alignItems:"flex-start",flex:1}}>
+          <div style={{minWidth:"44px",textAlign:"center"}}><span style={{fontSize:"1.9rem"}}>{exp.emoji}</span></div>
+          <div style={{flex:1}}>
+            <div style={{color:"#1a1a1a",fontWeight:"700",fontSize:"0.98rem",marginBottom:"6px",lineHeight:1.3,fontFamily:"'DM Sans',sans-serif"}}>{exp.name}</div>
+            <div style={{display:"flex",gap:"5px",flexWrap:"wrap"}}>
+              {!isFree&&timeLabel&&<span style={{background:"#f0faf4",color:"#1a6b3a",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #c8e6d0",fontFamily:"'DM Sans',sans-serif"}}>{timeLabel}</span>}
+              {exp.dur&&<span style={{background:"#fffde7",color:"#7a5c00",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #e6c200",fontFamily:"'DM Sans',sans-serif"}}>{exp.dur}</span>}
+              {exp.rating>0&&<span style={{background:"#f5f5f5",color:"#444",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #ddd",fontFamily:"'DM Sans',sans-serif"}}>⭐ {exp.rating}</span>}
+              {exp.isNew&&<span style={{background:"#f0faf4",color:"#1a6b3a",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #c8e6d0",fontFamily:"'DM Sans',sans-serif"}}>✨ Nuevo</span>}
+              {exp.limitedTime&&<span style={{background:"#fffde7",color:"#7a5c00",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #e6c200",fontFamily:"'DM Sans',sans-serif"}}>⏰ {exp.limitedTime}</span>}
+            </div>
+          </div>
+        </div>
+        {isFree?<span style={{background:"#f0faf4",border:"1px solid #c8e6d0",color:"#1a6b3a",fontSize:"0.75rem",fontWeight:"700",padding:"4px 12px",borderRadius:"20px",whiteSpace:"nowrap",marginLeft:"8px",fontFamily:"'DM Sans',sans-serif"}}>GRATIS</span>:<span style={{color:"#b8860b",fontSize:"0.95rem",fontWeight:"bold",marginLeft:"10px",whiteSpace:"nowrap",fontFamily:"'DM Sans',sans-serif"}}>Desde ${exp.price}</span>}
+      </div>
+      <p style={{color:"#333",fontSize:"0.84rem",lineHeight:1.75,margin:"0 0 12px",fontFamily:"'DM Sans',sans-serif"}}>{exp.desc}</p>
+      <a href={exp.url} target="_blank" rel="noopener noreferrer" style={{display:"block",background:isFree?"#f0faf4":"linear-gradient(135deg,#1a6b3a,#27ae60)",border:isFree?"1px solid #c8e6d0":"none",color:isFree?"#1a6b3a":"#fff",padding:"13px 16px",borderRadius:"10px",textDecoration:"none",fontSize:"0.88rem",fontWeight:"700",textAlign:"center",fontFamily:"'DM Sans',sans-serif"}}>
+        {isFree?"🔗 Más Información":"🎟️ Reservar Ahora"}
+      </a>
+    </div>
+  );
+}
