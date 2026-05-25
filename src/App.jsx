@@ -599,18 +599,49 @@ export default function TuVegasTickets() {
     const experienceNames = results.map(e=>e.name);
     const freeNames = freeResults.map(e=>e.name);
 
-    fetch("/api/briefing",{
+    fetch("https://api.anthropic.com/v1/messages",{
       method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({ travelerType, vibeDesc, interestDesc, budgetDesc, season:newAns.season, days:newAns.days, timeOfDay:newAns.timeOfDay, experiences:experienceNames, freeExperiences:freeNames })
-    }).then(r=>{
-      if(!r.ok) throw new Error(`API error: ${r.status}`);
-      return r.json();
-    }).then(data=>{
-      const text = data.text;
-      if(text && text.length > 30){ setAiStory(text); if(data.title) setAiTitle(data.title); }
-      setAiReady(true);
-    }).catch((err)=>{ console.error("Briefing error:", err); setAiReady(true); });
+      headers:{
+        "Content-Type":"application/json",
+        "x-api-key": process.env.REACT_APP_ANTHROPIC_KEY,
+        "anthropic-version":"2023-06-01",
+        "anthropic-dangerous-direct-browser-access":"true"
+      },
+      body:JSON.stringify({
+        model:"claude-haiku-4-5-20251001",
+        max_tokens:350,
+        messages:[{
+          role:"user",
+          content:`Eres una experta en perfiles de viajeros que conoce Las Vegas en profundidad. Basándote en el perfil a continuación, devuelve un objeto JSON con exactamente dos campos: "title" y "text".
+PERFIL DEL VIAJERO:
+- Tipo de viaje: ${travelerType}
+- Estilo / vibra: ${vibeDesc}
+- Intereses: ${interestDesc}
+- Comportamiento de gasto: ${budgetDesc}
+- Temporada: ${newAns.season}
+- Duración del viaje: ${newAns.days} días
+- Horario preferido: ${newAns.timeOfDay}
+CAMPO "title":
+Un nombre de arquetipo de viajero, máximo 5 palabras. Como un título de perfil clasificado. Ejemplos: "El Arquitecto de Medianoche", "El Cazador de Lujo Calculado", "La Coleccionista de Sombras". Que se sienta personal y específico para este perfil.
+CAMPO "text":
+Escribe exactamente 3 párrafos cortos en español neutro que se sientan como si la persona estuviera leyendo su propio horóscopo de viaje — específico, revelador, ligeramente cinematográfico, nunca genérico. Como una cartomante que lo ha visto todo, con humor sutil e inteligente.
+PÁRRAFO 1 — EL/LA VIAJERO/A (máximo 2 oraciones): Describe cómo viaja esta persona — su comportamiento real y sus decisiones. Específico, conductual, con humor seco. Deben pensar "¿cómo sabía esta app eso de mí?"
+PÁRRAFO 2 — VEGAS PARA ELLOS (solo 1 oración): Qué tiene Las Vegas específicamente para este perfil que no encontrará en ningún otro lugar.
+PÁRRAFO 3 — LA TEMPORADA (solo 1 oración): Las Vegas en ${newAns.season} — sensorial, atmosférico. Termina con algo que les haga querer estar allí ahora mismo.
+REGLAS: Devuelve SOLO JSON válido, sin markdown, sin comillas invertidas. Solo español neutro. Nunca menciones shows, atracciones o lugares por nombre. Tono íntimo, revelador, cinematográfico.`
+        }]
+      })
+    }).then(r=>r.json()).then(data=>{
+      const raw = data.content?.[0]?.text || '';
+      try {
+        const parsed = JSON.parse(raw.replace(/```json|```/g,'').trim());
+        if(parsed.text && parsed.text.length>30){ setAiStory(parsed.text); if(parsed.title) setAiTitle(parsed.title); }
+        setAiReady(true);
+      } catch {
+        if(raw.length>30){ setAiStory(raw); }
+        setAiReady(true);
+      }
+    }).catch((err)=>{ console.error("Briefing error:",err); setAiReady(true); });
   }
 
   const seasonLabels={winter:"Invierno",spring:"Primavera",summer:"Verano",fall:"Otoño"};
