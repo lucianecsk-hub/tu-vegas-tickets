@@ -916,8 +916,6 @@ export default function TuVegasTickets() {
               onMouseLeave={e=>{e.currentTarget.style.boxShadow="0 4px 16px rgba(26,107,58,.3)"}}>
               ↩ Empezar de Nuevo — Crear Otro Itinerario
             </button>
-              ↩ Empezar de Nuevo — Crear Otro Itinerario
-            </button>
 
             <p style={{textAlign:"center",color:"#bbb",fontSize:"0.65rem",marginTop:"16px",fontFamily:"'DM Sans',sans-serif"}}>
               Los enlaces de reserva pueden incluir asociaciones de afiliados · Precios sujetos a disponibilidad
