@@ -199,10 +199,10 @@ const QUESTIONS = [
     ]},
   { id:"season", question:"¿Cuándo vas a visitar?", subtitle:"Vegas se transforma completamente con cada estación", cols:2, multi:false,
     options:[
-      {v:"winter",label:"Invierno",emoji:"❄️",desc:"Dic – Feb · Noches frescas, nieve en Monte Charleston"},
-      {v:"spring",label:"Primavera",emoji:"🌸",desc:"Mar – May · Clima perfecto"},
-      {v:"summer",label:"Verano",emoji:"☀️",desc:"Jun – Sep · 40°C de calor, pool parties"},
-      {v:"fall",label:"Otoño",emoji:"🍂",desc:"Oct – Nov · Clima dorado"},
+      {v:"winter",label:"Invierno",emoji:"❄️",desc:"Dic – Feb · 2°C a 14°C · Noches frescas, nieve en Monte Charleston"},
+      {v:"spring",label:"Primavera",emoji:"🌸",desc:"Mar – May · 10°C a 28°C · Clima perfecto"},
+      {v:"summer",label:"Verano",emoji:"☀️",desc:"Jun – Sep · 25°C a 42°C · Calor extremo, pool parties"},
+      {v:"fall",label:"Otoño",emoji:"🍂",desc:"Oct – Nov · 8°C a 25°C · Clima dorado"},
     ]},
   { id:"days", question:"¿Cuántos días te quedas?", subtitle:"Ajustaremos tu itinerario a la perfección", cols:2, multi:false,
     options:[
@@ -576,11 +576,14 @@ export default function TuVegasTickets() {
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({ travelerType, vibeDesc, interestDesc, budgetDesc, season:newAns.season, days:newAns.days, timeOfDay:newAns.timeOfDay, experiences:experienceNames, freeExperiences:freeNames })
-    }).then(r=>r.json()).then(data=>{
+    }).then(r=>{
+      if(!r.ok) throw new Error(`API error: ${r.status}`);
+      return r.json();
+    }).then(data=>{
       const text = data.text;
       if(text && text.length > 30){ setAiStory(text); if(data.title) setAiTitle(data.title); }
       setAiReady(true);
-    }).catch(()=>{ setAiReady(true); });
+    }).catch((err)=>{ console.error("Briefing error:", err); setAiReady(true); });
   }
 
   const seasonLabels={winter:"Invierno",spring:"Primavera",summer:"Verano",fall:"Otoño"};
@@ -592,7 +595,7 @@ export default function TuVegasTickets() {
       minHeight:"100vh",
       background:"#fdf6f0",
       fontFamily:"'Georgia',serif",
-      color:"#fff",
+      color:"#1a1a1a",
       overflow:"hidden",
       position:"relative"
     }}>
@@ -701,12 +704,12 @@ export default function TuVegasTickets() {
             </div>
 
             <h2 style={{fontSize:"1.4rem",color:"#1a1a1a",margin:"0 0 5px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>{currentQ.question}</h2>
-            <p style={{color:"#888",fontSize:"0.82rem",margin:"0 0 18px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>{currentQ.subtitle}</p>
+            <p style={{color:"#1a6b3a",fontSize:"0.82rem",margin:"0 0 18px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>{currentQ.subtitle}</p>
 
             {currentQ.multi&&(
-              <div style={{background:"rgba(240,192,64,.1)",border:"2px solid rgba(240,192,64,.4)",borderRadius:"10px",padding:"12px 16px",marginBottom:"14px",display:"flex",alignItems:"center",gap:"10px"}}>
+              <div style={{background:"rgba(184,134,11,.12)",border:"2px solid rgba(184,134,11,.5)",borderRadius:"10px",padding:"12px 16px",marginBottom:"14px",display:"flex",alignItems:"center",gap:"10px"}}>
                 <span style={{fontSize:"1.1rem"}}>✨</span>
-                <span style={{color:"#f0c040",fontSize:"0.92rem",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>
+                <span style={{color:"#7a5c00",fontSize:"0.92rem",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>
                   {multiCount===0?`Elige hasta ${currentQ.max} — cubrimos todas`:multiCount<currentQ.max?`${multiCount} elegida(s) — elige una más`:`${multiCount} elegidas — ¡listo!`}
                 </span>
               </div>
@@ -820,8 +823,8 @@ export default function TuVegasTickets() {
             </div>
 
             {/* ITINERARIO */}
-            <h2 style={{color:"#fff",fontSize:"1.2rem",margin:"0 0 4px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>Tu Itinerario</h2>
-            <p style={{color:"#5a9a6a",fontSize:"0.78rem",margin:"0 0 18px",fontFamily:"'DM Sans',sans-serif"}}>Reserva directamente — enlaces abajo</p>
+            <h2 style={{color:"#1a1a1a",fontSize:"1.2rem",margin:"0 0 4px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>Tu Itinerario</h2>
+            <p style={{color:"#666",fontSize:"0.78rem",margin:"0 0 18px",fontFamily:"'DM Sans',sans-serif"}}>Reserva directamente — enlaces abajo</p>
 
             <div style={{display:"flex",flexDirection:"column",gap:"22px",marginBottom:"30px"}}>
               {(()=>{
@@ -957,7 +960,10 @@ function ExperienceCard({exp,index,isFree,timeLabel}){
           : <span style={{color:"#f0c040",fontSize:"1.1rem",fontWeight:"bold",marginLeft:"10px",whiteSpace:"nowrap",fontFamily:"'DM Sans',sans-serif"}}>{exp.price===0?"Gratis":exp.price?"$"+exp.price:""}</span>
         }
       </div>
-      <p style={{color:"#9abea8",fontSize:"0.84rem",lineHeight:1.75,margin:"0 0 14px",fontFamily:"'DM Sans',sans-serif"}}>{exp.desc}</p>
+      <p style={{color:"#333",fontSize:"0.84rem",lineHeight:1.75,margin:"0 0 8px",fontFamily:"'DM Sans',sans-serif"}}>{exp.desc}</p>
+      <p style={{color:"#999",fontSize:"0.7rem",margin:"0 0 10px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>
+        {isFree?"Gratis — sin costo de entrada":"Precios sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso."}
+      </p>
       <a href={exp.url} target="_blank" rel="noopener noreferrer"
         style={{
           display:"block",
