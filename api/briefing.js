@@ -11,44 +11,36 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 400,
+        max_tokens: 350,
         messages: [{
           role: 'user',
-          content: `Eres una cartomante digital que conoce Las Vegas mejor que nadie y que tiene el don de revelar la verdad sobre cada viajero — incluso lo que ellos mismos no saben. Basándote en el perfil a continuación, devuelve un objeto JSON con exactamente dos campos: "title" y "text".
-
+          content: `Eres una experta en perfiles de viajeros que conoce Las Vegas en profundidad. Basándote en el perfil a continuación, devuelve un objeto JSON con exactamente dos campos: "title" y "text".
 PERFIL DEL VIAJERO:
 - Tipo de viaje: ${travelerType}
-- Vibra / estilo: ${vibeDesc}
+- Estilo / vibra: ${vibeDesc}
 - Intereses: ${interestDesc}
 - Comportamiento de gasto: ${budgetDesc}
 - Temporada: ${season}
-- Duración: ${days} días
+- Duración del viaje: ${days} días
 - Horario preferido: ${timeOfDay}
-
 CAMPO "title":
-Un nombre de arquetipo de viajero, máximo 5 palabras. Como un título de perfil clasificado — específico, evocador, un poco misterioso. Ejemplos: "El Arquitecto de Medianoche", "El Cazador de Lujo Calculado", "La Coleccionista de Momentos Únicos". En español neutro.
-
+Un nombre de arquetipo de viajero, máximo 5 palabras. Como un título de perfil clasificado. Ejemplos: "El Arquitecto de Medianoche", "El Cazador de Lujo Calculado", "La Coleccionista de Sombras". Que se sienta personal y específico para este perfil.
 CAMPO "text":
-Escribe exactamente 3 párrafos cortos en español neutro que se sientan como si la persona estuviera leyendo su horóscopo de viaje — específico, revelador, ligeramente cinematográfico, con humor sutil. Como una cartomante que lo ha visto todo.
-
+Escribe exactamente 3 párrafos cortos en español neutro que se sientan como si la persona estuviera leyendo su propio horóscopo de viaje — específico, revelador, ligeramente cinematográfico, nunca genérico. Como una cartomante que lo ha visto todo, con humor sutil e inteligente.
 PÁRRAFO 1 — EL/LA VIAJERO/A (máximo 2 oraciones):
-Describe cómo viaja esta persona — su comportamiento real y sus decisiones. Específico, conductual, con humor seco e inteligente. Deben pensar "¿cómo sabía esta app eso de mí?"
-
+Describe cómo viaja esta persona — su comportamiento real y sus decisiones. Específico, conductual, con humor seco. Deben pensar "¿cómo sabía esta app eso de mí?"
 PÁRRAFO 2 — VEGAS PARA ELLOS (solo 1 oración):
 Qué tiene Las Vegas específicamente para este perfil que no encontrará en ningún otro lugar. No obvio — la capa de Vegas que encaja exactamente con quién son.
-
 PÁRRAFO 3 — LA TEMPORADA (solo 1 oración):
-Las Vegas en ${season} — sensorial, atmosférico, específico a la estación. Describe solo cómo se siente la ciudad: la temperatura, la luz, el ambiente. Termina con algo que les haga querer estar allí ahora mismo.
-
-REGLAS ABSOLUTAS:
+Las Vegas en ${season} — sensorial, atmosférico, específico a la estación. Describe solo cómo se siente la ciudad: la temperatura, la luz, las multitudes, la energía. Termina con algo que les haga querer estar allí ahora mismo.
+REGLAS:
 - Devuelve SOLO JSON válido, sin markdown, sin comillas invertidas
 - Solo en español neutro (válido para México, Colombia, España, Argentina, etc.)
 - Sé conciso y contundente — nada genérico
 - NUNCA menciones ningún show, atracción, lugar o actividad por nombre
 - Nunca uses: "vibrante" "increíble" "inolvidable" "experiencia única" "maravilloso"
-- Tono: íntimo, como si la cartomante te conociera de toda la vida, con humor cómplice
-- No uses comillas, títulos ni etiquetas dentro del campo "text"
-- El humor debe ser sutil e inteligente, nunca burlón`
+- Tono: íntimo, revelador, cinematográfico, con humor cómplice
+- No uses comillas, títulos ni etiquetas dentro del campo "text"`
         }]
       })
     });
