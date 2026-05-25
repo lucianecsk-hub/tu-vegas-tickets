@@ -556,4 +556,4 @@ export default function TuVegasTickets() {
     const results = filterExperiences(newAns);
     const kidsAge = newAns.groupGender;
     const isYoungFamily = newAns.tripType==="family" && (kidsAge==="under6"||kidsAge==="kids");
-    const maxDays = {["1-2"]:3,["3-4"]:4,["5-7"]:7,["1week"]:8}[newAns.da
+    const maxDays = {["1-2"]:3,["3-4"]:4,["5-7"]:7,["1week"]:8}[newAns.days]||4;
