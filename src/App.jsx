@@ -105,7 +105,7 @@ const FREE_EXPERIENCES = [
   { id:"f1", name:"Fuentes del Bellagio de Noche", loc:"Hotel Bellagio", time:"Después de las 8pm", emoji:"⛲", desc:"Cada 15-30 minutos después del anochecer. 1,000 chorros de agua coreografiados con música. Gratis. Imperdible.", url:"https://vegas.vdvm.net/oq11jb" },
   { id:"f3", name:"Fremont Street — Espectáculo LED", loc:"Downtown Vegas", time:"Al anochecer", emoji:"💡", desc:"Un techo de LED de 460 metros con shows gratis cada hora. El Vegas que el Strip no quiere que conozcas.", url:"https://vegas.vdvm.net/9gR3A3" },
   { id:"f5", name:"Grand Canal Shoppes — The Venetian", loc:"The Venetian", time:"Cualquier hora", emoji:"🛶", desc:"Venecia recreada dentro de un hotel. Camínalo gratis. Observa las góndolas gratis. Funciona.", url:"https://vegas.vdvm.net/MmJJG3" },
-  { id:"f10", name:"Cartel de Bienvenida a Las Vegas", loc:"Sur del Strip", time:"Hora dorada", emoji:"🪧", desc:"La foto. La hora dorada lo hace trascendente. Llega 30 minutos antes del atardecer.", url:"https://vegas.vdvm.net/DKPrk2" },
+  { id:"f10", name:"Cartel de Bienvenida a Las Vegas", loc:"Sur del Strip", time:"Hora dorada", emoji:"📸", desc:"La foto. La hora dorada lo hace trascendente. Llega 30 minutos antes del atardecer.", url:"https://vegas.vdvm.net/DKPrk2" },
   { id:"f6", name:"Pinball Hall of Fame", loc:"Sur del Strip", time:"Cualquier hora", emoji:"🎮", desc:"Más de 500 máquinas vintage desde los años 50. Todas jugables por monedas. Entrada completamente gratis.", url:"https://vegas.vdvm.net/WqnZa3", tags:["budget"] },
   { id:"f2", name:"Jardín Conservatorio del Bellagio", loc:"Hotel Bellagio", time:"Cualquier hora", emoji:"🌸", desc:"Un jardín interior de 1,300 m² que cambia 5 veces al año. Actualmente la habitación más hermosa de Vegas.", url:"https://vegas.vdvm.net/Org2RN" },
   { id:"f9", name:"Caída de la Atlántida — Caesars", loc:"Forum Shops", time:"Cada hora", emoji:"🏛️", desc:"Un show animatrónico gratuito dentro de los Forum Shops de Caesars. Sorprendentemente espectacular.", url:"https://vegas.vdvm.net/g1jjyO", tags:["budget"] },
@@ -431,6 +431,34 @@ function filterExperiences(ans) {
       if(state.toursAdded + added >= minTours) break;
       const lastNight = result.findIndex(e=>e.timeSlot==="night"&&!TOUR_IDS.includes(e.id));
       if(lastNight>=0) { used.delete(result[lastNight].id); result[lastNight] = {...tour, timeSlot:"day"}; used.add(tour.id); added++; }
+    }
+  }
+
+  // ── GARANTÍA CIRQUE DU SOLEIL ──
+  // Siempre incluir al menos un show de Cirque si el presupuesto lo permite
+  const CIRQUE_IDS = [22, 28, 39, 59]; // Mystère, O, MJ ONE, KÀ VIP
+  const hasCirque = result.some(e => CIRQUE_IDS.includes(e.id));
+  if(!hasCirque && ans.tripType !== "family") {
+    const cirqueCandidates = scored.filter(e =>
+      CIRQUE_IDS.includes(e.id) && !used.has(e.id) && budgetMatch(e.price)
+    );
+    if(cirqueCandidates.length > 0) {
+      const best = cirqueCandidates[0];
+      // Reemplaza el último show nocturno que no sea Cirque
+      const replaceIdx = result.findIndex(e =>
+        e.timeSlot === "night" && !CIRQUE_IDS.includes(e.id) && e.cat === "Show"
+      );
+      if(replaceIdx >= 0) {
+        used.delete(result[replaceIdx].id);
+        result[replaceIdx] = {...best, timeSlot:"night"};
+        used.add(best.id);
+      } else if(result.length > 0) {
+        // Si no hay show nocturno, reemplaza el último elemento
+        const last = result.length - 1;
+        used.delete(result[last].id);
+        result[last] = {...best, timeSlot:"night"};
+        used.add(best.id);
+      }
     }
   }
 
