@@ -838,7 +838,7 @@ export default function TuVegasTickets() {
                   if(freeForThisDay) freeIdx++;
                   combined.push(
                     <div key={`day-${d+1}`}>
-                      <div style={{color:"#2ecc71",fontSize:"1rem",fontWeight:"700",letterSpacing:"0.06em",margin:"0 0 10px",fontFamily:"'Playfair Display',serif",borderBottom:"1px solid rgba(46,204,113,.15)",paddingBottom:"6px"}}>
+                      <div style={{color:"#1a6b3a",fontSize:"1rem",fontWeight:"700",letterSpacing:"0.06em",margin:"0 0 10px",fontFamily:"'Playfair Display',serif",borderBottom:"1px solid #d4e8da",paddingBottom:"6px"}}>
                         Día {d+1}
                       </div>
                       <div style={{display:"flex",flexDirection:"column",gap:"10px"}}>
@@ -877,47 +877,47 @@ export default function TuVegasTickets() {
 
             {/* COMPARTIR */}
             <div style={{marginBottom:"22px"}}>
-              <p style={{color:"#7ec8a0",fontSize:"0.78rem",margin:"0 0 10px",textAlign:"center",fontFamily:"'DM Sans',sans-serif"}}>¿Conoces a alguien que le encantaría? Compártelo.</p>
+              <p style={{color:"#1a1a1a",fontSize:"0.85rem",margin:"0 0 10px",textAlign:"center",fontWeight:"600",fontFamily:"'DM Sans',sans-serif"}}>¿Conoces a alguien que lo necesita? ¡Compártelo!</p>
               <div style={{display:"flex",gap:"8px"}}>
                 <button onClick={()=>{
                   const shareText = "¿Vas a Las Vegas? Descubre tu perfil de viajero y ve lo que la ciudad tiene para ti 🎰\n" + window.location.href;
                   if(navigator.clipboard?.writeText){ navigator.clipboard.writeText(shareText).then(()=>alert("¡Copiado! Solo pega y envía 🎰")).catch(()=>prompt("Copia y envía a tu amigo:", shareText)); }
                   else { prompt("Copia y envía a tu amigo:", shareText); }
-                }} style={{flex:1,padding:"12px",borderRadius:"9px",border:"1px solid rgba(255,255,255,.1)",background:"rgba(255,255,255,.04)",color:"#c0c0c0",fontSize:"0.8rem",cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
+                }} style={{flex:1,padding:"13px",borderRadius:"9px",border:"1.5px solid #d4e8da",background:"#fff",color:"#333",fontSize:"0.82rem",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",fontWeight:"600",boxShadow:"0 2px 8px rgba(0,0,0,.06)"}}>
                   🔗 Copiar Enlace
                 </button>
                 <button onClick={()=>{
                   const shareText = "¿Vas a Las Vegas? Descubre tu perfil de viajero y ve lo que la ciudad tiene para ti 🎰";
                   if(navigator.share){ navigator.share({title:"Tu Vegas Tickets",text:shareText,url:window.location.href}); }
                   else { prompt("Copia y comparte:",shareText+"\n"+window.location.href); }
-                }} style={{flex:1,padding:"12px",borderRadius:"9px",border:"1px solid rgba(46,204,113,.3)",background:"rgba(46,204,113,.08)",color:"#2ecc71",fontSize:"0.8rem",cursor:"pointer",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>
+                }} style={{flex:1,padding:"13px",borderRadius:"9px",border:"none",background:"linear-gradient(135deg,#1a6b3a,#27ae60)",color:"#fff",fontSize:"0.82rem",cursor:"pointer",fontWeight:"700",fontFamily:"'DM Sans',sans-serif",boxShadow:"0 4px 16px rgba(26,107,58,.3)"}}>
                   💬 Compartir con Amigos
                 </button>
               </div>
             </div>
 
             {/* FEEDBACK */}
-            <div style={{background:"rgba(240,192,64,.04)",border:"1px solid rgba(240,192,64,.12)",borderRadius:"14px",padding:"20px",marginBottom:"18px",textAlign:"center"}}>
-              <p style={{color:"#e0d0a0",fontSize:"0.85rem",margin:"0 0 4px",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>
+            <div style={{background:"linear-gradient(135deg,#fffde7,#fff8e1)",border:"2px solid #e6c200",borderRadius:"14px",padding:"22px",marginBottom:"18px",textAlign:"center",boxShadow:"0 4px 16px rgba(184,134,11,.1)"}}>
+              <p style={{color:"#1a1a1a",fontSize:"0.92rem",margin:"0 0 6px",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>
                 🎰 ¿Falta algo en tu itinerario?
               </p>
-              <p style={{color:"#7a7060",fontSize:"0.78rem",margin:"0 0 14px",fontFamily:"'DM Sans',sans-serif"}}>
+              <p style={{color:"#555",fontSize:"0.8rem",margin:"0 0 16px",fontFamily:"'DM Sans',sans-serif"}}>
                 Las Vegas te espera con los brazos abiertos.
               </p>
               <a href="mailto:unveiledvegas@gmail.com?subject=Feedback Tu Vegas Tickets"
-                style={{display:"inline-block",padding:"11px 24px",borderRadius:"9px",border:"1px solid rgba(240,192,64,.25)",color:"#f0c040",fontSize:"0.8rem",textDecoration:"none",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>
+                style={{display:"inline-block",padding:"12px 28px",borderRadius:"9px",background:"linear-gradient(135deg,#b8860b,#f0c040)",color:"#fff",fontSize:"0.85rem",textDecoration:"none",fontWeight:"700",fontFamily:"'DM Sans',sans-serif",boxShadow:"0 4px 16px rgba(184,134,11,.3)"}}>
                 Deja Tu Opinión →
               </a>
             </div>
 
             <button onClick={()=>{setStep(0);setAnswers({});setSelected(null);setAiStory("");setAiTitle("");setAiReady(false);setItinerary([]);setFreeExp([]);}}
-              style={{width:"100%",padding:"16px",borderRadius:"10px",background:"rgba(255,255,255,.04)",border:"1px solid rgba(255,255,255,.1)",color:"#7ec8a0",fontSize:"0.9rem",fontWeight:"600",cursor:"pointer",transition:"all .2s",fontFamily:"'DM Sans',sans-serif"}}
-              onMouseEnter={e=>{e.currentTarget.style.color="#fff";e.currentTarget.style.background="rgba(46,204,113,.1)"}}
-              onMouseLeave={e=>{e.currentTarget.style.color="#7ec8a0";e.currentTarget.style.background="rgba(255,255,255,.04)"}}>
+              style={{width:"100%",padding:"16px",borderRadius:"10px",background:"#fff",border:"2px solid #c8e6d0",color:"#1a6b3a",fontSize:"0.9rem",fontWeight:"700",cursor:"pointer",transition:"all .2s",fontFamily:"'DM Sans',sans-serif",boxShadow:"0 2px 8px rgba(0,0,0,.06)"}}
+              onMouseEnter={e=>{e.currentTarget.style.background="#f0faf4";e.currentTarget.style.borderColor="#1a6b3a"}}
+              onMouseLeave={e=>{e.currentTarget.style.background="#fff";e.currentTarget.style.borderColor="#c8e6d0"}}>
               ↩ Empezar de Nuevo — Crear Otro Itinerario
             </button>
 
-            <p style={{textAlign:"center",color:"#2a4a32",fontSize:"0.65rem",marginTop:"16px",fontFamily:"'DM Sans',sans-serif"}}>
+            <p style={{textAlign:"center",color:"#bbb",fontSize:"0.65rem",marginTop:"16px",fontFamily:"'DM Sans',sans-serif"}}>
               Los enlaces de reserva pueden incluir asociaciones de afiliados · Precios sujetos a disponibilidad
             </p>
           </div>
@@ -932,12 +932,12 @@ function ExperienceCard({exp,index,isFree,timeLabel}){
   return (
     <div onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}
       style={{
-        background:hov?`linear-gradient(135deg,${isFree?"rgba(46,204,113,.12)":"rgba(46,204,113,.08)"},rgba(240,192,64,.06))`:"rgba(255,255,255,.03)",
-        border:hov?`1px solid ${isFree?"rgba(46,204,113,.4)":"rgba(240,192,64,.35)"}`:"1px solid rgba(255,255,255,.07)",
+        background:hov?"#f0faf4":"#ffffff",
+        border:hov?`1px solid ${isFree?"#27ae60":"#1a6b3a"}`:"1px solid #e0e8e2",
         borderRadius:"15px", padding:"18px", transition:"all .3s",
         transform:hov?"translateY(-2px)":"none",
         animation:`fadeUp .5s ease ${index*.07}s both`,
-        boxShadow:hov?"0 6px 24px rgba(46,204,113,.1)":"none"
+        boxShadow:hov?"0 6px 24px rgba(26,107,58,.1)":"0 2px 8px rgba(0,0,0,.04)"
       }}>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:"10px"}}>
         <div style={{display:"flex",gap:"12px",alignItems:"flex-start",flex:1}}>
@@ -945,34 +945,36 @@ function ExperienceCard({exp,index,isFree,timeLabel}){
             <span style={{fontSize:"1.9rem"}}>{exp.emoji}</span>
           </div>
           <div style={{flex:1}}>
-            <div style={{color:"#fff",fontWeight:"700",fontSize:"0.98rem",marginBottom:"6px",lineHeight:1.3,fontFamily:"'DM Sans',sans-serif"}}>{exp.name}</div>
+            <div style={{color:"#1a1a1a",fontWeight:"700",fontSize:"0.98rem",marginBottom:"6px",lineHeight:1.3,fontFamily:"'DM Sans',sans-serif"}}>{exp.name}</div>
             <div style={{display:"flex",gap:"5px",flexWrap:"wrap"}}>
-              {!isFree&&timeLabel&&<span style={{background:"rgba(46,204,113,.12)",color:"#2ecc71",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid rgba(46,204,113,.2)",fontFamily:"'DM Sans',sans-serif"}}>{timeLabel}</span>}
-              {exp.dur&&<span style={{background:"rgba(240,192,64,.12)",color:"#f0c040",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid rgba(240,192,64,.2)",fontFamily:"'DM Sans',sans-serif"}}>{exp.dur}</span>}
-              {exp.rating>0&&<span style={{background:"rgba(192,192,192,.1)",color:"#c0c0c0",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid rgba(192,192,192,.2)",fontFamily:"'DM Sans',sans-serif"}}>⭐ {exp.rating}</span>}
-              {exp.isNew&&<span style={{background:"rgba(46,204,113,.18)",color:"#2ecc71",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid rgba(46,204,113,.3)",fontFamily:"'DM Sans',sans-serif"}}>✨ Nuevo</span>}
-              {exp.limitedTime&&<span style={{background:"rgba(240,192,64,.15)",color:"#f0c040",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid rgba(240,192,64,.3)",fontFamily:"'DM Sans',sans-serif"}}>⏰ {exp.limitedTime}</span>}
+              {!isFree&&timeLabel&&<span style={{background:"#f0faf4",color:"#1a6b3a",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #c8e6d0",fontFamily:"'DM Sans',sans-serif"}}>{timeLabel}</span>}
+              {exp.dur&&<span style={{background:"#fffde7",color:"#7a5c00",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #e6c200",fontFamily:"'DM Sans',sans-serif"}}>{exp.dur}</span>}
+              {exp.rating>0&&<span style={{background:"#f5f5f5",color:"#444",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #ddd",fontFamily:"'DM Sans',sans-serif"}}>⭐ {exp.rating}</span>}
+              {exp.isNew&&<span style={{background:"#f0faf4",color:"#1a6b3a",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #c8e6d0",fontFamily:"'DM Sans',sans-serif"}}>✨ Nuevo</span>}
+              {exp.limitedTime&&<span style={{background:"#fffde7",color:"#7a5c00",fontSize:"0.7rem",padding:"2px 10px",borderRadius:"20px",border:"1px solid #e6c200",fontFamily:"'DM Sans',sans-serif"}}>⏰ {exp.limitedTime}</span>}
             </div>
           </div>
         </div>
         {isFree
-          ? <span style={{background:"rgba(46,204,113,.18)",border:"1px solid rgba(46,204,113,.35)",color:"#2ecc71",fontSize:"0.75rem",fontWeight:"700",padding:"4px 12px",borderRadius:"20px",whiteSpace:"nowrap",marginLeft:"8px",fontFamily:"'DM Sans',sans-serif"}}>GRATIS</span>
-          : <span style={{color:"#f0c040",fontSize:"1.1rem",fontWeight:"bold",marginLeft:"10px",whiteSpace:"nowrap",fontFamily:"'DM Sans',sans-serif"}}>{exp.price===0?"Gratis":exp.price?"$"+exp.price:""}</span>
+          ? <span style={{background:"#f0faf4",border:"1px solid #c8e6d0",color:"#1a6b3a",fontSize:"0.75rem",fontWeight:"700",padding:"4px 12px",borderRadius:"20px",whiteSpace:"nowrap",marginLeft:"8px",fontFamily:"'DM Sans',sans-serif"}}>GRATIS</span>
+          : <span style={{color:"#b8860b",fontSize:"1.1rem",fontWeight:"bold",marginLeft:"10px",whiteSpace:"nowrap",fontFamily:"'DM Sans',sans-serif"}}>{exp.price===0?"Gratis":exp.price?"$"+exp.price:""}</span>
         }
       </div>
-      <p style={{color:"#333",fontSize:"0.84rem",lineHeight:1.75,margin:"0 0 8px",fontFamily:"'DM Sans',sans-serif"}}>{exp.desc}</p>
-      <p style={{color:"#999",fontSize:"0.7rem",margin:"0 0 10px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>
-        {isFree?"Gratis — sin costo de entrada":"Precios sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso."}
+      <p style={{color:"#333",fontSize:"0.84rem",lineHeight:1.75,margin:"0 0 6px",fontFamily:"'DM Sans',sans-serif"}}>{exp.desc}</p>
+      <p style={{color:"#888",fontSize:"0.68rem",margin:"0 0 12px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>
+        {isFree
+          ? "Gratis — sin costo de entrada."
+          : "* Los precios mostrados son referenciales y están sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso. No nos hacemos responsables por variaciones en el precio al momento de la reserva."}
       </p>
       <a href={exp.url} target="_blank" rel="noopener noreferrer"
         style={{
           display:"block",
-          background:isFree?"linear-gradient(135deg,rgba(46,204,113,.25),rgba(46,204,113,.12))":"linear-gradient(135deg,#27ae60,#2ecc71)",
-          border:isFree?"1px solid rgba(46,204,113,.35)":"none",
-          color:isFree?"#2ecc71":"#0a1a0f",
+          background:isFree?"#f0faf4":"linear-gradient(135deg,#1a6b3a,#27ae60)",
+          border:isFree?"1px solid #c8e6d0":"none",
+          color:isFree?"#1a6b3a":"#fff",
           padding:"13px 16px", borderRadius:"10px", textDecoration:"none",
           fontSize:"0.88rem", fontWeight:"700", textAlign:"center",
-          boxShadow:isFree?"none":"0 4px 18px rgba(46,204,113,.3)",
+          boxShadow:isFree?"none":"0 4px 18px rgba(26,107,58,.3)",
           fontFamily:"'DM Sans',sans-serif"
         }}>
         {isFree?"🔗 Más Información":"🎟️ Reservar Ahora"}
