@@ -693,15 +693,15 @@ export default function TuVegasTickets() {
         {step>=1&&step<=totalSteps&&!loading&&(
           <div key={step} style={{animation:"fadeUp .35s ease"}}>
             <div style={{marginBottom:"26px"}}>
-              <div style={{height:"2px",background:"rgba(255,255,255,.06)",borderRadius:"2px"}}>
+              <div style={{height:"2px",background:"rgba(0,0,0,.08)",borderRadius:"2px"}}>
                 <div style={{height:"100%",borderRadius:"2px",
-                  background:"linear-gradient(90deg,#27ae60,#2ecc71,#f0c040)",
+                  background:"linear-gradient(90deg,#1a6b3a,#27ae60,#b8860b)",
                   width:`${(step/totalSteps)*100}%`,transition:"width .5s ease"}}/>
               </div>
             </div>
 
-            <h2 style={{fontSize:"1.4rem",color:"#fff",margin:"0 0 5px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>{currentQ.question}</h2>
-            <p style={{color:"#7ec8a0",fontSize:"0.82rem",margin:"0 0 18px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>{currentQ.subtitle}</p>
+            <h2 style={{fontSize:"1.4rem",color:"#1a1a1a",margin:"0 0 5px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>{currentQ.question}</h2>
+            <p style={{color:"#888",fontSize:"0.82rem",margin:"0 0 18px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>{currentQ.subtitle}</p>
 
             {currentQ.multi&&(
               <div style={{background:"rgba(240,192,64,.1)",border:"2px solid rgba(240,192,64,.4)",borderRadius:"10px",padding:"12px 16px",marginBottom:"14px",display:"flex",alignItems:"center",gap:"10px"}}>
@@ -720,15 +720,16 @@ export default function TuVegasTickets() {
                   <button key={opt.v} onClick={()=>!isDisabled&&handleSelect(opt.v)} style={{
                     padding:"16px 12px", borderRadius:"14px", border:"none",
                     cursor:isDisabled?"not-allowed":"pointer",
-                    background:isSel?"linear-gradient(135deg,rgba(46,204,113,.2),rgba(240,192,64,.12))":"rgba(255,255,255,.03)",
-                    outline:isSel?"2px solid rgba(46,204,113,.6)":"1px solid rgba(255,255,255,.07)",
-                    opacity:isDisabled&&!isSel?.4:1, color:"#fff", textAlign:"left",
-                    transition:"all .2s", transform:isSel?"scale(1.03)":"scale(1)"
+                    background:isSel?"linear-gradient(135deg,#f0faf4,#fffde7)":"#ffffff",
+                    outline:isSel?"2px solid #1a6b3a":"1.5px solid #e0e8e2",
+                    opacity:isDisabled&&!isSel?.4:1, color:"#1a1a1a", textAlign:"left",
+                    transition:"all .2s", transform:isSel?"scale(1.03)":"scale(1)",
+                    boxShadow:isSel?"0 4px 16px rgba(26,107,58,.12)":"0 2px 8px rgba(0,0,0,.04)"
                   }}>
                     <div style={{fontSize:"1.4rem",marginBottom:"6px"}}>{opt.emoji}</div>
-                    <div style={{fontWeight:"700",fontSize:"0.92rem",marginBottom:"4px",color:isSel?"#2ecc71":"#fff",fontFamily:"'DM Sans',sans-serif"}}>{opt.label}</div>
-                    <div style={{color:"#7ec8a0",fontSize:"0.78rem",lineHeight:1.5,fontFamily:"'DM Sans',sans-serif"}}>{opt.desc}</div>
-                    {isSel&&<div style={{marginTop:"6px",color:"#2ecc71",fontSize:"0.75rem"}}>✓</div>}
+                    <div style={{fontWeight:"700",fontSize:"0.92rem",marginBottom:"4px",color:isSel?"#1a6b3a":"#1a1a1a",fontFamily:"'DM Sans',sans-serif"}}>{opt.label}</div>
+                    <div style={{color:"#666",fontSize:"0.78rem",lineHeight:1.5,fontFamily:"'DM Sans',sans-serif"}}>{opt.desc}</div>
+                    {isSel&&<div style={{marginTop:"6px",color:"#1a6b3a",fontSize:"0.75rem"}}>✓</div>}
                   </button>
                 );
               })}
@@ -737,12 +738,12 @@ export default function TuVegasTickets() {
             <div style={{position:"sticky",bottom:"16px",zIndex:100,marginTop:"16px"}}>
               <button onClick={handleNext} disabled={!canContinue} style={{
                 width:"100%", padding:"16px", borderRadius:"12px", border:"none",
-                background:canContinue?"linear-gradient(135deg,#27ae60,#2ecc71,#f0c040)":"rgba(20,30,22,.95)",
-                color:canContinue?"#0a1a0f":"#3a5a3a", fontSize:"0.92rem", fontWeight:"700",
+                background:canContinue?"linear-gradient(135deg,#1a6b3a,#27ae60,#b8860b)":"#e8e8e8",
+                color:canContinue?"#fff":"#999", fontSize:"0.92rem", fontWeight:"700",
                 cursor:canContinue?"pointer":"not-allowed", letterSpacing:"0.08em",
                 textTransform:"uppercase", transition:"all .3s", fontFamily:"'DM Sans',sans-serif",
-                boxShadow:canContinue?"0 6px 24px rgba(46,204,113,.5), 0 2px 8px rgba(0,0,0,.8)":"0 2px 8px rgba(0,0,0,.6)",
-                border:canContinue?"none":"1px solid rgba(255,255,255,.06)"
+                boxShadow:canContinue?"0 6px 24px rgba(26,107,58,.4)":"none",
+                border:"none"
               }}>
                 {step===totalSteps?"🔓 Desbloquear Mi Itinerario":canContinue?"Continuar →":"Selecciona una opción"}
               </button>
@@ -771,13 +772,13 @@ export default function TuVegasTickets() {
 
             {/* Briefing IA */}
             <div style={{
-              background:"linear-gradient(135deg,rgba(46,204,113,.08),rgba(240,192,64,.05))",
-              border:"1px solid rgba(46,204,113,.18)",
-              borderLeft:"3px solid #2ecc71",
+              background:"linear-gradient(135deg,#1a0a0a,#0d1a10)",
+              border:"1px solid rgba(240,192,64,.2)",
+              borderLeft:"3px solid #c0392b",
               borderRadius:"18px", padding:"24px", marginBottom:"18px",
-              boxShadow:"0 4px 24px rgba(46,204,113,.07)"
+              boxShadow:"0 4px 24px rgba(0,0,0,.15)"
             }}>
-              <div style={{color:"#2ecc71",fontSize:"0.6rem",letterSpacing:"0.25em",marginBottom:"12px",fontFamily:"'DM Sans',sans-serif"}}>
+              <div style={{color:"#c0392b",fontSize:"0.6rem",letterSpacing:"0.25em",marginBottom:"12px",fontFamily:"'DM Sans',sans-serif"}}>
                 ✦ TU PERFIL DE VIAJERO/A
               </div>
               {!aiReady ? (
@@ -785,25 +786,25 @@ export default function TuVegasTickets() {
                   <div style={{position:"relative",width:"28px",height:"28px",flexShrink:0}}>
                     {[0,1,2].map(i=>(
                       <div key={i} style={{position:"absolute",inset:`${i*4}px`,borderRadius:"50%",border:"1.5px solid transparent",
-                        borderTopColor:i%2===0?"#2ecc71":"#f0c040",
+                        borderTopColor:i%2===0?"#c0392b":"#f0c040",
                         animation:`spin ${0.8+i*.3}s linear infinite ${i%2?"reverse":""}`}}/>
                     ))}
                   </div>
                   <div>
                     <p style={{color:"#f0c040",fontSize:"0.8rem",margin:"0 0 3px",fontWeight:"700",fontFamily:"'DM Sans',sans-serif"}}>Analizando tu perfil de viajero...</p>
-                    <p style={{color:"#5a9a6a",fontSize:"0.72rem",margin:0,fontFamily:"'DM Sans',sans-serif"}}>Tu revelación personal aparecerá en unos segundos ✨</p>
+                    <p style={{color:"#888",fontSize:"0.72rem",margin:0,fontFamily:"'DM Sans',sans-serif"}}>Tu revelación personal aparecerá en unos segundos ✨</p>
                   </div>
                 </div>
               ) : (
                 <div style={{animation:"fadeUp .5s ease"}}>
                   {aiTitle && (
                     <div style={{marginBottom:"14px"}}>
-                      <span style={{fontSize:"0.63rem",letterSpacing:"0.18em",color:"#5a9a6a",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>Arquetipo de Viajero</span>
+                      <span style={{fontSize:"0.63rem",letterSpacing:"0.18em",color:"#888",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>Arquetipo de Viajero</span>
                       <div style={{fontSize:"1.08rem",fontWeight:"700",color:"#f0c040",fontFamily:"'Playfair Display',serif",marginTop:"4px"}}>{aiTitle}</div>
                     </div>
                   )}
                   {aiStory.split("\n\n").filter(p=>p.trim()).map((para,i,arr)=>(
-                    <p key={i} style={{color:"#c8e0d0",lineHeight:1.9,margin:i===0?"0 0 14px 0":"0 0 14px 0",fontStyle:"italic",fontSize:"0.92rem",fontFamily:"'DM Sans',sans-serif"}}>
+                    <p key={i} style={{color:"#ddd",lineHeight:1.9,margin:"0 0 14px 0",fontStyle:"italic",fontSize:"0.92rem",fontFamily:"'DM Sans',sans-serif"}}>
                       {i===0?"\"":""}{para}{i===arr.length-1?"\"":""}
                     </p>
                   ))}
