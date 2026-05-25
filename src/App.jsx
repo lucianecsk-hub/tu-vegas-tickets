@@ -17,7 +17,6 @@ const PAID = [
   { id:47, name:"Tiro con Ametralladoras — Exterior", cat:"Aventura", price:159, rating:4.9, reviews:264, dur:"3 hrs", emoji:"💥", desc:"Campo de tiro exterior con traslado incluido. La tarde más americana que vivirás en cualquier lugar.", url:"https://www.getyourguide.com/las-vegas-l58/las-vegas-outdoor-machine-gun-and-rifle-shooting-w-pickup-t524974/?partner_id=FIT427X&utm_medium=online_publisher", provider:"GYG", tags:["solo","couple","group"], vibes:["luxury","adventure","romantic"], times:["morning","day"], seasons:["winter","spring","summer","fall"], interests:["adventure"], tier:"premium" },
   { id:50, name:"Caballos en el Desierto + Cena BBQ", cat:"Aventura", price:160, rating:4.7, reviews:459, dur:"6 hrs", emoji:"🐴", desc:"Caballos en el Mojave al atardecer. Traslado incluido. Cena BBQ de cowboy real bajo las estrellas.", url:"https://www.getyourguide.com/las-vegas-l58/wild-west-sunset-bbq-dinner-horseback-ride-t5169/?partner_id=FIT427X&utm_medium=online_publisher", provider:"GYG", tags:["solo","couple","group","family"], vibes:["adventure"], times:["day"], seasons:["spring","fall"], interests:["adventure"], tier:"premium", girlsTrip:true },
   { id:51, name:"Kayak — Cueva Esmeralda", cat:"Aventura", price:119, rating:4.7, reviews:269, dur:"4 hrs", emoji:"🚣", desc:"Kayak hacia una cueva esmeralda brillante en el Río Colorado. Traslado incluido. El mejor secreto al aire libre cerca de Vegas.", url:"https://www.getyourguide.com/las-vegas-l58/from-las-vegas-emerald-cave-kayak-tour-with-hotel-pickup-t856688/?partner_id=FIT427X&utm_medium=online_publisher", provider:"GYG", tags:["solo","couple"], vibes:["dark","adventure"], times:["morning","day"], seasons:["winter","spring","fall"], interests:["adventure"], tier:"mid" },
-  { id:52, name:"Kayak Nocturno — Río Colorado", cat:"Aventura", price:149, rating:5.0, reviews:10, dur:"3 hrs", emoji:"🌙", desc:"Kayak en el Río Colorado bajo la luna llena. La aventura al aire libre más romántica cerca de Vegas.", url:"https://www.getyourguide.com/las-vegas-l58/from-las-vegas-moonlight-kayak-tour-on-the-colorado-river-t449853/?partner_id=FIT427X&utm_medium=online_publisher", provider:"GYG", tags:["couple","group","family"], vibes:["adventure","romantic"], times:["night"], seasons:["winter","spring","fall"], interests:["adventure","unique"], tier:"mid", girlsTrip:true },
   { id:58, name:"Helicóptero — Aterrizaje Grand Canyon", cat:"Aventura", price:519, rating:4.8, reviews:1415, dur:"4.5 hrs", emoji:"🚁", desc:"Aterriza dentro del Gran Cañón. Picnic con champán en el fondo del cañón. Nada se compara a esto.", url:"https://www.getyourguide.com/las-vegas-l58/grand-canyon-helicopter-landing-tour-ecostar-t9617/?partner_id=FIT427X&utm_medium=online_publisher", provider:"GYG", tags:["couple","group","bachelorette"], vibes:["luxury"], times:["morning","day"], seasons:["winter","spring","summer","fall"], interests:["adventure"], tier:"luxury" },
   { id:87, name:"Cowabunga Canyon — Parque Acuático", cat:"Aventura", price:45, rating:4.7, reviews:300, dur:"Todo el día", emoji:"💦", desc:"El mejor parque acuático de Vegas. Toboganes, río lento, piscina de olas — el día de verano perfecto para todas las edades.", url:"https://vegas.vdvm.net/xkWeD1", provider:"VCO", tags:["solo","couple","group","family","kids"], vibes:[], times:["morning","day"], seasons:["summer"], interests:["adventure","unique"], tier:"budget" },
 
@@ -98,7 +97,7 @@ const PAID = [
   { id:88, name:"New Kids on the Block", cat:"Concierto", price:69, rating:4.9, reviews:23, dur:"2.5 hrs", emoji:"🎤", desc:"De vuelta al escenario en Park MGM. Los chicos vuelven — y Vegas es su escenario.", url:"https://vegas.vdvm.net/B5z74y", provider:"VCO", tags:["solo","group"], vibes:["adventure"], times:["night"], seasons:["fall"], interests:["show"], tier:"mid", girlsTrip:true, limitedTime:"Hasta 3 jul" },
   { id:89, name:"Ed Sheeran — Allegiant Stadium", cat:"Concierto", price:87, rating:4.8, reviews:50, dur:"2.5 hrs", emoji:"🎸", desc:"Ed Sheeran en vivo en Allegiant Stadium. Uno de los artistas de gira más grandes del mundo — aquí en Vegas.", url:"https://vegas.vdvm.net/k4aYxL", provider:"VCO", tags:["solo","couple","group","work"], vibes:["luxury","adventure"], times:["night"], seasons:["fall"], interests:["show"], tier:"mid", girlsTrip:true, limitedTime:"Hasta 17 jul" },
   { id:85, name:"Formula 1 Gran Premio Las Vegas", cat:"Deportes", price:500, rating:4.9, reviews:300, dur:"Todo el día", emoji:"🏎️", desc:"F1 en el Strip de Las Vegas de noche. El evento deportivo más espectacular del mundo — aquí mismo.", url:"https://vegas.vdvm.net/dy9xyW", provider:"VCO", tags:["group","family","kids"], vibes:["adventure"], times:["day","night"], seasons:["summer"], interests:["sports","adventure"], tier:"luxury", guysTrip:true, limitedTime:"Hasta 21 nov" },
-  { id:90, name:"Scorpions — Planet Hollywood", cat:"Concierto", price:91, rating:4.6, reviews:44, dur:"2 hrs", emoji:"🦂", desc:"Leyendas del rock en Planet Hollywood. La residencia de los Scorpions — una noche de lista de deseos para fans del rock.", url:"https://vegas.vdvm.net/Pzr7P6", provider:"VCO", tags:["solo","couple","group","family","work"], vibes:["luxury","adventure"], times:["night"], seasons:["winter","spring","summer","fall"], interests:["show"], tier:"mid", guysTrip:true, limitedTime:"Hasta 2 oct" },
+  { id:90, name:"Scorpions — Planet Hollywood", cat:"Concierto", price:91, rating:4.6, reviews:44, dur:"2 hrs", emoji:"🦂", desc:"Leyendas del rock en Planet Hollywood. La residencia de los Scorpions — una noche de lista de deseos para fans del rock.", url:"https://vegas.vdvm.net/Pzr7P6", provider:"VCO", tags:["solo","couple","group","work"], vibes:["luxury","adventure"], times:["night"], seasons:["winter","spring","summer","fall"], interests:["show"], tier:"mid", guysTrip:true, limitedTime:"Hasta 2 oct" },
   { id:2, name:"Atomic Golf — Golf en Azotea", cat:"Entretenimiento", price:22, rating:0, reviews:0, dur:"2 hrs", emoji:"⛳", desc:"Complejo de entretenimiento en azotea con bahías de golf, comida y cócteles artesanales. Vegas reinventó el deporte.", url:"https://vegas.vdvm.net/dy9YAq", provider:"VCO", tags:["solo","couple","group"], vibes:[], times:["day","night"], seasons:["winter","spring","summer","fall"], interests:["unique","nightlife"], tier:"budget", isNew:true },
 ];
 
@@ -144,7 +143,7 @@ const QUESTIONS = [
       {v:"lgbtq",label:"LGBTQ+",emoji:"🏳️‍🌈",desc:"Orgulloso/a y listo/a para Vegas"},
     ],
     familyOptions:[
-      {v:"under6",label:"Pequeñines",emoji:"🧸",desc:"Menos de 6 años — animales, atracciones y diversión fácil"},
+      {v:"under6",label:"Pequeños",emoji:"🧸",desc:"Menos de 6 años — animales, atracciones y diversión fácil"},
       {v:"kids",label:"Niños",emoji:"🧒",desc:"6-12 años — aventuras y descubrimiento"},
       {v:"teens",label:"Adolescentes",emoji:"🧑",desc:"13-17 años — adrenalina y experiencias cool"},
       {v:"mixedages",label:"Edades Mixtas",emoji:"👨‍👩‍👧‍👦",desc:"Diferentes edades — algo para todos"},
@@ -259,7 +258,7 @@ function filterExperiences(ans) {
     return true;
   };
 
-  const NATURE_IDS = [40,41,43,44,46,47,48,49,50,51,52,53,54,58,65];
+  const NATURE_IDS = [40,41,43,44,46,47,48,49,50,51,53,54,58,65];
   const WELLNESS_IDS = [61,62,63,64];
   const NIGHTLIFE_IDS = [11,14,24,30,31,35,66,67];
   const SPHERE_ID = 38;
@@ -284,7 +283,7 @@ function filterExperiences(ans) {
       if(vibes.includes("girlsspa") && WELLNESS_IDS.includes(exp.id)) s+=6;
       if(vibes.includes("girlsspa") && [62,63,61,64].includes(exp.id)) s+=4;
       if(vibes.includes("girlsadventure") && exp.tags.includes("adventure")) s+=4;
-      if(vibes.includes("girlsadventure") && [45,50,52,58].includes(exp.id)) s+=3;
+      if(vibes.includes("girlsadventure") && [45,50,58].includes(exp.id)) s+=3;
       if(vibes.includes("girlsmix") && exp.girlsTrip) s+=3;
     }
 
@@ -371,7 +370,7 @@ function filterExperiences(ans) {
   const MALE_REVUE_IDS = [31,35];
   const FEMALE_REVUE_IDS = [8,27,29];
   const DRAG_IDS = [70,71,72,73];
-  const TOUR_IDS = [19,26,32,36,40,41,43,44,45,46,47,48,49,50,51,52,53,54,58,65,93];
+  const TOUR_IDS = [19,26,32,36,40,41,43,44,45,46,47,48,49,50,51,53,54,58,65,93];
   const NIGHTLIFE_CAT_IDS = [11, 24, 56, 66, 67];
   const STRIP_CLUB_IDS = [74];
   const GRAND_CANYON_IDS = [44, 45, 58];
@@ -824,7 +823,8 @@ export default function TuVegasTickets() {
 
             {/* ITINERARIO */}
             <h2 style={{color:"#1a1a1a",fontSize:"1.2rem",margin:"0 0 4px",fontFamily:"'Playfair Display',serif",fontWeight:700}}>Tu Itinerario</h2>
-            <p style={{color:"#666",fontSize:"0.78rem",margin:"0 0 18px",fontFamily:"'DM Sans',sans-serif"}}>Reserva directamente — enlaces abajo</p>
+            <p style={{color:"#666",fontSize:"0.78rem",margin:"0 0 4px",fontFamily:"'DM Sans',sans-serif"}}>Reserva directamente — enlaces abajo</p>
+            <p style={{color:"#999",fontSize:"0.68rem",margin:"0 0 18px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>* Los precios son referenciales y están sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso. No nos hacemos responsables por variaciones en el precio al momento de la reserva.</p>
 
             <div style={{display:"flex",flexDirection:"column",gap:"22px",marginBottom:"30px"}}>
               {(()=>{
@@ -911,9 +911,11 @@ export default function TuVegasTickets() {
             </div>
 
             <button onClick={()=>{setStep(0);setAnswers({});setSelected(null);setAiStory("");setAiTitle("");setAiReady(false);setItinerary([]);setFreeExp([]);}}
-              style={{width:"100%",padding:"16px",borderRadius:"10px",background:"#fff",border:"2px solid #c8e6d0",color:"#1a6b3a",fontSize:"0.9rem",fontWeight:"700",cursor:"pointer",transition:"all .2s",fontFamily:"'DM Sans',sans-serif",boxShadow:"0 2px 8px rgba(0,0,0,.06)"}}
-              onMouseEnter={e=>{e.currentTarget.style.background="#f0faf4";e.currentTarget.style.borderColor="#1a6b3a"}}
-              onMouseLeave={e=>{e.currentTarget.style.background="#fff";e.currentTarget.style.borderColor="#c8e6d0"}}>
+              style={{width:"100%",padding:"16px",borderRadius:"10px",background:"linear-gradient(135deg,#1a6b3a,#27ae60)",border:"none",color:"#fff",fontSize:"0.9rem",fontWeight:"700",cursor:"pointer",transition:"all .2s",fontFamily:"'DM Sans',sans-serif",boxShadow:"0 4px 16px rgba(26,107,58,.3)"}}
+              onMouseEnter={e=>{e.currentTarget.style.boxShadow="0 6px 24px rgba(26,107,58,.5)"}}
+              onMouseLeave={e=>{e.currentTarget.style.boxShadow="0 4px 16px rgba(26,107,58,.3)"}}>
+              ↩ Empezar de Nuevo — Crear Otro Itinerario
+            </button>
               ↩ Empezar de Nuevo — Crear Otro Itinerario
             </button>
 
@@ -957,15 +959,12 @@ function ExperienceCard({exp,index,isFree,timeLabel}){
         </div>
         {isFree
           ? <span style={{background:"#f0faf4",border:"1px solid #c8e6d0",color:"#1a6b3a",fontSize:"0.75rem",fontWeight:"700",padding:"4px 12px",borderRadius:"20px",whiteSpace:"nowrap",marginLeft:"8px",fontFamily:"'DM Sans',sans-serif"}}>GRATIS</span>
-          : <span style={{color:"#b8860b",fontSize:"1.1rem",fontWeight:"bold",marginLeft:"10px",whiteSpace:"nowrap",fontFamily:"'DM Sans',sans-serif"}}>{exp.price===0?"Gratis":exp.price?"$"+exp.price:""}</span>
+          : <span style={{color:"#b8860b",fontSize:"0.95rem",fontWeight:"bold",marginLeft:"10px",whiteSpace:"nowrap",fontFamily:"'DM Sans',sans-serif"}}>
+              Desde ${exp.price}
+            </span>
         }
       </div>
-      <p style={{color:"#333",fontSize:"0.84rem",lineHeight:1.75,margin:"0 0 6px",fontFamily:"'DM Sans',sans-serif"}}>{exp.desc}</p>
-      <p style={{color:"#888",fontSize:"0.68rem",margin:"0 0 12px",fontStyle:"italic",fontFamily:"'DM Sans',sans-serif"}}>
-        {isFree
-          ? "Gratis — sin costo de entrada."
-          : "* Los precios mostrados son referenciales y están sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso. No nos hacemos responsables por variaciones en el precio al momento de la reserva."}
-      </p>
+      <p style={{color:"#333",fontSize:"0.84rem",lineHeight:1.75,margin:"0 0 12px",fontFamily:"'DM Sans',sans-serif"}}>{exp.desc}</p>
       <a href={exp.url} target="_blank" rel="noopener noreferrer"
         style={{
           display:"block",
