@@ -47,7 +47,11 @@ REGLAS:
     const data = await response.json();
     const raw = data.content?.[0]?.text || '';
     try {
-      const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim());
+      const cleaned = raw.replace(/```json/g, '').replace(/```/g, '').trim();
+const firstBrace = cleaned.indexOf('{');
+const lastBrace = cleaned.lastIndexOf('}');
+const jsonStr = cleaned.slice(firstBrace, lastBrace + 1);
+const parsed = JSON.parse(jsonStr);
       if (parsed.text && parsed.text.length > 30) {
         res.status(200).json({ title: parsed.title || '', text: parsed.text });
       } else {
