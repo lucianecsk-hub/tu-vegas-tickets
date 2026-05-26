@@ -693,7 +693,7 @@ export default function TuVegasTickets() {
         {step===totalSteps+1&&!loading&&(
           <div style={{animation:"fadeUp .5s ease"}}>
             <div style={{background:"linear-gradient(135deg,#1a0a0a,#0d1a10)",border:"1px solid rgba(240,192,64,.2)",borderLeft:"3px solid #c0392b",borderRadius:"18px",padding:"24px",marginBottom:"18px",boxShadow:"0 4px 24px rgba(0,0,0,.15)"}}>
-                           {!aiReady?(
+                 <div style={{color:"#c0392b",fontSize:"0.6rem",letterSpacing:"0.25em",marginBottom:"12px",fontFamily:"'DM Sans',sans-serif"}}>✦ TU PERFIL DE VIAJERO/A</div>          {!aiReady?(
                 <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"8px 0"}}>
                   <div style={{position:"relative",width:"28px",height:"28px",flexShrink:0}}>
                     {[0,1,2].map(i=>(<div key={i} style={{position:"absolute",inset:`${i*4}px`,borderRadius:"50%",border:"1.5px solid transparent",borderTopColor:i%2===0?"#c0392b":"#f0c040",animation:`spin ${0.8+i*.3}s linear infinite ${i%2?"reverse":""}`}}/>))}
