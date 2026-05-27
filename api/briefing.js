@@ -27,7 +27,7 @@ CAMPO "title":
 Un nombre de arquetipo de viajero, máximo 5 palabras. Como un título de perfil clasificado. Ejemplos: "El Arquitecto de Medianoche", "El Cazador de Lujo Calculado", "La Coleccionista de Sombras". Que se sienta personal y específico para este perfil.
 CAMPO "text":
 Escribe exactamente 3 párrafos cortos en español neutro que se sientan como si la persona estuviera leyendo su propio horóscopo de viaje — específico, revelador, ligeramente cinematográfico, nunca genérico. Como una cartomante que lo ha visto todo, con humor sutil e inteligente.
-PÁRRAFO 1 — EL/LA VIAJERO/A (máximo 2 oraciones):
+PÁRRAFO 1 — EL/LA VIAJERO/A (solo 1 oración):
 Describe cómo viaja esta persona — su comportamiento real y sus decisiones. Específico, conductual, con humor seco. Deben pensar "¿cómo sabía esta app eso de mí?"
 PÁRRAFO 2 — VEGAS PARA ELLOS (solo 1 oración):
 Qué tiene Las Vegas específicamente para este perfil que no encontrará en ningún otro lugar. No obvio — la capa de Vegas que encaja exactamente con quién son.
