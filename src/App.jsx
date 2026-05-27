@@ -693,7 +693,7 @@ export default function TuVegasTickets() {
         {step===totalSteps+1&&!loading&&(
           <div style={{animation:"fadeUp .5s ease"}}>
             <div style={{background:"linear-gradient(135deg,#1a0a0a,#0d1a10)",border:"1px solid rgba(240,192,64,.2)",borderLeft:"3px solid #c0392b",borderRadius:"18px",padding:"24px",marginBottom:"18px",boxShadow:"0 4px 24px rgba(0,0,0,.15)"}}>
-                 <div style={{color:"#c0392b",fontSize:"0.6rem",letterSpacing:"0.25em",marginBottom:"12px",fontFamily:"'DM Sans',sans-serif"}}>✦ TU PERFIL DE VIAJERO/A</div>          {!aiReady?(
+                 <div style={{color:"#c0392b",fontSize:"0.75rem",letterSpacing:"0.18em",marginBottom:"12px",fontFamily:"'DM Sans',sans-serif,fontWeight:"700",textTransform:"uppercase"}}> TU PERFIL DE VIAJERO</div>          {!aiReady?(
                 <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"8px 0"}}>
                   <div style={{position:"relative",width:"28px",height:"28px",flexShrink:0}}>
                     {[0,1,2].map(i=>(<div key={i} style={{position:"absolute",inset:`${i*4}px`,borderRadius:"50%",border:"1.5px solid transparent",borderTopColor:i%2===0?"#c0392b":"#f0c040",animation:`spin ${0.8+i*.3}s linear infinite ${i%2?"reverse":""}`}}/>))}
@@ -705,7 +705,7 @@ export default function TuVegasTickets() {
                 </div>
               ):(
                 <div style={{animation:"fadeUp .5s ease"}}>
-                  {aiTitle&&(<div style={{marginBottom:"14px"}}><span style={{fontSize:"0.75rem",letterSpacing:"0.18em",color:"#c0392b",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",fontWeight:"700"}}>Arquetipo de Viajero</span><div 
+                  {aiTitle&&(<div style={{marginBottom:"14px"}}>
                   style={{fontSize:"1.08rem",fontWeight:"700",color:"#f0c040",fontFamily:"'Playfair Display',serif",marginTop:"4px"}}>{aiTitle}</div></div>)}
                   {aiStory.split("\n\n").filter(p=>p.trim()).map((para,i,arr)=>(
                     <p key={i} style={{color:"#ddd",lineHeight:1.9,margin:"0 0 14px 0",fontStyle:"italic",fontSize:"0.92rem",fontFamily:"'DM Sans',sans-serif"}}>{i===0?"\"":""}{para}{i===arr.length-1?"\"":""}</p>
