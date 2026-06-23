@@ -94,7 +94,7 @@ const DB = {
     { name:"Circa Sportsbook — El Más Grande del Mundo", emoji:"🏆", price:"Gratis",      dur:"Cualquier hora", rating:4.9, dates:[], desc:"El sportsbook más grande del mundo. 4 pisos, 350 pantallas, asientos de estadio. Ve cualquier partido como en ningún otro lugar.", url:"https://vegas.vdvm.net/jRnEoP" },
     { name:"Vegas Golden Knights — NHL",                 emoji:"🏒", price:"Desde $80",   dur:"3 hrs",          rating:4.9, dates:["2026-10-01","2026-12-31"], desc:"T-Mobile Arena. El equipo que convirtió Vegas en ciudad deportiva real. La atmósfera más eléctrica de la NHL.", url:"https://vegas.vdvm.net/YVq55P" },
     { name:"Las Vegas Aces — WNBA",                      emoji:"🏀", price:"Desde $40",   dur:"2.5 hrs",        rating:4.8, dates:["2026-06-18","2026-09-22"], desc:"Campeonas de la WNBA. Michelob Ultra Arena. El baloncesto femenino más emocionante del mundo.", url:"https://vegas.vdvm.net/xJ2xx1" },
-    { name:"Las Vegas Aviators — Béisbol",               emoji:"⚾", price:"Desde $20",   dur:"3 hrs",          rating:4.7, dates:["2026-06-16","2026-09-21"], desc:"Béisbol Triple-A en Las Vegas Ballpark. Económico, familiar y muy divertido.", url:"https://vegas.vdvm.net/PzrLLe" },
+    { name:"Las Vegas Aviators — Béisbol",               emoji:"⚾", price:"Desde $20",   dur:"3 hrs",          rating:4.7, dates:["2026-07-01","2026-09-21"], desc:"Béisbol Triple-A en Las Vegas Ballpark. Económico, familiar y muy divertido.", url:"https://vegas.vdvm.net/PzrLLe" },
     { name:"Tour Allegiant Stadium — Raiders",           emoji:"🏟️", price:"Desde $72",   dur:"1.5 hrs",        rating:4.8, dates:[], desc:"Descubre los bastidores del estadio más tecnológico de la NFL. La casa de los Raiders de Las Vegas.", url:"https://vegas.vdvm.net/9VM05e" },
     { name:"NBA Summer League",                          emoji:"🏀", price:"Desde $35",   dur:"Todo el día",    rating:4.7, dates:["2026-07-09","2026-07-19"], desc:"Todos los equipos de la NBA en Las Vegas. Thomas & Mack Center / UNLV. 9 al 19 de julio. Los próximos grandes del basket.", url:"https://vegas.vdvm.net/B5zj5B" },
     { name:"NASCAR — South Point 400",                   emoji:"🏁", price:"Desde $50",   dur:"Todo el día",    rating:4.7, dates:["2026-10-04","2026-10-04"], desc:"NASCAR Cup Series. Las Vegas Motor Speedway. 4 de octubre. Coches a 300 km/h a pocos kilómetros del Strip.", url:"https://vegas.vdvm.net/6kPvkQ" },
@@ -105,11 +105,11 @@ const DB = {
   ],
 
   conciertos: [
-    { name:"Santana — An Intimate Evening: Greatest Hits Live", emoji:"🎸", price:"Desde $99",  dur:"2 hrs",   rating:4.8, dates:["2026-05-13","2026-05-24","2026-09-16","2026-09-27"], desc:"14 años de residencia. House of Blues — Mandalay Bay. Mayo y septiembre. El maestro de la guitarra en un venue íntimo único.", url:"https://vegas.vdvm.net/QY2YO9" },
+    { name:"Santana — An Intimate Evening: Greatest Hits Live", emoji:"🎸", price:"Desde $99",  dur:"2 hrs",   rating:4.8, dates:["2026-09-16","2026-09-27"], desc:"14 años de residencia. House of Blues — Mandalay Bay. Septiembre. El maestro de la guitarra en un venue íntimo único.", url:"https://vegas.vdvm.net/QY2YO9" },
     { name:"Kelly Clarkson: Studio Sessions",              emoji:"🎤", price:"Desde $99",  dur:"2 hrs",   rating:4.7, dates:["2026-07-17","2026-08-15"], desc:"La ganadora de American Idol en el Colosseum de Caesars Palace. Julio y agosto. Stronger, Since U Been Gone y más.", url:"https://vegas.vdvm.net/k4J4jx" },
     { name:"Scorpions — Coming Home to Las Vegas",         emoji:"🦂", price:"Desde $80",  dur:"2 hrs",   rating:4.7, dates:["2026-09-17","2026-10-03"], desc:"Los legendarios rockeros alemanes en Planet Hollywood. 17 sep – 3 oct. Wind of Change y Rock You Like a Hurricane en vivo.", url:"https://vegas.vdvm.net/Pzr7P6" },
     { name:"New Kids on the Block: The Right Stuff",       emoji:"🎶", price:"Desde $79",  dur:"2 hrs",   rating:4.6, dates:["2026-06-19","2026-07-04","2026-10-02","2026-10-17"], desc:"El boy band que reinventó Vegas. Dolby Live — Park MGM. Junio, julio y octubre. Hangin' Tough nunca sonó tan bien.", url:"https://vegas.vdvm.net/B5z74y" },
-    { name:"Barry Manilow: The Hits Come Home",            emoji:"🎹", price:"Desde $69",  dur:"2 hrs",   rating:4.8, dates:["2026-05-07","2026-12-19"], desc:"Residencia de por vida. Westgate Las Vegas. Mayo a diciembre. Mandy, Copacabana y el show más vendido de la ciudad.", url:"https://vegas.vdvm.net/enknK1" },
+    { name:"Barry Manilow: The Hits Come Home",            emoji:"🎹", price:"Desde $69",  dur:"2 hrs",   rating:4.8, dates:["2026-07-01","2026-12-19"], desc:"Residencia de por vida. Westgate Las Vegas. Julio a diciembre. Mandy, Copacabana y el show más vendido de la ciudad.", url:"https://vegas.vdvm.net/enknK1" },
     { name:"Wayne Newton: Up Close and Personal",          emoji:"🎙️", price:"Desde $55",  dur:"90 min",  rating:4.6, dates:["2026-09-01","2026-12-31"], desc:"Mr. Las Vegas en el Flamingo. Septiembre a diciembre. 50 años sobre los escenarios de Vegas. Danke Schoen en persona.", url:"https://vegas.vdvm.net/ZVYVQK" },
     { name:"Mary J. Blige: My Life, My Story",             emoji:"👑", price:"Desde $80",  dur:"2 hrs",   rating:4.8, dates:["2026-05-06","2026-10-31"], desc:"La Reina del Hip-Hop Soul en Dolby Live — Park MGM. Mayo, julio, agosto y octubre. Family Affair, No More Drama y más.", url:"https://vegas.vdvm.net/zznzN0" },
     { name:"Rod Stewart: The Encore Shows",                emoji:"🎸", price:"Desde $99",  dur:"2 hrs",   rating:4.7, dates:["2026-05-27","2026-08-22"], desc:"El Caballero del rock en el Colosseum de Caesars Palace. Mayo, junio y agosto. Do Ya Think I'm Sexy y Tonight's the Night.", url:"https://vegas.vdvm.net/n4W4LV" },
@@ -121,7 +121,7 @@ const DB = {
 
   sphere: [
     { name:"The Wizard of Oz at Sphere",     emoji:"🌐", price:"Desde $114", dur:"75 min",  rating:4.5, dates:[], desc:"160,000 m² de LED. El Mago de Oz como nunca lo habías visto. Múltiples sesiones diarias. La experiencia inmersiva más espectacular del mundo.", url:"https://www.getyourguide.com/las-vegas-l58/las-vegas-the-sphere-experience-the-wizard-of-oz-t969545/?partner_id=FIT427X&utm_medium=online_publisher" },
-    { name:"Kenny Chesney — Live at Sphere", emoji:"🤠", price:"Desde $69",  dur:"2 hrs",   rating:4.8, dates:["2026-06-19","2026-07-11"], desc:"El rey del country en la Sphere. 19 jun – 11 jul. Una playa de neón y 167,000 altavoces. El show de verano perfecto.", url:"https://vegas.vdvm.net/AgRg0J" },
+    { name:"Kenny Chesney — Live at Sphere", emoji:"🤠", price:"Desde $96",  dur:"2 hrs",   rating:4.8, dates:["2026-06-19","2026-07-11"], desc:"El rey del country en la Sphere. 19 jun – 11 jul. Una playa de neón y 167,000 altavoces. El show de verano perfecto.", url:"https://vegas.vdvm.net/AgRg0J" },
     { name:"Illenium — Presents Odyssey",    emoji:"🎧", price:"Desde $99",  dur:"2 hrs",   rating:4.9, dates:["2026-07-03","2026-07-04"], desc:"El productor electrónico más ambicioso en el venue más avanzado del mundo. 3 y 4 de julio. Un viaje sensorial sin igual.", url:"https://vegas.vdvm.net/L0RKyV" },
     { name:"Backstreet Boys — Into the Millennium", emoji:"🎤", price:"Desde $120", dur:"2 hrs", rating:4.9, dates:["2026-07-16","2026-08-29"], desc:"Los primeros artistas pop en Sphere. 16 jul – 29 ago. 21 shows. I Want It That Way en 360 grados. Nostalgia máxima.", url:"https://vegas.vdvm.net/JkL7EN" },
     { name:"Carín León at Sphere",           emoji:"🌵", price:"Desde $80",  dur:"2 hrs",   rating:4.9, dates:["2026-09-04","2026-09-13"], desc:"El fenómeno del regional mexicano en la Sphere. 4 al 13 de septiembre. Primera cita, Que Vuelvas — música con alma en el venue del futuro.", url:"https://vegas.vdvm.net/5k15e2" },
@@ -132,7 +132,73 @@ const DB = {
   // ── RESTAURANTES ─────────────────────────────────────────────────────
   restaurantes: [
     // Con Vista al Bellagio
-    { name:"Spago — Wolfgang Puck",       emoji:"🌊", cat:"Con Vista al Bellagio", preco:"$$$",  local:"Bellagio, 3600 Las Vegas Blvd",          rating:4.2, desc:"Terraza al aire libre frente a las fuentes del Bellagio. Sientes el agua. Pizzas artesanales, pastas frescas y cocina californiana de autor. La mejor relación vista-precio del Bellagio.", maps:"https://maps.app.goo.gl/Xd8rXTpRNEaQFeTy9" },
+    { name:"Spago — Wolfgang Puck",       emoji:"🌊", cat:"Con Vista al Bellagio", tipo:"Cocina de Autor · Mediterránea", preco:"$$$",  local:"Bellagio",          rating:4.2, tags:[], desc:"Terraza al aire libre frente a las fuentes del Bellagio. Sientes el agua. Cocina mediterránea de autor con pastas frescas y platos elegantes. La mejor relación vista-precio del Bellagio.", maps:"https://www.google.com/maps/search/Spago+Wolfgang+Puck+Bellagio+Las+Vegas" },
+    { name:"Mon Ami Gabi",                emoji:"🥐", cat:"Con Vista al Bellagio", tipo:"Bistró Francés",                 preco:"$$",   local:"Paris Las Vegas",    rating:4.7, tags:["gf"], desc:"Bistró francés con terraza al nivel de la calle, justo frente a las fuentes. Crepes, steak frites y desayunos increíbles. Con viento en los shows, puedes sentir el agua desde la mesa.", maps:"https://www.google.com/maps/search/Mon+Ami+Gabi+Paris+Las+Vegas" },
+    { name:"Chéri Rooftop",               emoji:"🗼", cat:"Con Vista al Bellagio", tipo:"Cócteles · Francesa",            preco:"$$",   local:"Paris Las Vegas",    rating:4.3, tags:[], desc:"Rooftop bajo la Torre Eiffel de París con vista directa al Bellagio. Ambiente de jardín parisino de los años 50, cócteles creativos y platos franceses. El secreto mejor guardado.", maps:"https://www.google.com/maps/search/Cheri+Rooftop+Paris+Las+Vegas" },
+    { name:"Eiffel Tower Restaurant",     emoji:"🗼", cat:"Con Vista al Bellagio", tipo:"Alta Cocina Francesa",           preco:"$$$$", local:"Paris Las Vegas",    rating:4.6, tags:[], desc:"Cena en el piso 11 de la Torre Eiffel de Vegas. Vista panorámica directa a las fuentes del Bellagio. El más romántico del Strip.", maps:"https://www.google.com/maps/search/Eiffel+Tower+Restaurant+Paris+Las+Vegas" },
+    // Rooftop
+    { name:"Beer Park",                   emoji:"🍺", cat:"Rooftop",              tipo:"Cervezas · Hamburguesas",        preco:"$$",   local:"Paris Las Vegas",    rating:4.2, tags:[], desc:"Terraza abierta sobre el Strip con vista al Bellagio. Cervezas artesanales, hamburguesas y el mejor atardecer de Vegas. Ideal para ver el Strip sin gastar de más.", maps:"https://www.google.com/maps/search/Beer+Park+Paris+Las+Vegas" },
+    { name:"BrewDog Las Vegas",           emoji:"🍻", cat:"Rooftop",              tipo:"Craft Beer · Bar & Grill",       preco:"$$",   local:"Las Vegas Strip",    rating:4.7, tags:[], desc:"Rooftop bar escocés con vistas al Strip. Múltiples barras, cervezas artesanales, hamburguesas y ambiente relajado. Uno de los favoritos de los locales.", maps:"https://www.google.com/maps/search/BrewDog+Las+Vegas+Strip" },
+    { name:"Ole Red Las Vegas",           emoji:"🤠", cat:"Rooftop",              tipo:"Bar Country · Cocina Tejana",    preco:"$$",   local:"Horseshoe Las Vegas", rating:4.6, tags:[], desc:"Bar country de 3 pisos con música en vivo todas las noches. Comida tejana, karaoke, rooftop y ambiente de fiesta hasta las 4am. El favorito de los fans del country.", maps:"https://www.google.com/maps/search/Ole+Red+Las+Vegas+Horseshoe" },
+    { name:"Hard Rock Cafe",              emoji:"🎸", cat:"Rooftop",              tipo:"Hamburguesas · Rock & Roll",     preco:"$$",   local:"Las Vegas Strip",    rating:4.4, tags:[], desc:"El templo del rock and roll. Guitarras icónicas, memorabilia legendaria y hamburguesas enormes. Terraza con vista al Strip. Abierto desde 7:30am.", maps:"https://www.google.com/maps/search/Hard+Rock+Cafe+Las+Vegas+Strip" },
+    { name:"Top of the World",            emoji:"🌆", cat:"Rooftop",              tipo:"Americana · Restaurante Giratorio", preco:"$$$$", local:"The STRAT",        rating:4.3, tags:[], desc:"Cena giratoria a 264 metros de altura. Las Vegas entera bajo tus pies, una vuelta completa cada 80 minutos. Romántico, espectacular e imprescindible.", maps:"https://www.google.com/maps/search/Top+of+the+World+Restaurant+Strat+Las+Vegas" },
+    { name:"Giada",                       emoji:"🍝", cat:"Rooftop",              tipo:"Italiana",                       preco:"$$$",  local:"The Cromwell",       rating:4.6, tags:[], desc:"La chef Giada De Laurentiis trae la cocina italiana moderna al Strip. Terraza con vistas únicas al Boulevard — una de las más bonitas de Vegas.", maps:"https://www.google.com/maps/search/Giada+Restaurant+Cromwell+Las+Vegas" },
+    // Fine Dining
+    { name:"Gordon Ramsay Hell's Kitchen",emoji:"🔥", cat:"Fine Dining",          tipo:"Steakhouse · Británica",         preco:"$$$",  local:"Caesars Palace",     rating:4.7, tags:["gf"], desc:"El restaurante más famoso del Strip. Beef Wellington legendario en el teatro más icónico de Gordon Ramsay. Reserva con anticipación — siempre lleno.", maps:"https://www.google.com/maps/search/Gordon+Ramsay+Hells+Kitchen+Caesars+Palace+Las+Vegas" },
+    { name:"Joël Robuchon",               emoji:"👨‍🍳", cat:"Fine Dining",          tipo:"Alta Cocina Francesa",           preco:"$$$$", local:"MGM Grand",          rating:4.9, tags:[], desc:"El único restaurante con 3 estrellas Michelin en Las Vegas. La experiencia gastronómica más exclusiva de Nevada. Una noche que no olvidarás.", maps:"https://www.google.com/maps/search/Joel+Robuchon+MGM+Grand+Las+Vegas" },
+    { name:"STK Steakhouse",              emoji:"🥩", cat:"Fine Dining",          tipo:"Steakhouse Moderna",             preco:"$$$",  local:"Cosmopolitan",       rating:4.5, tags:[], desc:"El steakhouse más cool de Vegas. Ambiente de club, música en vivo y los mejores cortes. Ideal para grupos y celebraciones especiales.", maps:"https://www.google.com/maps/search/STK+Steakhouse+Cosmopolitan+Las+Vegas" },
+    { name:"Nobu Las Vegas",              emoji:"🍣", cat:"Fine Dining",          tipo:"Japonesa · Peruana",             preco:"$$$",  local:"Caesars Palace",     rating:4.6, tags:["gf"], desc:"El templo mundial de la cocina japonesa-peruana. Black Cod with Miso — el plato más imitado del mundo. Una visita obligatoria en el Strip.", maps:"https://www.google.com/maps/search/Nobu+Las+Vegas+Caesars+Palace" },
+    { name:"Mizumi",                      emoji:"🎋", cat:"Fine Dining",          tipo:"Japonesa · Teppanyaki",          preco:"$$$",  local:"Wynn Las Vegas",     rating:4.5, tags:[], desc:"Japonés de alta gama dentro del Wynn. Teppanyaki espectacular con vistas al lago y cascada. Sushi, mariscos y wagyu de primera. Abre solo jueves a domingo.", maps:"https://www.google.com/maps/search/Mizumi+Restaurant+Wynn+Las+Vegas" },
+    { name:"Tao Las Vegas",               emoji:"🏮", cat:"Fine Dining",          tipo:"Asiática · Japonesa · Dim Sum",  preco:"$$$",  local:"The Venetian",       rating:4.4, tags:[], desc:"El restaurante asiático más icónico del Strip. Buda gigante, dim sum, sushi y platos asiáticos de autor en un ambiente espectacular de dos pisos. Una experiencia única.", maps:"https://www.google.com/maps/search/Tao+Restaurant+Venetian+Las+Vegas" },
+    { name:"The Buffet at Wynn",          emoji:"🦞", cat:"Fine Dining",          tipo:"Buffet Premium",                 preco:"$$$",  local:"Wynn Las Vegas",     rating:4.2, tags:[], desc:"El buffet más premium de Las Vegas. Cangrejos, carnes a la parrilla, estaciones gourmet y postres de autor. Solo viernes, sábado y domingo.", maps:"https://www.google.com/maps/search/The+Buffet+Wynn+Las+Vegas" },
+    { name:"Joe's Seafood Prime Steak",   emoji:"🦀", cat:"Fine Dining",          tipo:"Stone Crab · Mariscos Frescos",  preco:"$$$$", local:"Forum Shops, Caesars", rating:4.7, tags:["gf"], desc:"Stone crab, prime steak y mariscos frescos en el corazón del Strip. Menú GF dedicado. Uno de los favoritos de temporada para celebraciones especiales.", maps:"https://www.google.com/maps/search/Joes+Seafood+Prime+Steak+Stone+Crab+Las+Vegas" },
+    // Casual
+    { name:"Grand Lux Cafe",              emoji:"✨", cat:"Casual",               tipo:"Americana · Abierto 24hrs",      preco:"$$",   local:"The Venetian",       rating:4.5, tags:["gf"], desc:"Abierto 24 horas. El restaurante del Venetian que lo tiene todo: desayunos espectaculares, pasta, pollo y los postres más irresistibles del Strip.", maps:"https://www.google.com/maps/search/Grand+Lux+Cafe+Venetian+Las+Vegas" },
+    { name:"Virgil's Real BBQ",           emoji:"🍖", cat:"Casual",               tipo:"BBQ Americano",                  preco:"$$",   local:"LINQ",               rating:4.3, tags:[], desc:"BBQ americano de verdad en el corazón del Strip. Costillas, brisket y pulled pork que se deshacen solos. Vista al High Roller incluida.", maps:"https://www.google.com/maps/search/Virgils+Real+BBQ+LINQ+Las+Vegas" },
+    { name:"The Cheesecake Factory",      emoji:"🍰", cat:"Casual",               tipo:"Americana · Internacional",      preco:"$$",   local:"Forum Shops, Caesars", rating:4.4, tags:["gf"], desc:"Menú enorme con más de 200 platos y porciones gigantes — comparte con alguien. El cheesecake de chocolate Godiva es obligatorio.", maps:"https://www.google.com/maps/search/Cheesecake+Factory+Forum+Shops+Las+Vegas" },
+    { name:"Olive Garden",                emoji:"🍝", cat:"Casual",               tipo:"Italiana",                       preco:"$$",   local:"Las Vegas Strip",    rating:4.6, tags:["gf"], desc:"Pastas, sopas y el pan de ajo más famoso de América. Justo en el Strip, precio accesible y porciones generosas. Ideal para familias.", maps:"https://www.google.com/maps/search/Olive+Garden+Las+Vegas+Strip" },
+    { name:"Yardbird",                    emoji:"🍗", cat:"Casual",               tipo:"Pollo Frito Sureño",             preco:"$$",   local:"The Venetian",       rating:4.6, tags:["gf"], desc:"El mejor pollo frito de Las Vegas — con harina de arroz, es gluten friendly. Cocina sureña reconfortante y cócteles increíbles.", maps:"https://www.google.com/maps/search/Yardbird+Venetian+Las+Vegas" },
+    { name:"Shake Shack",                 emoji:"🍔", cat:"Casual",               tipo:"Hamburguesas",                   preco:"$$",   local:"New York-New York",   rating:4.4, tags:[], desc:"La hamburguesería más de moda de América. ShackBurger jugoso, papas crinkle y milkshakes espesos. Abierto desde las 6am hasta las 4am.", maps:"https://www.google.com/maps/search/Shake+Shack+New+York+New+York+Las+Vegas" },
+    { name:"Black Tap CrazyShakes",       emoji:"🥤", cat:"Casual",               tipo:"Milkshakes · Hamburguesas",      preco:"$$",   local:"The Venetian",       rating:4.3, tags:[], desc:"Los milkshakes más absurdos del mundo — coronados con tortas enteras, algodón de azúcar y dulces. Instagram obligatorio. Abierto hasta la 1am.", maps:"https://www.google.com/maps/search/Black+Tap+Venetian+Las+Vegas" },
+    { name:"In-N-Out Burger",             emoji:"🍔", cat:"Casual",               tipo:"Hamburguesas",                   preco:"$",    local:"Las Vegas Strip",    rating:4.8, tags:["gf"], desc:"La hamburguesa más famosa del Oeste americano. Pide el menú secreto 'Animal Style'. Para GF: pide 'Protein Style' en lechuga — sin cruces.", maps:"https://www.google.com/maps/search/In-N-Out+Burger+near+Las+Vegas+Strip" },
+    { name:"Raising Cane's",              emoji:"🍗", cat:"Casual",               tipo:"Pollo Frito",                    preco:"$",    local:"Las Vegas Strip",    rating:4.6, tags:[], desc:"El pollo frito más adictivo del Strip. Solo tenders, papas, ensalada y la Cane's Sauce secreta. Abierto hasta las 4am. Rápido, sabroso y barato.", maps:"https://www.google.com/maps/search/Raising+Canes+Las+Vegas+Strip" },
+    { name:"Wicked Spoon",                emoji:"🍽️", cat:"Casual",               tipo:"Buffet Gourmet",                 preco:"$$$",  local:"Cosmopolitan",       rating:4.5, tags:["gf"], desc:"El buffet más instagrameable de Las Vegas. Estaciones gourmet, mariscos frescos y postres de autor. Opciones sin gluten disponibles. Vale cada dólar.", maps:"https://www.google.com/maps/search/Wicked+Spoon+Cosmopolitan+Las+Vegas" },
+    // Desayuno
+    { name:"Siegel's Bagelmania",         emoji:"🥯", cat:"Desayuno",             tipo:"Bagels · Deli",                  preco:"$$",   local:"Convention Center",  rating:4.6, tags:["gf"], desc:"El deli más querido de Las Vegas. Bagels frescos horneados cada mañana con docenas de cream cheese. Tienen bagels sin gluten. Abre a las 6am.", maps:"https://www.google.com/maps/search/Siegels+Bagelmania+Las+Vegas" },
+    { name:"Urth Caffé",                  emoji:"☕", cat:"Desayuno",             tipo:"Café Orgánico",                  preco:"$$",   local:"Wynn Las Vegas",     rating:4.2, tags:[], desc:"El café más instagrameable de Las Vegas. Dentro del Wynn, con jardín interior, fuente y ambiente europeo. Lattes de pistacho y desayunos orgánicos.", maps:"https://www.google.com/maps/search/Urth+Caffe+Wynn+Las+Vegas" },
+    { name:"Denny's",                     emoji:"🍳", cat:"Desayuno",             tipo:"Desayuno Americano",             preco:"$",    local:"Las Vegas Strip",    rating:4.3, tags:[], desc:"Abierto 24 horas. El desayuno americano clásico: pancakes esponjosos, huevos y café sin límite. El lugar favorito de Vegas a las 3am.", maps:"https://www.google.com/maps/search/Denny's+near+me+Las+Vegas+Strip" },
+    { name:"Hash House A Go Go",          emoji:"🥞", cat:"Desayuno",             tipo:"Desayuno Gigante",               preco:"$$",   local:"The LINQ",           rating:4.8, tags:[], desc:"Las porciones más ridículas de Vegas — los pancakes son del tamaño de tu cara. Pollo con waffles legendario. Llega temprano porque la fila crece rápido.", maps:"https://www.google.com/maps/search/Hash+House+A+Go+Go+LINQ+Las+Vegas" },
+    { name:"Eggslut",                     emoji:"🥚", cat:"Desayuno",             tipo:"Sándwiches de Huevo",            preco:"$$",   local:"Cosmopolitan",       rating:4.3, tags:["gf"], desc:"El sandwich de huevo más famoso de Instagram. Brioche suave, huevos sedosos y las truffle hashbrowns más adictivas del Strip. Pide el omelet bowl — es GF.", maps:"https://www.google.com/maps/search/Eggslut+Cosmopolitan+Las+Vegas" },
+    { name:"Peppermill Restaurant",       emoji:"☕", cat:"Desayuno",             tipo:"Diner Americano",                preco:"$$",   local:"Las Vegas Strip",    rating:4.5, tags:[], desc:"El diner más icónico de Las Vegas desde 1972. Porciones enormes, ambiente retro de los 70s y el Fireside Lounge de fuego vivo. Abierto 24 horas los fines de semana.", maps:"https://www.google.com/maps/search/Peppermill+Restaurant+Las+Vegas" },
+    { name:"Black Bear Diner",            emoji:"🐻", cat:"Desayuno",             tipo:"Diner Familiar",                 preco:"$",    local:"Las Vegas Strip",    rating:4.5, tags:[], desc:"Diner familiar estilo cabaña americana con porciones gigantes. Desayuno todo el día, pancakes esponjosos y el chicken fried steak más generoso de Vegas.", maps:"https://www.google.com/maps/search/Black+Bear+Diner+Las+Vegas" },
+    { name:"IHOP",                        emoji:"🥞", cat:"Desayuno",             tipo:"Pancakes · Desayuno",            preco:"$",    local:"Las Vegas Strip",    rating:4.4, tags:[], desc:"El templo internacional de los pancakes. Abierto 24 horas. Prueba el Tres Leches off-menu que todos piden.", maps:"https://www.google.com/maps/search/IHOP+near+Las+Vegas+Strip" },
+    // Famosos de la TV
+    { name:"Big Chicken — Shaquille O'Neal", emoji:"🏀", cat:"Famosos de la TV",  tipo:"Pollo Frito",                    preco:"$$",   local:"Paradise Rd",        rating:4.6, tags:[], desc:"El restaurante del legendario Shaquille O'Neal. Sándwich de pollo doble empanado, mac & cheese y banana pudding. El más querido de los famosos de Vegas.", maps:"https://www.google.com/maps/search/Big+Chicken+Shaquille+ONeal+Las+Vegas" },
+    { name:"Guy Fieri's Vegas Kitchen",   emoji:"🔥", cat:"Famosos de la TV",    tipo:"Americana Extrema",              preco:"$$",   local:"LINQ",               rating:3.9, tags:[], desc:"El rey del Food Network en el Strip. Trash Can Nachos, mac & cheese burgers y alas de pollo con whisky. Comida americana exagerada — exactamente como en TV.", maps:"https://www.google.com/maps/search/Guy+Fieri+Vegas+Kitchen+LINQ+Las+Vegas" },
+    { name:"Carlo's Bakery — Cake Boss",  emoji:"🎂", cat:"Famosos de la TV",    tipo:"Pastelería Italiana",            preco:"$$",   local:"The Venetian",       rating:3.7, tags:[], desc:"La famosa panadería del Cake Boss Buddy Valastro de TLC. Lobster Tail, cannolis, Rainbow Cake y pasteles de autor. El lugar más fotografiado del Venetian.", maps:"https://www.google.com/maps/search/Carlos+Bakery+Venetian+Las+Vegas" },
+    { name:"Buddy V's Ristorante",        emoji:"🍝", cat:"Famosos de la TV",    tipo:"Italiana · Pasta",               preco:"$$$",  local:"The Venetian",       rating:4.5, tags:[], desc:"El restaurante italiano de Buddy Valastro (Cake Boss). Mozzarella estirada en vivo, pasta hecha a mano y la pizza más auténtica del Strip. Un show en sí mismo.", maps:"https://www.google.com/maps/search/Buddy+Vs+Ristorante+Venetian+Las+Vegas" },
+    { name:"Gordon Ramsay Hell's Kitchen (TV)", emoji:"👨‍🍳", cat:"Famosos de la TV", tipo:"Steakhouse · Hell's Kitchen", preco:"$$$", local:"Caesars Palace",    rating:4.7, tags:["gf"], desc:"El restaurante de la serie Hell's Kitchen de Fox. Beef Wellington, pan de salmón y el menú exacto del programa. Reserva con semanas de anticipación.", maps:"https://www.google.com/maps/search/Gordon+Ramsay+Hells+Kitchen+Caesars+Palace+Las+Vegas" },
+    { name:"Amalfi — Bobby Flay",         emoji:"🐟", cat:"Famosos de la TV",    tipo:"Italiana · Mariscos",            preco:"$$$",  local:"Caesars Palace",     rating:4.4, tags:[], desc:"El campeón de Iron Chef trae la Costa Amalfitana al Strip. Pescado fresco del día, pasta y mariscos con técnica italiana auténtica. Abre solo a la cena.", maps:"https://www.google.com/maps/search/Amalfi+Bobby+Flay+Caesars+Palace+Las+Vegas" },
+    { name:"Bazaar Meat — José Andrés",   emoji:"🥩", cat:"Famosos de la TV",    tipo:"Carnes · Cocina de Vanguardia",  preco:"$$$$", local:"The Venetian",       rating:4.5, tags:[], desc:"El chef español más famoso del mundo — conocido por su disputa con Trump — trae su churrasco de autor al Venetian. Cotton candy foie gras, vaca vieja y espectáculo total.", maps:"https://www.google.com/maps/search/Bazaar+Meat+Jose+Andres+Venetian+Las+Vegas" },
+    // Confeitaria
+    { name:"Hershey's Chocolate World",   emoji:"🍫", cat:"Confeitaria",          tipo:"Chocolates",                     preco:"$",    local:"New York-New York",   rating:4.5, tags:[], desc:"El mundo del chocolate de Hershey's — como entrar a la fábrica de Willy Wonka. Chocolates, helados y souvenirs. Perfecto para llevar de regalo. Abierto hasta la 1am.", maps:"https://www.google.com/maps/search/Hersheys+Chocolate+World+Las+Vegas" },
+    { name:"Donutique",                   emoji:"🍩", cat:"Confeitaria",          tipo:"Donuts Gourmet",                 preco:"$$",   local:"The Venetian",       rating:4.2, tags:[], desc:"Donuts gourmet europeos en el corazón del Venetian. Cada pieza es una obra de arte: tiramisu, pistacho, crema de limón. Opciones veganas y sin gluten.", maps:"https://www.google.com/maps/search/Donutique+Venetian+Las+Vegas" },
+    { name:"Zeppola Cafe",                emoji:"🥐", cat:"Confeitaria",          tipo:"Croissants · Café",              preco:"$$",   local:"The Venetian",       rating:4.3, tags:[], desc:"El café viral de la Piazza San Marco en el Venetian. Los Cube Croissants y Rolly Croissants son los más fotografiados de Las Vegas. Receta familiar italiana desde las 4am.", maps:"https://www.google.com/maps/search/Zeppola+Cafe+Venetian+Las+Vegas" },
+    { name:"Dominique Ansel",             emoji:"🌸", cat:"Confeitaria",          tipo:"Pastelería Francesa",            preco:"$$$",  local:"Paris Las Vegas",    rating:4.0, tags:[], desc:"El inventor del Cronut. Pastelería de autor francesa con creaciones únicas cada temporada. El Cookie Shot (llenado con leche al momento) es imprescindible.", maps:"https://www.google.com/maps/search/Dominique+Ansel+Paris+Las+Vegas" },
+    // Vegano
+    { name:"Tacotarian",                  emoji:"🌮", cat:"Vegano",               tipo:"Tacos Veganos",                  preco:"$",    local:"Planet Hollywood",   rating:4.6, tags:["gf","vegan"], desc:"100% plant-based. Los mejores tacos veganos del Strip — birria, chorizo y al pastor sin carne que engañan hasta a los carnívoros. Tortillas de maíz GF.", maps:"https://www.google.com/maps/search/Tacotarian+Las+Vegas" },
+    { name:"True Food Kitchen",           emoji:"🥗", cat:"Vegano",               tipo:"Saludable · Orgánico",           preco:"$$",   local:"Forum Shops, Caesars", rating:4.5, tags:["gf","vegan"], desc:"Cocina saludable y orgánica con menú amplio vegano y GF. Edamame dumplings, bowls de quinoa y hamburguesas plant-based. En el Forum Shops de Caesars.", maps:"https://www.google.com/maps/search/True+Food+Kitchen+Las+Vegas+Forum+Shops" },
+    { name:"Nacho Daddy",                 emoji:"🧀", cat:"Vegano",               tipo:"Mexicano Vegano",                preco:"$$",   local:"Las Vegas Strip",    rating:4.4, tags:["vegan"], desc:"Bar mexicano con menú vegano completo — nachos, burritos y chimichanga de pollo plant-based. Ambiente de sports bar, abierto hasta las 3am.", maps:"https://www.google.com/maps/search/Nacho+Daddy+Las+Vegas" },
+    { name:"Crossroads Kitchen",          emoji:"🌿", cat:"Vegano",               tipo:"Alta Cocina Vegana",             preco:"$$$",  local:"Resorts World",      rating:4.5, tags:["gf","vegan"], desc:"El único restaurante vegano fine dining en el Strip. Chef Tal Ronnen. Calamares veganos, pasta carbonara plant-based y brunch buffet los domingos. Impresionante.", maps:"https://www.google.com/maps/search/Crossroads+Kitchen+Resorts+World+Las+Vegas" },
+  ],
+
+  // ── CHURRASCARIAS ────────────────────────────────────────────────────
+  churrascarias: [
+    { name:"Galpão Gaucho",   emoji:"🏆", cat:"Churrascaria", tipo:"Churrasco Brasileño", preco:"$$$",  local:"Las Vegas Strip",        rating:4.8, desc:"La mejor churrascaria del Strip. 18 cortes de la parrilla incluyendo el legendario Golden Steak® bañado en oro. Barra de ensaladas con 45 opciones. Servicio impecable, ambiente elegante.", maps:"https://www.google.com/maps/search/Galpao+Gaucho+Las+Vegas" },
+    { name:"Fogo de Chão",    emoji:"🔥", cat:"Churrascaria", tipo:"Churrasco Brasileño", preco:"$$$",  local:"The Venetian",           rating:4.7, desc:"Picanha, fraldinha y filet mignon asados en brasa abierta y cortados en la mesa por gauchos. Dos niveles, parrilla a la vista y el Market Table más completo de Vegas.", maps:"https://www.google.com/maps/search/Fogo+de+Chao+Venetian+Las+Vegas" },
+    { name:"Texas de Brazil",  emoji:"🤠", cat:"Churrascaria", tipo:"Churrasco Brasileño", preco:"$$$",  local:"Town Square",            rating:4.5, desc:"Churrascaria al estilo texano-brasileño con cortes de res, cerdo, cordero, pollo y chorizo a voluntad. Barra de ensaladas con más de 50 opciones. Ideal para grupos grandes.", maps:"https://www.google.com/maps/search/Texas+de+Brazil+Las+Vegas+Town+Square" },
+  ],
+};
     { name:"Mon Ami Gabi",                emoji:"🥐", cat:"Con Vista al Bellagio", preco:"$$",   local:"Paris Las Vegas, 3655 Las Vegas Blvd",    rating:4.7, desc:"Bistró francés con terraza al nivel de la calle, justo frente a las fuentes. Crepes, steak frites y desayunos increíbles. Con viento en los shows, puedes sentir el agua desde la mesa.", maps:"https://maps.app.goo.gl/MFxK1kGq3pjvVCaj8" },
     { name:"Chéri Rooftop",               emoji:"🗼", cat:"Con Vista al Bellagio", preco:"$$",   local:"Paris Las Vegas, 3655 Las Vegas Blvd",    rating:4.3, desc:"Rooftop bajo la Torre Eiffel de París con vista directa al Bellagio. Ambiente de jardín parisino de los años 50, cócteles creativos y platos franceses. El secreto mejor guardado de Paris Las Vegas.", maps:"https://maps.app.goo.gl/ZCYfHPmE7TK3i6j68" },
     { name:"Eiffel Tower Restaurant",     emoji:"🗼", cat:"Con Vista al Bellagio", preco:"$$$$", local:"Paris Las Vegas, 3655 Las Vegas Blvd",    rating:4.6, desc:"Cena en el piso 11 de la Torre Eiffel de Vegas. Vista panorámica directa a las fuentes del Bellagio. El más romántico del Strip.", maps:"https://maps.app.goo.gl/EiffelTowerRestaurant" },
@@ -266,9 +332,8 @@ const S = {
   resBack: { background:"linear-gradient(135deg, #d400bc 0%, #8800a0 100%)", border:"none", color:"#fff", fontSize:"16px", fontWeight:700, letterSpacing:"1px", cursor:"pointer", fontFamily:"'Inter', sans-serif", marginBottom:"24px", display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", padding:"14px 24px", borderRadius:"10px", width:"100%", boxShadow:"0 0 20px rgba(200,0,180,0.4)", transition:"all 0.2s" },
   avisoLegal: { fontSize:"10px", color:"rgba(255,255,255,0.25)", fontStyle:"italic", lineHeight:1.6, marginBottom:"24px", padding:"10px 14px", background:"rgba(255,255,255,0.02)", borderRadius:"6px", border:"1px solid rgba(255,255,255,0.05)" },
   catHeader: { display:"flex", alignItems:"center", gap:"10px", marginBottom:"16px", paddingBottom:"10px", borderBottom:"1px solid rgba(224,0,200,0.2)" },
-  catEmoji: { fontSize:"22px" },
-  catTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"20px", fontWeight:700, color:"#fff" },
-  catDestaque: { fontSize:"10px", fontWeight:700, letterSpacing:"3px", textTransform:"uppercase", color:"#e000c8", background:"rgba(224,0,200,0.1)", padding:"3px 10px", borderRadius:"20px", border:"1px solid rgba(224,0,200,0.3)", marginLeft:"auto", whiteSpace:"nowrap" },
+  catTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:700, color:"#fff" },
+  catSubTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"18px", fontWeight:700, color:"rgba(255,255,255,0.85)", marginBottom:"12px", marginTop:"20px", paddingBottom:"6px", borderBottom:"1px solid rgba(255,255,255,0.08)" },
   card: { background:"rgba(255,255,255,0.03)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"14px", padding:"16px", marginBottom:"10px", transition:"all 0.2s" },
   cardTop: { display:"flex", alignItems:"flex-start", gap:"12px", marginBottom:"10px" },
   cardEmoji: { fontSize:"32px", lineHeight:1, flexShrink:0 },
@@ -280,9 +345,9 @@ const S = {
   cardPrice: { fontSize:"16px", fontWeight:700, color:"#ffd700", whiteSpace:"nowrap", marginLeft:"8px", flexShrink:0 },
   cardDesc: { fontSize:"12px", color:"rgba(255,255,255,0.55)", lineHeight:1.7, marginBottom:"12px" },
   cardBtn: { display:"block", background:"linear-gradient(135deg, #d400bc, #8800a0)", color:"#fff", textAlign:"center", padding:"12px", borderRadius:"8px", textDecoration:"none", fontSize:"13px", fontWeight:700, fontFamily:"'Inter', sans-serif", letterSpacing:"0.5px", boxShadow:"0 4px 16px rgba(200,0,180,0.3)" },
-  calWrap: { background:"rgba(255,255,255,0.03)", border:"1px solid rgba(224,0,200,0.2)", borderRadius:"12px", padding:"14px", marginBottom:"20px" },
-  calTitle: { fontSize:"11px", fontWeight:700, letterSpacing:"2px", textTransform:"uppercase", color:"#e000c8", marginBottom:"10px" },
-  calInput: { width:"100%", background:"rgba(255,255,255,0.06)", border:"1px solid rgba(224,0,200,0.3)", borderRadius:"8px", padding:"10px 14px", color:"#fff", fontSize:"14px", fontFamily:"'Inter', sans-serif", outline:"none", cursor:"pointer" },
+  calWrap: { background:"rgba(224,0,200,0.08)", border:"2px solid rgba(224,0,200,0.4)", borderRadius:"12px", padding:"16px", marginBottom:"20px" },
+  calTitle: { fontSize:"14px", fontWeight:800, letterSpacing:"1px", textTransform:"uppercase", color:"#e000c8", marginBottom:"12px" },
+  calInput: { width:"100%", background:"rgba(255,255,255,0.08)", border:"1.5px solid rgba(224,0,200,0.4)", borderRadius:"8px", padding:"12px 14px", color:"#fff", fontSize:"16px", fontFamily:"'Inter', sans-serif", outline:"none", cursor:"pointer" },
 };
 
 // ─── COMPONENTES ──────────────────────────────────────────────────────────
@@ -330,7 +395,7 @@ function ExpCard({ exp }) {
 
 function RestCard({ rest }) {
   const c = CAT_COLORS[rest.cat] || CAT_COLORS["Casual"];
-  const tagCat = { fontSize:"10px", padding:"2px 8px", borderRadius:"20px", fontWeight:600, background:c.bg, color:c.text, border:`1px solid ${c.border}` };
+  const tagTipo = { fontSize:"10px", padding:"2px 8px", borderRadius:"20px", fontWeight:600, background:c.bg, color:c.text, border:`1px solid ${c.border}` };
   const tagPreco = { fontSize:"11px", padding:"2px 8px", borderRadius:"20px", fontWeight:700, background:"rgba(255,215,0,0.12)", color:"#ffd700", border:"1px solid rgba(255,215,0,0.3)" };
   const tagGF = { fontSize:"10px", padding:"2px 7px", borderRadius:"20px", fontWeight:600, background:"rgba(52,211,153,0.12)", color:"#6ee7b7", border:"1px solid rgba(52,211,153,0.4)" };
   const tagVegan = { fontSize:"10px", padding:"2px 7px", borderRadius:"20px", fontWeight:600, background:"rgba(52,211,153,0.18)", color:"#34d399", border:"1px solid rgba(52,211,153,0.5)" };
@@ -341,13 +406,13 @@ function RestCard({ rest }) {
         <div style={S.cardInfo}>
           <div style={S.cardName}>{rest.name}</div>
           <div style={S.cardTags}>
-            <span style={tagCat}>{rest.cat}</span>
+            {rest.tipo && <span style={tagTipo}>{rest.tipo}</span>}
             {rest.preco && <span style={tagPreco}>{rest.preco}</span>}
             {rest.tags?.includes("gf") && <span style={tagGF}>🌾 GF</span>}
             {rest.tags?.includes("vegan") && <span style={tagVegan}>🌿 Vegano</span>}
             {rest.rating && <span style={S.tagRating}>⭐ {rest.rating}</span>}
           </div>
-          <div style={{fontSize:"10px", color:"rgba(255,255,255,0.35)", marginTop:"5px"}}>📍 {rest.local}</div>
+          {rest.local && <div style={{fontSize:"10px", color:"rgba(255,255,255,0.35)", marginTop:"5px"}}>📍 {rest.local}</div>}
         </div>
       </div>
       <div style={S.cardDesc}>{rest.desc}</div>
@@ -555,11 +620,12 @@ function ResultadosScreen({ sel, subcatRest, onVolver }) {
   const [fecha, setFecha] = useState("");
 
   const filtrarPorFecha = (items, catId) => {
-    if (!CAT_META[catId].hasFecha) return items;
+    if (!CAT_META[catId]?.hasFecha) return items;
     if (!fecha) return items;
     const d = new Date(fecha + "T00:00:00");
     return items.filter(item => {
-      if (!item.dates || item.dates.length === 0) return true;
+      // Itens sem datas específicas só aparecem sem filtro
+      if (!item.dates || item.dates.length === 0) return false;
       const ini = new Date(item.dates[0] + "T00:00:00");
       const fin = new Date(item.dates[item.dates.length - 1] + "T00:00:00");
       return d >= ini && d <= fin;
@@ -635,20 +701,44 @@ function ResultadosScreen({ sel, subcatRest, onVolver }) {
             </div>
           )}
 
-          {sections.map(({ catId, meta, items }, si) => (
-            <div key={catId} style={{marginBottom:"36px", animation:`fadeUp 0.45s ease ${si*0.08}s both`}}>
-              <div style={S.catHeader}>
-                <span style={S.catEmoji}>{meta.emoji}</span>
-                <span style={S.catTitulo}>{meta.label}</span>
-                <span style={S.catDestaque}>{meta.destaque}</span>
+          {sections.map(({ catId, meta, items }, si) => {
+            if (catId === "restaurantes") {
+              // Agrupar por subcategoria e ordenar por preço dentro de cada uma
+              const subcatOrder = ["Desayuno","Casual","Con Vista al Bellagio","Churrascaria","Rooftop","Fine Dining","Famosos de la TV","Confeitaria","Vegano"];
+              const grupos = {};
+              items.forEach(item => {
+                const k = item.cat || "Outros";
+                if (!grupos[k]) grupos[k] = [];
+                grupos[k].push(item);
+              });
+              const subcatsPresentes = subcatOrder.filter(k => grupos[k]?.length > 0);
+              return (
+                <div key={catId} style={{marginBottom:"36px", animation:`fadeUp 0.45s ease ${si*0.08}s both`}}>
+                  <div style={S.catHeader}>
+                    <span style={S.catTitulo}>Bares & Restaurantes</span>
+                  </div>
+                  {subcatsPresentes.map(subcat => (
+                    <div key={subcat}>
+                      <div style={S.catSubTitulo}>{subcat}</div>
+                      {grupos[subcat]
+                        .sort((a,b) => (PRECO_ORDER[a.preco]||0) - (PRECO_ORDER[b.preco]||0))
+                        .map(exp => <RestCard key={exp.name} rest={exp} />)}
+                    </div>
+                  ))}
+                  {/* Botão voltar embaixo */}
+                  <button style={{...S.resBack, marginTop:"16px"}} onClick={onVolver}>← Volver</button>
+                </div>
+              );
+            }
+            return (
+              <div key={catId} style={{marginBottom:"36px", animation:`fadeUp 0.45s ease ${si*0.08}s both`}}>
+                <div style={S.catHeader}>
+                  <span style={S.catTitulo}>{meta.label}</span>
+                </div>
+                {items.map(exp => <ExpCard key={exp.name} exp={exp} />)}
               </div>
-              {items.map(exp =>
-                catId === "restaurantes"
-                  ? <RestCard key={exp.name} rest={exp} />
-                  : <ExpCard key={exp.name} exp={exp} />
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
       <style>{`@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}`}</style>
@@ -746,13 +836,18 @@ function SubcatRestScreen({ onVolver, onResultados }) {
 
 // ─── APP ROOT ─────────────────────────────────────────────────────────────
 export default function TuVegasTickets() {
-  const [screen, setScreen]       = useState("splash");
-  const [sel, setSel]             = useState([]);
-  const [subcatRest, setSubcatRest] = useState([]);
+  const [screen, setScreen]             = useState("splash");
+  const [sel, setSel]                   = useState([]);
+  const [subcatRest, setSubcatRest]     = useState([]);
+  const [abaAnterior, setAbaAnterior]   = useState("exp");
 
   const handleResultados = (cats, subcats) => {
     setSel(cats);
     setSubcatRest(subcats || []);
+    // Saber de qual aba veio
+    const temRest = cats.includes("restaurantes");
+    const temExp  = cats.some(c => c !== "restaurantes");
+    setAbaAnterior(temRest && !temExp ? "rest" : "exp");
     setScreen("resultados");
   };
 
