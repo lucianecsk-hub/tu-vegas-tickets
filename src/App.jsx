@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // ─── BASE DE DATOS ────────────────────────────────────────────────────────
 const DB = {
@@ -306,7 +306,7 @@ const S = {
   logo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"#fff" },
   logoSpan: { color:"#e000c8", textShadow:"0 0 18px rgba(200,0,180,1), 0 0 50px rgba(200,0,180,0.5)" },
   headerSub: { fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.4)", marginTop:"3px" },
-  splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", padding:"16px 28px 20px", textAlign:"center" },
+  splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-between", padding:"16px 28px 24px", textAlign:"center" },
   city: { fontFamily:"'Playfair Display', serif", fontWeight:900, fontSize:"clamp(44px,13vw,60px)", lineHeight:0.88, color:"#fff", letterSpacing:"-2px" },
   subtitulo: { fontSize:"10px", fontWeight:700, letterSpacing:"5px", textTransform:"uppercase", color:"rgba(255,255,255,0.45)", margin:"8px 0 2px" },
   destaque: { fontFamily:"'Playfair Display', serif", fontSize:"20px", fontWeight:700, color:"#fff" },
@@ -331,13 +331,13 @@ const S = {
   resBody: { flex:1, overflowY:"auto", padding:"20px 16px 48px" },
   resBack: { background:"linear-gradient(135deg, #d400bc 0%, #8800a0 100%)", border:"none", color:"#fff", fontSize:"16px", fontWeight:700, letterSpacing:"1px", cursor:"pointer", fontFamily:"'Inter', sans-serif", marginBottom:"24px", display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", padding:"14px 24px", borderRadius:"10px", width:"100%", boxShadow:"0 0 20px rgba(200,0,180,0.4)", transition:"all 0.2s" },
   avisoLegal: { fontSize:"10px", color:"rgba(255,255,255,0.25)", fontStyle:"italic", lineHeight:1.6, marginBottom:"24px", padding:"10px 14px", background:"rgba(255,255,255,0.02)", borderRadius:"6px", border:"1px solid rgba(255,255,255,0.05)" },
-  catHeader: { display:"flex", alignItems:"center", gap:"10px", marginBottom:"16px", paddingBottom:"10px", borderBottom:"1px solid rgba(224,0,200,0.2)" },
-  catTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:700, color:"#fff" },
+  avisoLegal: { fontSize:"12px", color:"rgba(255,255,255,0.6)", fontStyle:"italic", lineHeight:1.6, marginBottom:"20px", padding:"12px 16px", background:"rgba(255,255,255,0.04)", borderRadius:"8px", border:"1px solid rgba(255,255,255,0.1)" },
+  catHeader: { marginBottom:"16px", paddingBottom:"10px", borderBottom:"2px solid rgba(224,0,200,0.3)" },
+  catTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:700, color:"#fff", display:"block" },
   catSubTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"18px", fontWeight:700, color:"rgba(255,255,255,0.85)", marginBottom:"12px", marginTop:"20px", paddingBottom:"6px", borderBottom:"1px solid rgba(255,255,255,0.08)" },
   card: { background:"rgba(255,255,255,0.03)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"14px", padding:"16px", marginBottom:"10px", transition:"all 0.2s" },
-  cardTop: { display:"flex", alignItems:"flex-start", gap:"12px", marginBottom:"10px" },
   cardEmoji: { fontSize:"32px", lineHeight:1, flexShrink:0 },
-  cardInfo: { flex:1 },
+  cardTop: { display:"flex", alignItems:"flex-start", gap:"12px", marginBottom:"10px" },
   cardName: { fontFamily:"'Inter', sans-serif", fontSize:"14px", fontWeight:700, color:"#fff", marginBottom:"6px", lineHeight:1.3 },
   cardTags: { display:"flex", flexWrap:"wrap", gap:"4px" },
   tagDur: { fontSize:"10px", padding:"2px 8px", borderRadius:"20px", fontWeight:500, background:"rgba(255,215,0,0.1)", color:"#ffd700", border:"1px solid rgba(255,215,0,0.2)" },
@@ -645,7 +645,7 @@ function ResultadosScreen({ sel, subcatRest, onVolver }) {
     if (catId === "restaurantes" && subcatRest && subcatRest.length > 0) {
       items = items.filter(item => subcatRest.includes(item.cat));
     }
-    // Também mostrar churrascarias dentro de restaurantes se Churrascaria selecionada
+    // Churrascarias dentro de restaurantes
     if (catId === "restaurantes" && subcatRest && subcatRest.includes("Churrascaria")) {
       const churr = (DB["churrascarias"] || []).filter(item => {
         if (seen.has(item.name)) return false;
@@ -654,9 +654,17 @@ function ResultadosScreen({ sel, subcatRest, onVolver }) {
       });
       items = [...items, ...churr];
     }
-    // Ordenar restaurantes por preço
-    if (catId === "restaurantes") {
-      items = [...items].sort((a, b) => (PRECO_ORDER[a.preco] || 0) - (PRECO_ORDER[b.preco] || 0));
+    // Ordenar: shows mantém ordem original (mágicos juntos no final), resto alfabético
+    if (catId !== "shows" && catId !== "restaurantes") {
+      items = [...items].sort((a, b) => a.name.localeCompare(b.name, "es"));
+    }
+    // Shows: mágicos juntos no final
+    if (catId === "shows") {
+      const magicos = ["Criss Angel MINDFREAK","Mat Franco — Magic Reinvented Nightly","Allstars of Magic","V — The Ultimate Variety Show"];
+      items = [
+        ...items.filter(i => !magicos.includes(i.name)),
+        ...items.filter(i => magicos.includes(i.name)),
+      ];
     }
     const filtered = filtrarPorFecha(items, catId);
     return { catId, meta: CAT_META[catId], items: filtered };
@@ -688,8 +696,8 @@ function ResultadosScreen({ sel, subcatRest, onVolver }) {
 
           {/* Aviso legal apenas para categorias que não são restaurantes */}
           {sel.some(id => id !== "restaurantes") && (
-            <div style={S.avisoLegal}>
-              * Los precios son referenciales y están sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso. No nos hacemos responsables por variaciones en el precio al momento de la reserva.
+            <div style={{fontSize:"12px", color:"rgba(255,255,255,0.55)", fontStyle:"italic", lineHeight:1.5, marginBottom:"20px", padding:"10px 14px", background:"rgba(255,255,255,0.04)", borderRadius:"8px", border:"1px solid rgba(255,255,255,0.1)"}}>
+              * Precios referenciales, sujetos a disponibilidad y cambios sin previo aviso.
             </div>
           )}
 
@@ -841,14 +849,31 @@ export default function TuVegasTickets() {
   const [subcatRest, setSubcatRest]     = useState([]);
   const [abaAnterior, setAbaAnterior]   = useState("exp");
 
+  // Controla a seta de voltar do telefone
+  const navegarPara = (novaScreen) => {
+    window.history.pushState({ screen: novaScreen }, "");
+    setScreen(novaScreen);
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setScreen(prev => {
+        if (prev === "resultados") return "filtros";
+        if (prev === "filtros") return "splash";
+        return prev;
+      });
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
   const handleResultados = (cats, subcats) => {
     setSel(cats);
     setSubcatRest(subcats || []);
-    // Saber de qual aba veio
     const temRest = cats.includes("restaurantes");
     const temExp  = cats.some(c => c !== "restaurantes");
     setAbaAnterior(temRest && !temExp ? "rest" : "exp");
-    setScreen("resultados");
+    navegarPara("resultados");
   };
 
   return (
@@ -864,12 +889,12 @@ export default function TuVegasTickets() {
         input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); opacity: 0.6; cursor: pointer; }
       `}</style>
 
-      {screen === "splash"     && <SplashScreen    onStart={() => setScreen("filtros")} />}
+      {screen === "splash"     && <SplashScreen    onStart={() => navegarPara("filtros")} />}
       {screen === "filtros"    && <FiltrosScreen   onResultados={handleResultados} />}
       {screen === "resultados" && <ResultadosScreen
                                     sel={sel}
                                     subcatRest={subcatRest}
-                                    onVolver={() => setScreen("filtros")} />}
+                                    onVolver={() => navegarPara("filtros")} />}
     </>
   );
 }
