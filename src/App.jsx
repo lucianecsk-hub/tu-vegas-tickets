@@ -240,15 +240,15 @@ const S = {
   header: { padding:"10px 24px 8px", textAlign:"center", borderBottom:"1px solid rgba(224,0,200,0.18)", flexShrink:0 },
   logo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"#fff" },
   logoSpan: { color:"#e000c8", textShadow:"0 0 18px rgba(200,0,180,1), 0 0 50px rgba(200,0,180,0.5)" },
-  headerSub: { fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.4)", marginTop:"3px" },
-  splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", padding:"16px 28px 24px", gap:"20px", textAlign:"center" },
-  city: { fontFamily:"'Playfair Display', serif", fontWeight:900, fontSize:"clamp(44px,13vw,60px)", lineHeight:0.88, color:"#fff", letterSpacing:"-2px" },
-  subtitulo: { fontSize:"10px", fontWeight:700, letterSpacing:"5px", textTransform:"uppercase", color:"rgba(255,255,255,0.45)", margin:"8px 0 2px" },
-  destaque: { fontFamily:"'Playfair Display', serif", fontSize:"20px", fontWeight:700, color:"#fff" },
-  deco: { width:"36px", height:"1px", background:"linear-gradient(90deg, transparent, #e000c8, transparent)", boxShadow:"0 0 8px rgba(200,0,180,0.5)", margin:"0 auto 6px" },
-  loquepasa: { fontFamily:"'Playfair Display', serif", fontSize:"17px", fontStyle:"italic", color:"#e000c8", lineHeight:1.3, marginBottom:"2px" },
-  solopasa: { fontFamily:"'Playfair Display', serif", fontSize:"30px", fontStyle:"italic", fontWeight:900, color:"#fff", lineHeight:1.1 },
-  categorias: { display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"nowrap", gap:"5px", fontSize:"10px", fontWeight:800, letterSpacing:"1.5px", textTransform:"uppercase", color:"#e000c8", textShadow:"0 0 10px rgba(200,0,180,0.7)" },
+  headerSub: { fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.85)", marginTop:"3px" },
+  splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", padding:"20px 28px 28px", gap:"0", textAlign:"center" },
+  city: { fontFamily:"'Playfair Display', serif", fontWeight:900, fontSize:"clamp(58px,18vw,78px)", lineHeight:0.85, color:"#fff", letterSpacing:"-2px" },
+  subtitulo: { fontSize:"12px", fontWeight:700, letterSpacing:"5px", textTransform:"uppercase", color:"rgba(255,255,255,0.45)", margin:"18px 0 4px" },
+  destaque: { fontFamily:"'Playfair Display', serif", fontSize:"26px", fontWeight:700, color:"#fff" },
+  deco: { width:"40px", height:"1px", background:"linear-gradient(90deg, transparent, #e000c8, transparent)", boxShadow:"0 0 8px rgba(200,0,180,0.5)", margin:"52px auto 16px" },
+  loquepasa: { fontFamily:"'Playfair Display', serif", fontSize:"28px", fontStyle:"italic", color:"#e000c8", lineHeight:1.3, marginBottom:"6px" },
+  solopasa: { fontFamily:"'Playfair Display', serif", fontSize:"36px", fontStyle:"italic", fontWeight:900, color:"#fff", lineHeight:1.1 },
+  categorias: { display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"nowrap", gap:"5px", fontSize:"10px", fontWeight:800, letterSpacing:"1.5px", textTransform:"uppercase", color:"#e000c8", textShadow:"0 0 10px rgba(200,0,180,0.7)", marginTop:"32px" },
   sep: { color:"rgba(224,0,200,0.4)", fontWeight:300 },
   cta: { background:"linear-gradient(135deg, #d400bc 0%, #8800a0 100%)", color:"#fff", border:"none", borderRadius:"8px", padding:0, width:"100%", maxWidth:"300px", cursor:"pointer", fontFamily:"'Inter', sans-serif", boxShadow:"0 0 28px rgba(200,0,180,0.45), 0 8px 28px rgba(0,0,0,0.5)", transition:"all 0.2s", overflow:"hidden" },
   ctaMain: { display:"block", padding:"18px 24px 14px", fontSize:"19px", fontWeight:700, borderBottom:"1px solid rgba(255,255,255,0.12)" },
@@ -389,7 +389,7 @@ function SplashScreen({ onStart }) {
           </div>
 
           {/* BLOCO 3 — Badge + Botão */}
-          <div style={{width:"100%", marginTop:"auto", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px"}}>
+          <div style={{width:"100%", marginTop:"36px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px"}}>
             <div style={{display:"flex", alignItems:"center", gap:"6px", background:"rgba(224,0,200,0.1)", border:"1px solid rgba(224,0,200,0.3)", borderRadius:"20px", padding:"4px 14px"}}>
               <span style={{fontSize:"10px"}}>🔥</span>
               <span style={{fontSize:"10px", fontWeight:700, letterSpacing:"1px", color:"#e000c8"}}>+500 EXPERIENCIAS DISPONIBLES</span>
