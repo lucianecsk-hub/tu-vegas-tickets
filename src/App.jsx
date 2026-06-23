@@ -128,54 +128,141 @@ const DB = {
     { name:"Eagles — Live at Sphere",        emoji:"🦅", price:"Desde $145", dur:"2 hrs",   rating:4.9, dates:["2026-09-18","2026-11-28"], desc:"La residencia más larga en Sphere. Sep, nov. Hotel California y 50 años de hits envolviendo al público en 16K. Histórico.", url:"https://vegas.vdvm.net/DWRyZ5" },
     { name:"Metallica — Life Burns Faster",  emoji:"🎸", price:"Desde $283", dur:"2.5 hrs", rating:4.9, dates:["2026-10-01","2026-11-07"], desc:"Los maestros del metal en Sphere. Oct y nov. No Repeat Weekend — dos noches, dos setlists diferentes. El rock más épico de la historia.", url:"https://vegas.vdvm.net/4arXkG" },
   ],
+
+  // ── RESTAURANTES ─────────────────────────────────────────────────────
+  restaurantes: [
+    // Con Vista al Bellagio
+    { name:"Spago — Wolfgang Puck",       emoji:"🌊", cat:"Con Vista al Bellagio", preco:"$$$",  local:"Bellagio, 3600 Las Vegas Blvd",          rating:4.2, desc:"Terraza al aire libre frente a las fuentes del Bellagio. Sientes el agua. Pizzas artesanales, pastas frescas y cocina californiana de autor. La mejor relación vista-precio del Bellagio.", maps:"https://maps.app.goo.gl/Xd8rXTpRNEaQFeTy9" },
+    { name:"Mon Ami Gabi",                emoji:"🥐", cat:"Con Vista al Bellagio", preco:"$$",   local:"Paris Las Vegas, 3655 Las Vegas Blvd",    rating:4.7, desc:"Bistró francés con terraza al nivel de la calle, justo frente a las fuentes. Crepes, steak frites y desayunos increíbles. Con viento en los shows, puedes sentir el agua desde la mesa.", maps:"https://maps.app.goo.gl/MFxK1kGq3pjvVCaj8" },
+    { name:"Chéri Rooftop",               emoji:"🗼", cat:"Con Vista al Bellagio", preco:"$$",   local:"Paris Las Vegas, 3655 Las Vegas Blvd",    rating:4.3, desc:"Rooftop bajo la Torre Eiffel de París con vista directa al Bellagio. Ambiente de jardín parisino de los años 50, cócteles creativos y platos franceses. El secreto mejor guardado de Paris Las Vegas.", maps:"https://maps.app.goo.gl/ZCYfHPmE7TK3i6j68" },
+    { name:"Eiffel Tower Restaurant",     emoji:"🗼", cat:"Con Vista al Bellagio", preco:"$$$$", local:"Paris Las Vegas, 3655 Las Vegas Blvd",    rating:4.6, desc:"Cena en el piso 11 de la Torre Eiffel de Vegas. Vista panorámica directa a las fuentes del Bellagio. El más romántico del Strip.", maps:"https://maps.app.goo.gl/EiffelTowerRestaurant" },
+    // Rooftop
+    { name:"Beer Park",                   emoji:"🍺", cat:"Rooftop",              preco:"$$",   local:"Paris Las Vegas, 3655 Las Vegas Blvd",    rating:4.2, desc:"Terraza abierta sobre el Strip con vista al Bellagio. Cervezas artesanales, hamburguesas y el mejor atardecer de Vegas. Ideal para ver el Strip sin gastar de más.", maps:"https://maps.app.goo.gl/S8xBqL9e2mBPNJL49" },
+    { name:"BrewDog Las Vegas",           emoji:"🍻", cat:"Rooftop",              preco:"$$",   local:"3767 Las Vegas Blvd S",                   rating:4.7, desc:"Rooftop bar escocés con vistas al Strip, múltiples barras, cervezas artesanales y ambiente relajado. Uno de los favoritos de los locales — y pocos turistas lo conocen.", maps:"https://maps.app.goo.gl/nAGhUHxkobFHNqCH9" },
+    { name:"Ole Red Las Vegas",           emoji:"🤠", cat:"Rooftop",              preco:"$$",   local:"Bally's, 3627 Las Vegas Blvd S",          rating:4.6, desc:"Bar country de 3 pisos con música en vivo todas las noches. Comida sureña, karaoke, rooftop y ambiente de fiesta hasta las 4am. El favorito de los fans del country.", maps:"https://maps.app.goo.gl/FMFWdQN1SFuVjZcQ9" },
+    { name:"Hard Rock Cafe",              emoji:"🎸", cat:"Rooftop",              preco:"$$",   local:"3771 Las Vegas Blvd S",                   rating:4.4, desc:"El templo del rock and roll. Guitarras icónicas, memorabilia legendaria y hamburguesas enormes. Terraza con vista al Strip. Abierto desde 7:30am.", maps:"https://maps.app.goo.gl/v5GUZEmZjMXrXz5RA" },
+    { name:"Top of the World",            emoji:"🌆", cat:"Rooftop",              preco:"$$$$", local:"The STRAT, 2000 Las Vegas Blvd",          rating:4.3, desc:"Cena giratoria a 264 metros de altura. Las Vegas entera bajo tus pies, una vuelta completa cada 80 minutos. Romántico, espectacular e imprescindible.", maps:"https://maps.app.goo.gl/2d5b1VGnHxK4VYqf7" },
+    { name:"Giada",                       emoji:"🍝", cat:"Rooftop",              preco:"$$$",  local:"The Cromwell, 3595 Las Vegas Blvd",       rating:4.6, desc:"La chef Giada De Laurentiis trae la cocina italiana moderna al Strip. Terraza con vistas únicas al Boulevard — una de las más bonitas de Vegas.", maps:"https://maps.app.goo.gl/GiadaLasVegas" },
+    // Fine Dining
+    { name:"Gordon Ramsay Hell's Kitchen",emoji:"🔥", cat:"Fine Dining",          preco:"$$$",  local:"Caesars Palace, 3570 Las Vegas Blvd",    rating:4.7, tags:["gf"], desc:"El restaurante más famoso del Strip. Beef Wellington legendario en el teatro más icónico de Gordon Ramsay. Reserva con anticipación — siempre lleno.", maps:"https://maps.app.goo.gl/GordonRamsayHellsKitchen" },
+    { name:"Joël Robuchon",               emoji:"👨‍🍳", cat:"Fine Dining",          preco:"$$$$", local:"MGM Grand, 3799 Las Vegas Blvd",         rating:4.9, tags:[], desc:"El único restaurante con 3 estrellas Michelin en Las Vegas. La experiencia gastronómica más exclusiva de Nevada. Una noche que no olvidarás.", maps:"https://maps.app.goo.gl/JoelRobuchonLV" },
+    { name:"STK Steakhouse",              emoji:"🥩", cat:"Fine Dining",          preco:"$$$",  local:"Cosmopolitan, 3708 Las Vegas Blvd",       rating:4.5, tags:[], desc:"El steakhouse más cool de Vegas. Ambiente de club, música en vivo y los mejores cortes. Ideal para grupos y celebraciones especiales.", maps:"https://maps.app.goo.gl/STKSteakhouseLV" },
+    { name:"Nobu Las Vegas",              emoji:"🍣", cat:"Fine Dining",          preco:"$$$",  local:"Caesars Palace, 3570 Las Vegas Blvd",    rating:4.6, tags:["gf"], desc:"El templo mundial de la cocina japonesa-peruana. Black Cod with Miso — el plato más imitado del mundo. Una visita obligatoria en el Strip.", maps:"https://maps.app.goo.gl/NobuLasVegas" },
+    { name:"Mizumi",                      emoji:"🎋", cat:"Fine Dining",          preco:"$$$",  local:"Wynn Las Vegas, 3131 Las Vegas Blvd",    rating:4.5, tags:[], desc:"Japonés de alta gama dentro del Wynn. Teppanyaki espectacular con vistas al lago y cascada. Sushi, mariscos y wagyu de primera. Abre solo jueves a domingo.", maps:"https://maps.app.goo.gl/MizumiWynnLV" },
+    { name:"The Buffet at Wynn",          emoji:"🦞", cat:"Fine Dining",          preco:"$$$",  local:"Wynn Las Vegas, 3131 Las Vegas Blvd",    rating:4.2, tags:[], desc:"El buffet más premium de Las Vegas. Cangrejos, carnes a la parrilla, estaciones gourmet y postres de autor. Solo viernes, sábado y domingo.", maps:"https://maps.app.goo.gl/WynnBuffetLV" },
+    { name:"Joe's Seafood Prime Steak",   emoji:"🦀", cat:"Fine Dining",          preco:"$$$$", local:"Forum Shops, 3500 Las Vegas Blvd",       rating:4.7, tags:["gf"], desc:"Stone crab, prime steak y mariscos frescos en el corazón del Strip. Menú GF dedicado. Uno de los favoritos de temporada para celebraciones especiales.", maps:"https://maps.app.goo.gl/JoesSeafoodLV" },
+    // Casual
+    { name:"Grand Lux Cafe",              emoji:"✨", cat:"Casual",               preco:"$$",   local:"The Venetian, 3355 Las Vegas Blvd",      rating:4.5, tags:["gf"], desc:"Abierto 24 horas. El restaurante del Venetian que lo tiene todo: desayunos espectaculares, pasta, pollo y los postres más irresistibles del Strip.", maps:"https://maps.app.goo.gl/ZCzrxAe41uuqFxBQ9" },
+    { name:"Virgil's Real BBQ",           emoji:"🍖", cat:"Casual",               preco:"$$",   local:"LINQ, 3545 Las Vegas Blvd S",            rating:4.3, tags:[], desc:"BBQ americano de verdad en el corazón del Strip. Costillas, brisket y pulled pork que se deshacen solos. Vista al High Roller incluida.", maps:"https://maps.app.goo.gl/KBzpJMxVETkFqcUT6" },
+    { name:"The Cheesecake Factory",      emoji:"🍰", cat:"Casual",               preco:"$$",   local:"Forum Shops, 3500 Las Vegas Blvd",       rating:4.4, tags:["gf"], desc:"Menú enorme con más de 200 platos y porciones gigantes — comparte con alguien. El cheesecake de chocolate Godiva es obligatorio.", maps:"https://maps.app.goo.gl/VHxvSgU5cBCZJ2H6A" },
+    { name:"Olive Garden",                emoji:"🍝", cat:"Casual",               preco:"$$",   local:"3767 Las Vegas Blvd S, Piso 3",          rating:4.6, tags:["gf"], desc:"Pastas, sopas y el pan de ajo más famoso de América. Justo en el Strip, precio accesible y porciones generosas. Ideal para familias.", maps:"https://maps.app.goo.gl/H3LH3HiLwdBvSwxz6" },
+    { name:"Yardbird",                    emoji:"🍗", cat:"Casual",               preco:"$$",   local:"The Venetian, 3355 Las Vegas Blvd",      rating:4.6, tags:["gf"], desc:"El mejor pollo frito de Las Vegas — con harina de arroz, es gluten friendly. Cocina sureña reconfortante y cócteles increíbles.", maps:"https://maps.app.goo.gl/YardbirdLV" },
+    { name:"Shake Shack",                 emoji:"🍔", cat:"Casual",               preco:"$$",   local:"New York-New York, 3790 Las Vegas Blvd", rating:4.4, tags:[], desc:"La hamburguesería más de moda de América. ShackBurger jugoso, papas crinkle y milkshakes espesos. Abierto desde las 6am hasta las 4am.", maps:"https://maps.app.goo.gl/ShakeShackNYNYLV" },
+    { name:"Black Tap CrazyShakes",       emoji:"🥤", cat:"Casual",               preco:"$$",   local:"The Venetian, 3355 Las Vegas Blvd",      rating:4.3, tags:[], desc:"Los milkshakes más absurdos del mundo — coronados con tortas enteras, algodón de azúcar y dulces. Instagram obligatorio. Abierto hasta la 1am.", maps:"https://maps.app.goo.gl/BlackTapVenetianLV" },
+    { name:"In-N-Out Burger",             emoji:"🍔", cat:"Casual",               preco:"$",    local:"Strip / varios locales",                 rating:4.8, tags:["gf"], desc:"La hamburguesa más famosa del Oeste americano. Pide el menú secreto 'Animal Style'. Para GF: pide 'Protein Style' en lechuga — sin cruces.", maps:"https://maps.app.goo.gl/InNOutLasVegas" },
+    { name:"Raising Cane's",              emoji:"🍗", cat:"Casual",               preco:"$",    local:"3791 Las Vegas Blvd S",                  rating:4.6, tags:[], desc:"El pollo frito más adictivo del Strip. Solo tenders, papas, ensalada y la Cane's Sauce secreta. Abierto hasta las 4am. Rápido, sabroso y barato.", maps:"https://maps.app.goo.gl/RaisingCanesLV" },
+    { name:"Wicked Spoon",                emoji:"🍽️", cat:"Casual",               preco:"$$$",  local:"Cosmopolitan, 3708 Las Vegas Blvd",       rating:4.5, tags:[], desc:"El buffet más instagrameable de Las Vegas. Estaciones gourmet, mariscos frescos y postres de autor. Vale cada dólar.", maps:"https://maps.app.goo.gl/WickedSpoonLV" },
+    // Desayuno
+    { name:"Siegel's Bagelmania",         emoji:"🥯", cat:"Desayuno",             preco:"$$",   local:"252 Convention Center Dr",               rating:4.6, tags:["gf"], desc:"El deli más querido de Las Vegas. Bagels frescos horneados cada mañana con docenas de cream cheese. Tienen bagels sin gluten. Abre a las 6am.", maps:"https://maps.app.goo.gl/BagelmaniaLV" },
+    { name:"Urth Caffé",                  emoji:"☕", cat:"Desayuno",             preco:"$$",   local:"Wynn Las Vegas, 3131 Las Vegas Blvd",    rating:4.2, tags:[], desc:"El café más instagrameable de Las Vegas. Dentro del Wynn, con jardín interior, fuente y ambiente europeo. Lattes de pistacho y desayunos orgánicos.", maps:"https://maps.app.goo.gl/UrthCaffeWynnLV" },
+    { name:"Denny's",                     emoji:"🍳", cat:"Desayuno",             preco:"$",    local:"3771 Las Vegas Blvd S",                  rating:4.3, tags:[], desc:"Abierto 24 horas. El desayuno americano clásico: pancakes esponjosos, huevos y café sin límite. El lugar favorito de Vegas a las 3am.", maps:"https://maps.app.goo.gl/kDXd3cGb3DLqsPLi7" },
+    { name:"Hash House A Go Go",          emoji:"🥞", cat:"Desayuno",             preco:"$$",   local:"The LINQ, 3535 Las Vegas Blvd",          rating:4.8, tags:[], desc:"Las porciones más ridículas de Vegas — los pancakes son del tamaño de tu cara. Pollo con waffles legendario. Llega temprano porque la fila crece rápido.", maps:"https://maps.app.goo.gl/HashHouseLINQ" },
+    { name:"Eggslut",                     emoji:"🥚", cat:"Desayuno",             preco:"$$",   local:"Cosmopolitan, 3708 Las Vegas Blvd",      rating:4.3, tags:[], desc:"El sandwich de huevo más famoso de Instagram. Brioche suave, huevos sedosos y las truffle hashbrowns más adictivas del Strip.", maps:"https://maps.app.goo.gl/EggslutLV" },
+    { name:"Peppermill Restaurant",       emoji:"☕", cat:"Desayuno",             preco:"$$",   local:"2985 Las Vegas Blvd S",                  rating:4.5, tags:[], desc:"El diner más icónico de Las Vegas desde 1972. Porciones enormes, ambiente retro de los 70s y el Fireside Lounge de fuego vivo. Abierto 24 horas los fines de semana.", maps:"https://maps.app.goo.gl/PeppermillLV" },
+    { name:"Black Bear Diner",            emoji:"🐻", cat:"Desayuno",             preco:"$",    local:"7680 Las Vegas Blvd S",                  rating:4.5, tags:[], desc:"Diner familiar estilo cabaña americana con porciones gigantes. Desayuno todo el día, pancakes esponjosos y el chicken fried steak más generoso de Vegas.", maps:"https://maps.app.goo.gl/BlackBearDinerLV" },
+    { name:"IHOP",                        emoji:"🥞", cat:"Desayuno",             preco:"$",    local:"1809 Las Vegas Blvd S",                  rating:4.4, tags:[], desc:"El templo internacional de los pancakes. Abierto 24 horas. Prueba el Tres Leches off-menu que todos piden.", maps:"https://maps.app.goo.gl/IHOPLasVegas" },
+    // Famosos de la TV
+    { name:"Big Chicken — Shaquille O'Neal", emoji:"🏀", cat:"Famosos de la TV",  preco:"$$",   local:"4480 Paradise Rd",                       rating:4.6, tags:[], desc:"El restaurante del legendario Shaquille O'Neal. Sándwich de pollo doble empanado, mac & cheese y banana pudding. El más querido de los famosos de Vegas.", maps:"https://maps.app.goo.gl/BigChickenLV" },
+    { name:"Guy Fieri's Vegas Kitchen",   emoji:"🔥", cat:"Famosos de la TV",    preco:"$$",   local:"LINQ, 3535 Las Vegas Blvd S",            rating:3.9, tags:[], desc:"El rey del Food Network en el Strip. Trash Can Nachos, mac & cheese burgers y alas de pollo con whisky. Comida americana exagerada — exactamente como en TV.", maps:"https://maps.app.goo.gl/GuyFieriLV" },
+    { name:"Carlo's Bakery — Cake Boss",  emoji:"🎂", cat:"Famosos de la TV",    preco:"$$",   local:"The Venetian, 3327 Las Vegas Blvd",      rating:3.7, tags:[], desc:"La famosa panadería del Cake Boss Buddy Valastro de TLC. Lobster Tail, cannolis, Rainbow Cake y pasteles de autor. El lugar más fotografiado del Venetian.", maps:"https://maps.app.goo.gl/CarlosBakeryVenetian" },
+    { name:"Buddy V's Ristorante",        emoji:"🍝", cat:"Famosos de la TV",    preco:"$$$",  local:"The Venetian, 3327 Las Vegas Blvd",      rating:4.5, tags:[], desc:"El restaurante italiano de Buddy Valastro (Cake Boss). Mozzarella estirada en vivo, pasta hecha a mano y la pizza más auténtica del Strip. Un show en sí mismo.", maps:"https://maps.app.goo.gl/BuddyVsVenetian" },
+    { name:"Gordon Ramsay Hell's Kitchen (TV)", emoji:"👨‍🍳", cat:"Famosos de la TV", preco:"$$$", local:"Caesars Palace, 3570 Las Vegas Blvd", rating:4.7, tags:["gf"], desc:"El restaurante de la serie Hell's Kitchen de Fox. Beef Wellington, pan de salmón y el menú exacto del programa. Reserva con semanas de anticipación.", maps:"https://maps.app.goo.gl/GordonRamsayHellsKitchen" },
+    { name:"Amalfi — Bobby Flay",         emoji:"🐟", cat:"Famosos de la TV",    preco:"$$$",  local:"Caesars Palace, 3570 Las Vegas Blvd",    rating:4.4, tags:[], desc:"El campeón de Iron Chef trae la Costa Amalfitana al Strip. Pescado fresco del día, pasta y mariscos con técnica italiana auténtica. Abre solo a la cena.", maps:"https://maps.app.goo.gl/AmalfiBobbyflayCaesars" },
+    { name:"Bazaar Meat — José Andrés",   emoji:"🥩", cat:"Famosos de la TV",    preco:"$$$$", local:"The Venetian, 3325 Las Vegas Blvd",      rating:4.5, tags:[], desc:"El chef español más famoso del mundo — conocido por su disputa con Trump — trae su churrasco de autor al Venetian. Cotton candy foie gras, vaca vieja y espectáculo total.", maps:"https://maps.app.goo.gl/BazaarMeatVenetian" },
+    // Confeitarias
+    { name:"Hershey's Chocolate World",   emoji:"🍫", cat:"Confeitaria",          preco:"$",    local:"New York-New York, 3790 Las Vegas Blvd", rating:4.5, tags:[], desc:"El mundo del chocolate de Hershey's — como entrar a la fábrica de Willy Wonka. Chocolates, helados y souvenirs. Perfecto para llevar de regalo. Abierto hasta la 1am.", maps:"https://maps.app.goo.gl/HersheysLV" },
+    { name:"Donutique",                   emoji:"🍩", cat:"Confeitaria",          preco:"$$",   local:"The Venetian, 3327 Las Vegas Blvd",      rating:4.2, tags:[], desc:"Donuts gourmet europeos en el corazón del Venetian. Cada pieza es una obra de arte: tiramisu, pistacho, crema de limón. Opciones veganas y sin gluten.", maps:"https://maps.app.goo.gl/DonutiqueVenetian" },
+    { name:"Zeppola Cafe",                emoji:"🥐", cat:"Confeitaria",          preco:"$$",   local:"The Venetian, 3377 Las Vegas Blvd",      rating:4.3, tags:[], desc:"El café viral de la Piazza San Marco en el Venetian. Los Cube Croissants y Rolly Croissants son los más fotografiados de Las Vegas. Receta familiar italiana desde las 4am.", maps:"https://maps.app.goo.gl/ZeppolaCafeVenetian" },
+    { name:"Dominique Ansel",             emoji:"🌸", cat:"Confeitaria",          preco:"$$$",  local:"Paris Las Vegas, 3570 Las Vegas Blvd",   rating:4.0, tags:[], desc:"El inventor del Cronut. Pastelería de autor francesa con creaciones únicas cada temporada. El Cookie Shot (llenado con leche al momento) es imprescindible.", maps:"https://maps.app.goo.gl/DominiqueAnselLV" },
+    // Vegano
+    { name:"Tacotarian",                  emoji:"🌮", cat:"Vegano",               preco:"$",    local:"Miracle Mile, Planet Hollywood",         rating:4.6, tags:["gf","vegan"], desc:"100% plant-based. Los mejores tacos veganos del Strip — birria, chorizo y al pastor sin carne que engañan hasta a los carnívoros. Tortillas de maíz GF.", maps:"https://maps.app.goo.gl/TacotarianMiracleMile" },
+    { name:"True Food Kitchen",           emoji:"🥗", cat:"Vegano",               preco:"$$",   local:"Forum Shops, Caesars, 3500 Las Vegas Blvd", rating:4.5, tags:["gf","vegan"], desc:"Cocina saludable y orgánica con menú amplio vegano y GF. Edamame dumplings, bowls de quinoa y hamburguesas plant-based. En el Forum Shops de Caesars.", maps:"https://maps.app.goo.gl/TrueFoodKitchenLV" },
+    { name:"Nacho Daddy",                 emoji:"🧀", cat:"Vegano",               preco:"$$",   local:"3663 Las Vegas Blvd S",                  rating:4.4, tags:["vegan"], desc:"Bar mexicano con menú vegano completo — nachos, burritos y chimichanga de pollo plant-based. Ambiente de sports bar, abierto hasta las 3am.", maps:"https://maps.app.goo.gl/NachoDaddyLV" },
+    { name:"Crossroads Kitchen",          emoji:"🌿", cat:"Vegano",               preco:"$$$",  local:"Resorts World, 3000 Las Vegas Blvd",     rating:4.5, tags:["gf","vegan"], desc:"El único restaurante vegano fine dining en el Strip. Chef Tal Ronnen. Calamares veganos, pasta carbonara plant-based y brunch buffet los domingos. Impresionante.", maps:"https://maps.app.goo.gl/CrossroadsKitchenLV" },
+  ],
+
+  // ── CHURRASCARIAS ────────────────────────────────────────────────────
+  churrascarias: [
+    { name:"Galpão Gaucho",   emoji:"🏆", cat:"Churrascaria", preco:"$$$",  local:"3200 Las Vegas Blvd S, Strip",        rating:4.8, desc:"La mejor churrascaria del Strip. 18 cortes de la parrilla incluyendo el legendario Golden Steak® bañado en oro. Barra de ensaladas con 45 opciones. Servicio impecable, ambiente elegante.", maps:"https://maps.app.goo.gl/GalpaoGauchoLV" },
+    { name:"Fogo de Chão",    emoji:"🔥", cat:"Churrascaria", preco:"$$$",  local:"The Venetian, 3377 Las Vegas Blvd",   rating:4.7, desc:"Picanha, fraldinha y filet mignon asados en brasa abierta y cortados en la mesa por gauchos. Dos niveles, parrilla a la vista y el Market Table más completo de Vegas.", maps:"https://maps.app.goo.gl/aSFtJ2K8sWQhCTGK6" },
+    { name:"Texas de Brazil",  emoji:"🤠", cat:"Churrascaria", preco:"$$$",  local:"Town Square, 6533 Las Vegas Blvd S", rating:4.5, desc:"Churrascaria al estilo texano-brasileño con cortes de res, cerdo, cordero, pollo y chorizo a voluntad. Barra de ensaladas con más de 50 opciones. Ideal para grupos grandes.", maps:"https://maps.app.goo.gl/TexasDeBrazilLV" },
+  ],
 };
 
 const CAT_META = {
-  atracciones: { label:"Atracciones",         emoji:"🎡", destaque:"En Destaque",    hasFecha:false },
-  ninos:       { label:"Con niños",           emoji:"👨‍👩‍👧", destaque:"Familia",       hasFecha:false },
-  experiencias:{ label:"Experiencias",        emoji:"⚡", destaque:"En Destaque",    hasFecha:false },
-  nightlife:   { label:"Fiestas & Nightlife", emoji:"🔥", destaque:"Mayores de 21",  hasFecha:false },
-  shows:       { label:"Shows",               emoji:"🎭", destaque:"En Destaque",    hasFecha:false },
-  sphere:      { label:"The Sphere",          emoji:"🌐", destaque:"En Destaque",    hasFecha:true  },
-  tours:       { label:"Tours",               emoji:"🏔️", destaque:"En Destaque",    hasFecha:false },
-  tributos:    { label:"Tributos",            emoji:"🎵", destaque:"En Destaque",    hasFecha:false },
-  conciertos:  { label:"Conciertos",          emoji:"🎤", destaque:"En Destaque",    hasFecha:true  },
-  deportes:    { label:"Deportes",            emoji:"🏆", destaque:"En Destaque",    hasFecha:true  },
+  atracciones:  { label:"Atracciones",         emoji:"🎡", destaque:"En Destaque",    hasFecha:false },
+  sphere:       { label:"The Sphere",          emoji:"🌐", destaque:"En Destaque",    hasFecha:true  },
+  conciertos:   { label:"Conciertos",          emoji:"🎤", destaque:"En Destaque",    hasFecha:true  },
+  deportes:     { label:"Deportes",            emoji:"🏆", destaque:"En Destaque",    hasFecha:true  },
+  shows:        { label:"Shows",               emoji:"🎭", destaque:"En Destaque",    hasFecha:false },
+  tributos:     { label:"Tributos",            emoji:"🎵", destaque:"En Destaque",    hasFecha:false },
+  tours:        { label:"Tours",               emoji:"🏔️", destaque:"En Destaque",    hasFecha:false },
+  nightlife:    { label:"Fiestas & Nightlife", emoji:"🔥", destaque:"Mayores de 21",  hasFecha:false },
+  experiencias: { label:"Experiencias",        emoji:"⚡", destaque:"En Destaque",    hasFecha:false },
+  ninos:        { label:"Con niños",           emoji:"👨‍👩‍👧", destaque:"Familia",       hasFecha:false },
+  restaurantes: { label:"Bares & Restaurantes",emoji:"🍻", destaque:"Comer & Beber",  hasFecha:false },
 };
 
 const CATEGORIAS = Object.entries(CAT_META).map(([id, m]) => ({ id, label:m.label, emoji:m.emoji, hasFecha:m.hasFecha }));
 const MAX_SEL = 3;
 
+// ─── COLORES POR SUBCATEGORÍA DE RESTAURANTE ─────────────────────────────
+const CAT_COLORS = {
+  "Con Vista al Bellagio": { bg:"rgba(99,179,237,0.18)",  border:"rgba(99,179,237,0.6)",  text:"#90cdf4" },
+  "Rooftop":               { bg:"rgba(251,146,60,0.18)",  border:"rgba(251,146,60,0.6)",  text:"#fdba74" },
+  "Fine Dining":           { bg:"rgba(255,215,0,0.15)",   border:"rgba(255,215,0,0.6)",   text:"#ffd700" },
+  "Casual":                { bg:"rgba(104,211,145,0.15)", border:"rgba(104,211,145,0.6)", text:"#6ee7a0" },
+  "Desayuno":              { bg:"rgba(246,173,85,0.15)",  border:"rgba(246,173,85,0.6)",  text:"#fbbf6a" },
+  "Churrascaria":          { bg:"rgba(220,38,38,0.15)",   border:"rgba(220,38,38,0.6)",   text:"#fca5a5" },
+  "Famosos de la TV":      { bg:"rgba(167,139,250,0.15)", border:"rgba(167,139,250,0.6)", text:"#c4b5fd" },
+  "Confeitaria":           { bg:"rgba(244,114,182,0.15)", border:"rgba(244,114,182,0.6)", text:"#f9a8d4" },
+  "Vegano":                { bg:"rgba(52,211,153,0.15)",  border:"rgba(52,211,153,0.6)",  text:"#6ee7b7" },
+};
+
+// ─── ORDEN DE PRECIO ─────────────────────────────────────────────────────
+const PRECO_ORDER = { "$":1, "$$":2, "$$$":3, "$$$$":4 };
+
 // ─── ESTILOS ──────────────────────────────────────────────────────────────
 const S = {
-  app: { minHeight:"100vh", background:"#080808", display:"flex", flexDirection:"column", alignItems:"center", fontFamily:"'Inter', sans-serif", color:"#fff", position:"relative", overflow:"hidden" },
-  inner: { width:"100%", maxWidth:"420px", display:"flex", flexDirection:"column", minHeight:"100vh", position:"relative", zIndex:2 },
-  header: { padding:"14px 24px 12px", textAlign:"center", borderBottom:"1px solid rgba(224,0,200,0.18)", flexShrink:0 },
-  logo: { fontFamily:"'Playfair Display', serif", fontSize:"26px", fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"#fff" },
+  app: { minHeight:"100vh", height:"100vh", background:"#080808", display:"flex", flexDirection:"column", alignItems:"center", fontFamily:"'Inter', sans-serif", color:"#fff", position:"relative", overflow:"hidden" },
+  inner: { width:"100%", maxWidth:"420px", display:"flex", flexDirection:"column", height:"100vh", position:"relative", zIndex:2 },
+  header: { padding:"10px 24px 8px", textAlign:"center", borderBottom:"1px solid rgba(224,0,200,0.18)", flexShrink:0 },
+  logo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"#fff" },
   logoSpan: { color:"#e000c8", textShadow:"0 0 18px rgba(200,0,180,1), 0 0 50px rgba(200,0,180,0.5)" },
-  headerSub: { fontSize:"11px", fontWeight:600, letterSpacing:"3.5px", textTransform:"uppercase", color:"rgba(255,255,255,0.85)", marginTop:"6px" },
-  splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:"4px 28px 48px", textAlign:"center" },
-  loquepasa: { fontFamily:"'Playfair Display', serif", fontSize:"20px", fontStyle:"italic", color:"rgba(255,255,255,0.75)", lineHeight:1.4, marginBottom:"4px" },
-  solopasa: { fontFamily:"'Playfair Display', serif", fontSize:"22px", fontStyle:"italic", fontWeight:700, color:"#e000c8", textShadow:"0 0 16px rgba(200,0,180,0.7)", marginBottom:"28px" },
-  deco: { width:"56px", height:"1px", background:"linear-gradient(90deg, transparent, #e000c8, transparent)", boxShadow:"0 0 8px rgba(200,0,180,0.5)", margin:"0 auto 48px" },
-  city: { fontFamily:"'Playfair Display', serif", fontWeight:900, fontSize:"clamp(52px,15vw,72px)", lineHeight:0.9, color:"#fff", letterSpacing:"-1px", marginBottom:"16px" },
-  subtitulo: { fontSize:"15px", fontWeight:600, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.75)", marginBottom:"4px" },
-  destaque: { fontFamily:"'Playfair Display', serif", fontSize:"28px", fontWeight:700, color:"#fff", marginBottom:"52px" },
-  categorias: { display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:"6px", marginBottom:"56px", fontSize:"13px", fontWeight:600, letterSpacing:"2px", textTransform:"uppercase", color:"#e000c8", textShadow:"0 0 12px rgba(200,0,180,0.6)" },
-  sep: { color:"rgba(255,255,255,0.25)", fontWeight:300 },
+  headerSub: { fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.4)", marginTop:"3px" },
+  splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", padding:"16px 28px 20px", textAlign:"center" },
+  city: { fontFamily:"'Playfair Display', serif", fontWeight:900, fontSize:"clamp(44px,13vw,60px)", lineHeight:0.88, color:"#fff", letterSpacing:"-2px" },
+  subtitulo: { fontSize:"10px", fontWeight:700, letterSpacing:"5px", textTransform:"uppercase", color:"rgba(255,255,255,0.45)", margin:"8px 0 2px" },
+  destaque: { fontFamily:"'Playfair Display', serif", fontSize:"20px", fontWeight:700, color:"#fff" },
+  deco: { width:"36px", height:"1px", background:"linear-gradient(90deg, transparent, #e000c8, transparent)", boxShadow:"0 0 8px rgba(200,0,180,0.5)", margin:"0 auto 6px" },
+  loquepasa: { fontFamily:"'Playfair Display', serif", fontSize:"17px", fontStyle:"italic", color:"#e000c8", lineHeight:1.3, marginBottom:"2px" },
+  solopasa: { fontFamily:"'Playfair Display', serif", fontSize:"30px", fontStyle:"italic", fontWeight:900, color:"#fff", lineHeight:1.1 },
+  categorias: { display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"nowrap", gap:"5px", fontSize:"10px", fontWeight:800, letterSpacing:"1.5px", textTransform:"uppercase", color:"#e000c8", textShadow:"0 0 10px rgba(200,0,180,0.7)" },
+  sep: { color:"rgba(224,0,200,0.4)", fontWeight:300 },
   cta: { background:"linear-gradient(135deg, #d400bc 0%, #8800a0 100%)", color:"#fff", border:"none", borderRadius:"8px", padding:0, width:"100%", maxWidth:"300px", cursor:"pointer", fontFamily:"'Inter', sans-serif", boxShadow:"0 0 28px rgba(200,0,180,0.45), 0 8px 28px rgba(0,0,0,0.5)", transition:"all 0.2s", overflow:"hidden" },
   ctaMain: { display:"block", padding:"18px 24px 14px", fontSize:"19px", fontWeight:700, borderBottom:"1px solid rgba(255,255,255,0.12)" },
   ctaSub: { display:"block", padding:"10px 24px 13px", fontSize:"10px", fontWeight:600, letterSpacing:"2.5px", textTransform:"uppercase", color:"rgba(255,255,255,0.65)" },
-  filtrosBody: { flex:1, display:"flex", flexDirection:"column", padding:"24px 20px 40px", overflowY:"auto" },
-  filtrosTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:700, color:"#fff", textAlign:"center", marginBottom:"6px" },
-  filtrosSub: { fontSize:"12px", color:"rgba(255,255,255,0.4)", textAlign:"center", marginBottom:"24px", letterSpacing:"1px" },
+  filtrosBody: { flex:1, display:"flex", flexDirection:"column", overflow:"hidden", minHeight:0 },
+  filtrosScroll: { flex:1, overflowY:"auto", padding:"24px 20px 8px", WebkitOverflowScrolling:"touch" },
+  filtrosFooter: { flexShrink:0, padding:"12px 20px 28px", background:"linear-gradient(to top, #080808 75%, rgba(8,8,8,0))", borderTop:"none" },
+  filtrosTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:700, color:"#fff", textAlign:"center", marginBottom:"8px" },
+  filtrosSub: { fontSize:"16px", fontWeight:700, color:"#fff", textAlign:"center", marginBottom:"24px", letterSpacing:"0.5px" },
   filtrosGrid: { display:"grid", gridTemplateColumns:"1fr 1fr", gap:"10px", marginBottom:"28px" },
-  filtroBtn: (sel) => ({ background: sel ? "rgba(224,0,200,0.12)" : "rgba(255,255,255,0.04)", border: sel ? "1.5px solid #e000c8" : "1.5px solid rgba(255,255,255,0.1)", borderRadius:"12px", padding:"16px 10px", cursor:"pointer", fontFamily:"'Inter', sans-serif", color: sel ? "#fff" : "rgba(255,255,255,0.6)", fontSize:"12px", fontWeight:600, textAlign:"center", transition:"all 0.2s", display:"flex", flexDirection:"column", alignItems:"center", gap:"7px", boxShadow: sel ? "0 0 16px rgba(224,0,200,0.25)" : "none" }),
+  filtroBtn: (sel) => ({ background: sel ? "rgba(224,0,200,0.25)" : "rgba(255,255,255,0.09)", border: sel ? "2px solid #e000c8" : "1.5px solid rgba(255,255,255,0.25)", borderRadius:"12px", padding:"16px 10px", cursor:"pointer", fontFamily:"'Inter', sans-serif", color: sel ? "#fff" : "rgba(255,255,255,0.85)", fontSize:"12px", fontWeight:700, textAlign:"center", transition:"all 0.2s", display:"flex", flexDirection:"column", alignItems:"center", gap:"7px", boxShadow: sel ? "0 0 20px rgba(224,0,200,0.35)" : "0 2px 8px rgba(0,0,0,0.4)" }),
   filtroEmoji: { fontSize:"26px", lineHeight:1 },
   fechaBadge: { fontSize:"8px", background:"rgba(224,0,200,0.2)", color:"#e000c8", border:"1px solid rgba(224,0,200,0.4)", borderRadius:"10px", padding:"1px 6px", letterSpacing:"1px" },
   contador: (ativo) => ({ textAlign:"center", fontSize:"11px", fontWeight:500, letterSpacing:"2px", textTransform:"uppercase", color: ativo ? "#e000c8" : "rgba(255,255,255,0.3)", marginBottom:"20px", minHeight:"18px", textShadow: ativo ? "0 0 8px rgba(200,0,180,0.5)" : "none" }),
   resBody: { flex:1, overflowY:"auto", padding:"20px 16px 48px" },
-  // ← VOLVER: grande y visible
   resBack: { background:"linear-gradient(135deg, #d400bc 0%, #8800a0 100%)", border:"none", color:"#fff", fontSize:"16px", fontWeight:700, letterSpacing:"1px", cursor:"pointer", fontFamily:"'Inter', sans-serif", marginBottom:"24px", display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", padding:"14px 24px", borderRadius:"10px", width:"100%", boxShadow:"0 0 20px rgba(200,0,180,0.4)", transition:"all 0.2s" },
   avisoLegal: { fontSize:"10px", color:"rgba(255,255,255,0.25)", fontStyle:"italic", lineHeight:1.6, marginBottom:"24px", padding:"10px 14px", background:"rgba(255,255,255,0.02)", borderRadius:"6px", border:"1px solid rgba(255,255,255,0.05)" },
   catHeader: { display:"flex", alignItems:"center", gap:"10px", marginBottom:"16px", paddingBottom:"10px", borderBottom:"1px solid rgba(224,0,200,0.2)" },
@@ -193,7 +280,6 @@ const S = {
   cardPrice: { fontSize:"16px", fontWeight:700, color:"#ffd700", whiteSpace:"nowrap", marginLeft:"8px", flexShrink:0 },
   cardDesc: { fontSize:"12px", color:"rgba(255,255,255,0.55)", lineHeight:1.7, marginBottom:"12px" },
   cardBtn: { display:"block", background:"linear-gradient(135deg, #d400bc, #8800a0)", color:"#fff", textAlign:"center", padding:"12px", borderRadius:"8px", textDecoration:"none", fontSize:"13px", fontWeight:700, fontFamily:"'Inter', sans-serif", letterSpacing:"0.5px", boxShadow:"0 4px 16px rgba(200,0,180,0.3)" },
-  // Calendario
   calWrap: { background:"rgba(255,255,255,0.03)", border:"1px solid rgba(224,0,200,0.2)", borderRadius:"12px", padding:"14px", marginBottom:"20px" },
   calTitle: { fontSize:"11px", fontWeight:700, letterSpacing:"2px", textTransform:"uppercase", color:"#e000c8", marginBottom:"10px" },
   calInput: { width:"100%", background:"rgba(255,255,255,0.06)", border:"1px solid rgba(224,0,200,0.3)", borderRadius:"8px", padding:"10px 14px", color:"#fff", fontSize:"14px", fontFamily:"'Inter', sans-serif", outline:"none", cursor:"pointer" },
@@ -212,10 +298,12 @@ function Header() {
 function Glow() {
   return (
     <>
-      <div style={{position:"absolute",top:"-120px",left:"50%",transform:"translateX(-50%)",width:400,height:400,background:"radial-gradient(circle,rgba(210,0,185,0.13) 0%,transparent 65%)",pointerEvents:"none"}}/>
-      <div style={{position:"absolute",bottom:"-80px",left:"50%",transform:"translateX(-50%)",width:360,height:360,background:"radial-gradient(circle,rgba(210,0,185,0.10) 0%,transparent 65%)",pointerEvents:"none"}}/>
-      <div style={{position:"absolute",top:0,left:0,width:2,height:"100%",background:"linear-gradient(180deg,transparent,#e000c8 50%,transparent)",opacity:0.3,pointerEvents:"none"}}/>
-      <div style={{position:"absolute",top:0,right:0,width:2,height:"100%",background:"linear-gradient(180deg,transparent,#e000c8 50%,transparent)",opacity:0.3,pointerEvents:"none"}}/>
+      <div style={{position:"fixed",top:0,left:"50%",transform:"translateX(-50%)",width:"100%",maxWidth:"420px",height:"100vh",pointerEvents:"none",zIndex:1}}>
+        <div style={{position:"absolute",top:"-120px",left:"50%",transform:"translateX(-50%)",width:400,height:400,background:"radial-gradient(circle,rgba(210,0,185,0.13) 0%,transparent 65%)"}}/>
+        <div style={{position:"absolute",bottom:"-80px",left:"50%",transform:"translateX(-50%)",width:360,height:360,background:"radial-gradient(circle,rgba(210,0,185,0.10) 0%,transparent 65%)"}}/>
+        <div style={{position:"absolute",top:0,left:0,width:"2px",height:"100%",background:"linear-gradient(180deg,transparent,#e000c8 50%,transparent)",opacity:0.5}}/>
+        <div style={{position:"absolute",top:0,right:0,width:"2px",height:"100%",background:"linear-gradient(180deg,transparent,#e000c8 50%,transparent)",opacity:0.5}}/>
+      </div>
     </>
   );
 }
@@ -240,6 +328,37 @@ function ExpCard({ exp }) {
   );
 }
 
+function RestCard({ rest }) {
+  const c = CAT_COLORS[rest.cat] || CAT_COLORS["Casual"];
+  const tagCat = { fontSize:"10px", padding:"2px 8px", borderRadius:"20px", fontWeight:600, background:c.bg, color:c.text, border:`1px solid ${c.border}` };
+  const tagPreco = { fontSize:"11px", padding:"2px 8px", borderRadius:"20px", fontWeight:700, background:"rgba(255,215,0,0.12)", color:"#ffd700", border:"1px solid rgba(255,215,0,0.3)" };
+  const tagGF = { fontSize:"10px", padding:"2px 7px", borderRadius:"20px", fontWeight:600, background:"rgba(52,211,153,0.12)", color:"#6ee7b7", border:"1px solid rgba(52,211,153,0.4)" };
+  const tagVegan = { fontSize:"10px", padding:"2px 7px", borderRadius:"20px", fontWeight:600, background:"rgba(52,211,153,0.18)", color:"#34d399", border:"1px solid rgba(52,211,153,0.5)" };
+  return (
+    <div style={S.card}>
+      <div style={S.cardTop}>
+        <span style={S.cardEmoji}>{rest.emoji}</span>
+        <div style={S.cardInfo}>
+          <div style={S.cardName}>{rest.name}</div>
+          <div style={S.cardTags}>
+            <span style={tagCat}>{rest.cat}</span>
+            {rest.preco && <span style={tagPreco}>{rest.preco}</span>}
+            {rest.tags?.includes("gf") && <span style={tagGF}>🌾 GF</span>}
+            {rest.tags?.includes("vegan") && <span style={tagVegan}>🌿 Vegano</span>}
+            {rest.rating && <span style={S.tagRating}>⭐ {rest.rating}</span>}
+          </div>
+          <div style={{fontSize:"10px", color:"rgba(255,255,255,0.35)", marginTop:"5px"}}>📍 {rest.local}</div>
+        </div>
+      </div>
+      <div style={S.cardDesc}>{rest.desc}</div>
+      <a href={rest.maps} target="_blank" rel="noopener noreferrer"
+        style={{...S.cardBtn, background:"linear-gradient(135deg, #1a6a3a, #0d4a26)"}}>
+        🗺️ Cómo llegar
+      </a>
+    </div>
+  );
+}
+
 // ─── PANTALLA 1: SPLASH ───────────────────────────────────────────────────
 function SplashScreen({ onStart }) {
   return (
@@ -248,22 +367,40 @@ function SplashScreen({ onStart }) {
         <Glow />
         <Header />
         <div style={S.splashBody}>
-          <div style={S.loquepasa}>Lo que pasa en Vegas...</div>
-          <div style={S.solopasa}>¡solo pasa en Vegas!</div>
-          <div style={S.deco}/>
-          <div style={S.city}>Las Vegas</div>
-          <div style={S.subtitulo}>la capital mundial</div>
-          <div style={S.destaque}>del Entretenimiento</div>
-          <div style={S.categorias}>
-            <span>Tickets</span><span style={S.sep}>·</span>
-            <span>Shows</span><span style={S.sep}>·</span>
-            <span>Tours</span><span style={S.sep}>·</span>
-            <span>Atracciones</span>
+
+          {/* BLOCO 1 — Cidade + Frase juntas */}
+          <div style={{width:"100%"}}>
+            <div style={S.city}>Las Vegas</div>
+            <div style={S.subtitulo}>la capital mundial</div>
+            <div style={S.destaque}>del Entretenimiento</div>
+            <div style={{margin:"12px auto 6px", width:"36px", height:"1px", background:"linear-gradient(90deg,transparent,#e000c8,transparent)", boxShadow:"0 0 8px rgba(200,0,180,0.5)"}}/>
+            <div style={S.loquepasa}>Lo que pasa en Vegas...</div>
+            <div style={S.solopasa}>¡solo pasa en Vegas!</div>
           </div>
-          <button style={{...S.cta,animation:"neonPulse 2.5s ease-in-out infinite"}} onClick={onStart}>
-            <span style={S.ctaMain}>¡Empieza aquí! →</span>
-            <span style={S.ctaSub}>¡Quiero mis tickets ahora!</span>
-          </button>
+
+          {/* BLOCO 2 — Categorias */}
+          <div style={{width:"100%", marginTop:"16px"}}>
+            <div style={S.categorias}>
+              <span>Tickets</span><span style={S.sep}>·</span>
+              <span>Shows</span><span style={S.sep}>·</span>
+              <span>Tours</span><span style={S.sep}>·</span>
+              <span>Bares</span><span style={S.sep}>·</span>
+              <span>Restaurantes</span>
+            </div>
+          </div>
+
+          {/* BLOCO 3 — Badge + Botão */}
+          <div style={{width:"100%", marginTop:"16px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px"}}>
+            <div style={{display:"flex", alignItems:"center", gap:"6px", background:"rgba(224,0,200,0.1)", border:"1px solid rgba(224,0,200,0.3)", borderRadius:"20px", padding:"4px 14px"}}>
+              <span style={{fontSize:"10px"}}>🔥</span>
+              <span style={{fontSize:"10px", fontWeight:700, letterSpacing:"1px", color:"#e000c8"}}>+500 EXPERIENCIAS DISPONIBLES</span>
+            </div>
+            <button style={{...S.cta, maxWidth:"100%", animation:"neonPulse 2.5s ease-in-out infinite"}} onClick={onStart}>
+              <span style={{display:"block", padding:"15px 24px 12px", fontSize:"20px", fontWeight:700, borderBottom:"1px solid rgba(255,255,255,0.12)"}}>¡Empieza aquí! →</span>
+              <span style={{display:"block", padding:"8px 24px 10px", fontSize:"10px", fontWeight:600, letterSpacing:"2px", textTransform:"uppercase", color:"rgba(255,255,255,0.7)"}}>Gratis · Reserva sin compromiso</span>
+            </button>
+          </div>
+
         </div>
       </div>
       <style>{`@keyframes neonPulse{0%,100%{box-shadow:0 0 28px rgba(200,0,180,0.45),0 8px 28px rgba(0,0,0,0.5)}50%{box-shadow:0 0 48px rgba(200,0,180,0.75),0 12px 36px rgba(0,0,0,0.6)}}`}</style>
@@ -271,58 +408,141 @@ function SplashScreen({ onStart }) {
   );
 }
 
-// ─── PANTALLA 2: FILTROS ──────────────────────────────────────────────────
-function FiltrosScreen({ onResultados }) {
-  const [sel, setSel] = useState([]);
+// ─── PANTALLA 2: FILTROS CON TABS ────────────────────────────────────────
+const CATS_EXPERIENCIAS = Object.entries(CAT_META)
+  .filter(([id]) => id !== "restaurantes")
+  .map(([id, m]) => ({ id, label:m.label, emoji:m.emoji, hasFecha:m.hasFecha }));
 
-  const toggle = (id) => {
-    setSel(prev => {
+function FiltrosScreen({ onResultados }) {
+  const [aba, setAba]       = useState("exp"); // "exp" | "rest"
+  const [selExp, setSelExp] = useState([]);
+  const [selRest, setSelRest] = useState([]);
+
+  const toggleExp = (id) => {
+    setSelExp(prev => {
       if (prev.includes(id)) return prev.filter(x => x !== id);
       if (prev.length >= MAX_SEL) return prev;
       return [...prev, id];
     });
   };
 
-  const ativo = sel.length >= 1;
-  const atMax = sel.length === MAX_SEL;
+  const toggleRest = (id) => {
+    setSelRest(prev => {
+      if (prev.includes(id)) return prev.filter(x => x !== id);
+      if (prev.length >= MAX_SUBCAT) return prev;
+      return [...prev, id];
+    });
+  };
+
+  const totalSel = selExp.length + (selRest.length > 0 ? 1 : 0);
+  const ativoExp = selExp.length > 0;
+  const ativoRest = selRest.length > 0;
+  const ativo = ativoExp || ativoRest;
+
+  const handleVer = () => {
+    if (!ativo) return;
+    const cats = [...selExp];
+    if (ativoRest) cats.push("restaurantes");
+    onResultados(cats, selRest);
+  };
+
+  const tabStyle = (active) => ({
+    flex:1, padding:"12px 8px", border:"none", cursor:"pointer",
+    fontFamily:"'Inter', sans-serif", fontSize:"13px", fontWeight:700,
+    letterSpacing:"0.5px", transition:"all 0.2s",
+    background: active ? "rgba(224,0,200,0.2)" : "rgba(255,255,255,0.05)",
+    color: active ? "#fff" : "rgba(255,255,255,0.45)",
+    borderBottom: active ? "2px solid #e000c8" : "2px solid transparent",
+    boxShadow: active ? "0 0 12px rgba(200,0,180,0.2)" : "none",
+  });
 
   return (
     <div style={S.app}>
       <div style={S.inner}>
         <Glow />
         <Header />
+
+        {/* ── ABAS ── */}
+        <div style={{display:"flex", flexShrink:0, borderBottom:"1px solid rgba(255,255,255,0.08)"}}>
+          <button style={tabStyle(aba === "exp")} onClick={() => setAba("exp")}>
+            🎭 Experiencias
+            {ativoExp && <span style={{marginLeft:"6px", background:"#e000c8", color:"#fff", borderRadius:"10px", padding:"1px 6px", fontSize:"10px"}}>{selExp.length}</span>}
+          </button>
+          <button style={tabStyle(aba === "rest")} onClick={() => setAba("rest")}>
+            🍻 Comer & Beber
+            {ativoRest && <span style={{marginLeft:"6px", background:"#e000c8", color:"#fff", borderRadius:"10px", padding:"1px 6px", fontSize:"10px"}}>{selRest.length}</span>}
+          </button>
+        </div>
+
         <div style={S.filtrosBody}>
-          <div style={S.filtrosTitulo}>¿Qué quieres hacer?</div>
-          <div style={S.filtrosSub}>Elige hasta <span style={{color:"#e000c8",fontWeight:600}}>{MAX_SEL} opciones</span></div>
+          <div style={S.filtrosScroll}>
 
-          <div style={S.filtrosGrid}>
-            {CATEGORIAS.map((cat, i) => {
-              const isSel = sel.includes(cat.id);
-              const isLast = i === CATEGORIAS.length - 1 && CATEGORIAS.length % 2 !== 0;
-              return (
-                <button key={cat.id} onClick={() => toggle(cat.id)}
-                  style={{...S.filtroBtn(isSel), gridColumn: isLast ? "1 / -1" : undefined}}>
-                  <span style={S.filtroEmoji}>{cat.emoji}</span>
-                  {cat.label}
-                  {cat.hasFecha && <span style={S.fechaBadge}>FECHAS</span>}
-                </button>
-              );
-            })}
+            {/* ── ABA EXPERIENCIAS ── */}
+            {aba === "exp" && (
+              <>
+                <div style={S.filtrosTitulo}>¿Qué quieres hacer?</div>
+                <div style={S.filtrosSub}>Elige hasta <span style={{color:"#e000c8", textShadow:"0 0 12px rgba(200,0,180,0.8)"}}>{MAX_SEL} opciones</span></div>
+                <div style={S.filtrosGrid}>
+                  {CATS_EXPERIENCIAS.map((cat, i) => {
+                    const isSel = selExp.includes(cat.id);
+                    const isLast = i === CATS_EXPERIENCIAS.length - 1 && CATS_EXPERIENCIAS.length % 2 !== 0;
+                    return (
+                      <button key={cat.id} onClick={() => toggleExp(cat.id)}
+                        style={{...S.filtroBtn(isSel), gridColumn: isLast ? "1 / -1" : undefined}}>
+                        <span style={S.filtroEmoji}>{cat.emoji}</span>
+                        {cat.label}
+                        {cat.hasFecha && <span style={S.fechaBadge}>FECHAS</span>}
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+
+            {/* ── ABA RESTAURANTES ── */}
+            {aba === "rest" && (
+              <>
+                <div style={S.filtrosTitulo}>¿Dónde comer?</div>
+                <div style={S.filtrosSub}>Elige hasta <span style={{color:"#e000c8", textShadow:"0 0 12px rgba(200,0,180,0.8)"}}>{MAX_SUBCAT} categorías</span></div>
+                <div style={S.filtrosGrid}>
+                  {SUBCATS.map((cat, i) => {
+                    const isSel = selRest.includes(cat.id);
+                    const isLast = i === SUBCATS.length - 1 && SUBCATS.length % 2 !== 0;
+                    const c = CAT_COLORS[cat.id] || {};
+                    return (
+                      <button key={cat.id} onClick={() => toggleRest(cat.id)}
+                        style={{
+                          ...S.filtroBtn(isSel),
+                          gridColumn: isLast ? "1 / -1" : undefined,
+                          border: isSel ? `2px solid ${c.border || "#e000c8"}` : "1.5px solid rgba(255,255,255,0.25)",
+                          background: isSel ? (c.bg || "rgba(224,0,200,0.25)") : "rgba(255,255,255,0.09)",
+                          color: isSel ? (c.text || "#fff") : "rgba(255,255,255,0.85)",
+                          boxShadow: isSel ? `0 0 16px ${c.border || "rgba(224,0,200,0.35)"}` : "0 2px 8px rgba(0,0,0,0.4)",
+                        }}>
+                        <span style={S.filtroEmoji}>{cat.emoji}</span>
+                        {cat.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            )}
           </div>
 
-          <div style={S.contador(ativo)}>
-            {!ativo && "Selecciona al menos una opción"}
-            {ativo && !atMax && `${sel.length} de ${MAX_SEL} seleccionadas`}
-            {atMax && "✦ Máximo alcanzado ✦"}
-          </div>
-
-          <div style={{display:"flex",justifyContent:"center"}}>
-            <button onClick={() => ativo && onResultados(sel)}
-              style={{...S.cta, opacity: ativo ? 1 : 0.35, pointerEvents: ativo ? "auto" : "none",
-                boxShadow: ativo ? "0 0 28px rgba(200,0,180,0.45),0 8px 28px rgba(0,0,0,0.5)" : "none"}}>
-              <span style={S.ctaMain}>¡Ver opciones! →</span>
-              <span style={S.ctaSub}>Mostrar todo disponible</span>
-            </button>
+          {/* ── RODAPÉ FIXO ── */}
+          <div style={S.filtrosFooter}>
+            <div style={S.contador(ativo)}>
+              {!ativo && "Selecciona al menos una opción"}
+              {ativo && `${ativoExp ? selExp.length + " experiencia(s)" : ""}${ativoExp && ativoRest ? " + " : ""}${ativoRest ? selRest.length + " restaurante(s)" : ""}`}
+            </div>
+            <div style={{display:"flex",justifyContent:"center"}}>
+              <button onClick={handleVer}
+                style={{...S.cta, opacity: ativo ? 1 : 0.35, pointerEvents: ativo ? "auto" : "none",
+                  boxShadow: ativo ? "0 0 28px rgba(200,0,180,0.45),0 8px 28px rgba(0,0,0,0.5)" : "none"}}>
+                <span style={S.ctaMain}>¡Ver opciones! →</span>
+                <span style={S.ctaSub}>Mostrar todo disponible</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -331,7 +551,7 @@ function FiltrosScreen({ onResultados }) {
 }
 
 // ─── PANTALLA 3: RESULTADOS ───────────────────────────────────────────────
-function ResultadosScreen({ sel, onVolver }) {
+function ResultadosScreen({ sel, subcatRest, onVolver }) {
   const [fecha, setFecha] = useState("");
 
   const filtrarPorFecha = (items, catId) => {
@@ -350,14 +570,30 @@ function ResultadosScreen({ sel, onVolver }) {
   const seen = new Set();
 
   const sections = sel.map(catId => {
-    const meta = CAT_META[catId];
-    const items = (DB[catId] || []).filter(item => {
+    let items = (DB[catId] || []).filter(item => {
       if (seen.has(item.name)) return false;
       seen.add(item.name);
       return true;
     });
+    // Filtrar por subcategoria se for restaurantes
+    if (catId === "restaurantes" && subcatRest && subcatRest.length > 0) {
+      items = items.filter(item => subcatRest.includes(item.cat));
+    }
+    // Também mostrar churrascarias dentro de restaurantes se Churrascaria selecionada
+    if (catId === "restaurantes" && subcatRest && subcatRest.includes("Churrascaria")) {
+      const churr = (DB["churrascarias"] || []).filter(item => {
+        if (seen.has(item.name)) return false;
+        seen.add(item.name);
+        return true;
+      });
+      items = [...items, ...churr];
+    }
+    // Ordenar restaurantes por preço
+    if (catId === "restaurantes") {
+      items = [...items].sort((a, b) => (PRECO_ORDER[a.preco] || 0) - (PRECO_ORDER[b.preco] || 0));
+    }
     const filtered = filtrarPorFecha(items, catId);
-    return { catId, meta, items: filtered };
+    return { catId, meta: CAT_META[catId], items: filtered };
   }).filter(s => s.items.length > 0);
 
   return (
@@ -366,12 +602,10 @@ function ResultadosScreen({ sel, onVolver }) {
         <Glow />
         <Header />
         <div style={S.resBody}>
-          {/* ← VOLVER — grande y visible */}
           <button style={S.resBack} onClick={onVolver}>
             ← Volver
           </button>
 
-          {/* Filtro de fecha para categorías que lo necesitan */}
           {hasFecha && (
             <div style={S.calWrap}>
               <div style={S.calTitle}>📅 ¿Cuándo estarás en Las Vegas?</div>
@@ -386,9 +620,12 @@ function ResultadosScreen({ sel, onVolver }) {
             </div>
           )}
 
-          <div style={S.avisoLegal}>
-            * Los precios son referenciales y están sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso. No nos hacemos responsables por variaciones en el precio al momento de la reserva.
-          </div>
+          {/* Aviso legal apenas para categorias que não são restaurantes */}
+          {sel.some(id => id !== "restaurantes") && (
+            <div style={S.avisoLegal}>
+              * Los precios son referenciales y están sujetos a disponibilidad. Las tarifas pueden cambiar sin previo aviso. No nos hacemos responsables por variaciones en el precio al momento de la reserva.
+            </div>
+          )}
 
           {sections.length === 0 && fecha && (
             <div style={{textAlign:"center",color:"rgba(255,255,255,0.5)",padding:"40px 20px"}}>
@@ -405,7 +642,11 @@ function ResultadosScreen({ sel, onVolver }) {
                 <span style={S.catTitulo}>{meta.label}</span>
                 <span style={S.catDestaque}>{meta.destaque}</span>
               </div>
-              {items.map(exp => <ExpCard key={exp.name} exp={exp} />)}
+              {items.map(exp =>
+                catId === "restaurantes"
+                  ? <RestCard key={exp.name} rest={exp} />
+                  : <ExpCard key={exp.name} exp={exp} />
+              )}
             </div>
           ))}
         </div>
@@ -415,10 +656,105 @@ function ResultadosScreen({ sel, onVolver }) {
   );
 }
 
+// ─── PANTALLA SUBCATEGORÍAS RESTAURANTES ─────────────────────────────────
+const SUBCATS = [
+  { id:"Desayuno",          label:"Desayuno",        emoji:"🍳" },
+  { id:"Casual",            label:"Casual",          emoji:"🍔" },
+  { id:"Con Vista al Bellagio", label:"Vista Bellagio", emoji:"🌊" },
+  { id:"Churrascaria",      label:"Churrascaria",    emoji:"🔥" },
+  { id:"Rooftop",           label:"Rooftop",         emoji:"🏙️" },
+  { id:"Fine Dining",       label:"Fine Dining",     emoji:"✨" },
+  { id:"Famosos de la TV",  label:"Famosos TV",      emoji:"📺" },
+  { id:"Confeitaria",       label:"Dulces & Pasteles",emoji:"🍰" },
+  { id:"Vegano",            label:"Vegano",          emoji:"🌿" },
+];
+const MAX_SUBCAT = 2;
+
+function SubcatRestScreen({ onVolver, onResultados }) {
+  const [sel, setSel] = useState([]);
+
+  const toggle = (id) => {
+    setSel(prev => {
+      if (prev.includes(id)) return prev.filter(x => x !== id);
+      if (prev.length >= MAX_SUBCAT) return prev;
+      return [...prev, id];
+    });
+  };
+
+  const ativo = sel.length >= 1;
+  const atMax = sel.length === MAX_SUBCAT;
+
+  return (
+    <div style={S.app}>
+      <div style={S.inner}>
+        <Glow />
+        <Header />
+        <div style={S.filtrosBody}>
+          <div style={S.filtrosScroll}>
+            {/* Botón volver */}
+            <button onClick={onVolver}
+              style={{background:"rgba(255,255,255,0.07)", border:"1.5px solid rgba(255,255,255,0.18)", borderRadius:"10px", color:"rgba(255,255,255,0.7)", fontSize:"13px", fontWeight:600, padding:"10px 16px", cursor:"pointer", fontFamily:"'Inter', sans-serif", marginBottom:"20px", display:"flex", alignItems:"center", gap:"6px"}}>
+              ← Volver
+            </button>
+
+            <div style={S.filtrosTitulo}>Restaurantes</div>
+            <div style={S.filtrosSub}>Elige hasta <span style={{color:"#e000c8", textShadow:"0 0 12px rgba(200,0,180,0.8)"}}>{MAX_SUBCAT} categorías</span></div>
+
+            <div style={S.filtrosGrid}>
+              {SUBCATS.map((cat, i) => {
+                const isSel = sel.includes(cat.id);
+                const isLast = i === SUBCATS.length - 1 && SUBCATS.length % 2 !== 0;
+                const c = CAT_COLORS[cat.id] || {};
+                return (
+                  <button key={cat.id} onClick={() => toggle(cat.id)}
+                    style={{
+                      ...S.filtroBtn(isSel),
+                      gridColumn: isLast ? "1 / -1" : undefined,
+                      border: isSel ? `2px solid ${c.border || "#e000c8"}` : "1.5px solid rgba(255,255,255,0.25)",
+                      background: isSel ? (c.bg || "rgba(224,0,200,0.25)") : "rgba(255,255,255,0.09)",
+                      color: isSel ? (c.text || "#fff") : "rgba(255,255,255,0.85)",
+                      boxShadow: isSel ? `0 0 16px ${c.border || "rgba(224,0,200,0.35)"}` : "0 2px 8px rgba(0,0,0,0.4)",
+                    }}>
+                    <span style={S.filtroEmoji}>{cat.emoji}</span>
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div style={S.filtrosFooter}>
+            <div style={S.contador(ativo)}>
+              {!ativo && "Selecciona al menos una categoría"}
+              {ativo && !atMax && `${sel.length} de ${MAX_SUBCAT} seleccionadas`}
+              {atMax && "✦ Máximo alcanzado ✦"}
+            </div>
+            <div style={{display:"flex",justifyContent:"center"}}>
+              <button onClick={() => ativo && onResultados(sel)}
+                style={{...S.cta, opacity: ativo ? 1 : 0.35, pointerEvents: ativo ? "auto" : "none",
+                  boxShadow: ativo ? "0 0 28px rgba(200,0,180,0.45),0 8px 28px rgba(0,0,0,0.5)" : "none"}}>
+                <span style={S.ctaMain}>¡Ver restaurantes! →</span>
+                <span style={S.ctaSub}>Mostrar opciones disponibles</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── APP ROOT ─────────────────────────────────────────────────────────────
 export default function TuVegasTickets() {
-  const [screen, setScreen] = useState("splash");
-  const [sel, setSel]       = useState([]);
+  const [screen, setScreen]       = useState("splash");
+  const [sel, setSel]             = useState([]);
+  const [subcatRest, setSubcatRest] = useState([]);
+
+  const handleResultados = (cats, subcats) => {
+    setSel(cats);
+    setSubcatRest(subcats || []);
+    setScreen("resultados");
+  };
 
   return (
     <>
@@ -434,8 +770,11 @@ export default function TuVegasTickets() {
       `}</style>
 
       {screen === "splash"     && <SplashScreen    onStart={() => setScreen("filtros")} />}
-      {screen === "filtros"    && <FiltrosScreen   onResultados={s => { setSel(s); setScreen("resultados"); }} />}
-      {screen === "resultados" && <ResultadosScreen sel={sel} onVolver={() => setScreen("filtros")} />}
+      {screen === "filtros"    && <FiltrosScreen   onResultados={handleResultados} />}
+      {screen === "resultados" && <ResultadosScreen
+                                    sel={sel}
+                                    subcatRest={subcatRest}
+                                    onVolver={() => setScreen("filtros")} />}
     </>
   );
 }
