@@ -107,14 +107,14 @@ const DB = {
   ],
 
   conciertos: [
-    { name:"Santana — An Intimate Evening: Greatest Hits Live", emoji:"🎸", price:"Desde $99",  dur:"2 hrs",   rating:4.8, dates:["2026-09-16","2026-09-27"], desc:"14 años de residencia. House of Blues — Mandalay Bay. Septiembre. El maestro de la guitarra en un venue íntimo único.", url:"https://vegas.vdvm.net/QY2YO9" },
-    { name:"Kelly Clarkson: Studio Sessions",              emoji:"🎤", price:"Desde $99",  dur:"2 hrs",   rating:4.7, dates:["2026-07-17","2026-08-15"], desc:"La ganadora de American Idol en el Colosseum de Caesars Palace. Julio y agosto. Stronger, Since U Been Gone y más.", url:"https://vegas.vdvm.net/k4J4jx" },
-    { name:"Scorpions — Coming Home to Las Vegas",         emoji:"🦂", price:"Desde $80",  dur:"2 hrs",   rating:4.7, dates:["2026-09-17","2026-10-03"], desc:"Los legendarios rockeros alemanes en Planet Hollywood. 17 sep – 3 oct. Wind of Change y Rock You Like a Hurricane en vivo.", url:"https://vegas.vdvm.net/Pzr7P6" },
-    { name:"New Kids on the Block: The Right Stuff",       emoji:"🎶", price:"Desde $79",  dur:"2 hrs",   rating:4.6, dates:["2026-06-19","2026-07-04","2026-10-02","2026-10-17"], desc:"El boy band que reinventó Vegas. Dolby Live — Park MGM. Junio, julio y octubre. Hangin' Tough nunca sonó tan bien.", url:"https://vegas.vdvm.net/B5z74y" },
-    { name:"Barry Manilow: The Hits Come Home",            emoji:"🎹", price:"Desde $69",  dur:"2 hrs",   rating:4.8, dates:["2026-07-01","2026-12-19"], desc:"Residencia de por vida. Westgate Las Vegas. Julio a diciembre. Mandy, Copacabana y el show más vendido de la ciudad.", url:"https://vegas.vdvm.net/enknK1" },
+    { name:"Santana — An Intimate Evening: Greatest Hits Live", emoji:"🎸", price:"Desde $99",  dur:"2 hrs",   rating:4.8, dates:["2026-05-13","2026-05-14","2026-05-16","2026-05-17","2026-05-20","2026-05-21","2026-05-23","2026-05-24","2026-09-16","2026-09-17","2026-09-19","2026-09-20","2026-09-23","2026-09-24","2026-09-26","2026-09-27"], desc:"14 años de residencia. House of Blues — Mandalay Bay. Mayo y septiembre. El maestro de la guitarra en un venue íntimo único.", url:"https://vegas.vdvm.net/QY2YO9" },
+    { name:"Kelly Clarkson: Studio Sessions",              emoji:"🎤", price:"Desde $99",  dur:"2 hrs",   rating:4.7, dates:["2026-07-17","2026-07-18","2026-07-24","2026-07-25","2026-07-31","2026-08-01","2026-08-07","2026-08-08","2026-08-14","2026-08-15"], desc:"La ganadora de American Idol en el Colosseum de Caesars Palace. Julio y agosto. Stronger, Since U Been Gone y más.", url:"https://vegas.vdvm.net/k4J4jx" },
+    { name:"Scorpions — Coming Home to Las Vegas",         emoji:"🦂", price:"Desde $80",  dur:"2 hrs",   rating:4.7, dates:["2026-09-17","2026-09-19","2026-09-22","2026-09-24","2026-09-26","2026-09-29","2026-10-01","2026-10-03"], desc:"Los legendarios rockeros alemanes en Planet Hollywood. 17 sep – 3 oct. Wind of Change y Rock You Like a Hurricane en vivo.", url:"https://vegas.vdvm.net/Pzr7P6" },
+    { name:"New Kids on the Block: The Right Stuff",       emoji:"🎶", price:"Desde $79",  dur:"2 hrs",   rating:4.6, dates:["2026-06-19","2026-06-20","2026-06-24","2026-06-26","2026-06-27","2026-07-01","2026-07-03","2026-07-04","2026-10-02","2026-10-03","2026-10-07","2026-10-09","2026-10-10","2026-10-14","2026-10-16","2026-10-17"], desc:"El boy band que reinventó Vegas. Dolby Live — Park MGM. Junio, julio y octubre. Hangin' Tough nunca sonó tan bien.", url:"https://vegas.vdvm.net/B5z74y" },
+    { name:"Barry Manilow: The Hits Come Home",            emoji:"🎹", price:"Desde $69",  dur:"2 hrs",   rating:4.8, dates:["2026-07-09","2026-07-10","2026-07-11","2026-07-16","2026-07-17","2026-07-18","2026-08-20","2026-08-22","2026-08-27","2026-08-29","2026-09-17","2026-09-18","2026-09-19","2026-09-24","2026-09-25","2026-09-26","2026-10-08","2026-10-09","2026-10-10","2026-10-15","2026-10-16","2026-10-17","2026-11-05","2026-11-06","2026-11-07","2026-12-03","2026-12-04","2026-12-05","2026-12-10","2026-12-12","2026-12-17","2026-12-18","2026-12-19"], desc:"Residencia de por vida. Westgate Las Vegas. Julio a diciembre. Mandy, Copacabana y el show más vendido de la ciudad.", url:"https://vegas.vdvm.net/enknK1" },
     { name:"Wayne Newton: Up Close and Personal",          emoji:"🎙️", price:"Desde $55",  dur:"90 min",  rating:4.6, dates:["2026-09-01","2026-12-31"], desc:"Mr. Las Vegas en el Flamingo. Septiembre a diciembre. 50 años sobre los escenarios de Vegas. Danke Schoen en persona.", url:"https://vegas.vdvm.net/ZVYVQK" },
     { name:"Mary J. Blige: My Life, My Story",             emoji:"👑", price:"Desde $80",  dur:"2 hrs",   rating:4.8, dates:["2026-05-06","2026-10-31"], desc:"La Reina del Hip-Hop Soul en Dolby Live — Park MGM. Mayo, julio, agosto y octubre. Family Affair, No More Drama y más.", url:"https://vegas.vdvm.net/zznzN0" },
-    { name:"Rod Stewart: The Encore Shows",                emoji:"🎸", price:"Desde $99",  dur:"2 hrs",   rating:4.7, dates:["2026-05-27","2026-08-22"], desc:"El Caballero del rock en el Colosseum de Caesars Palace. Mayo, junio y agosto. Do Ya Think I'm Sexy y Tonight's the Night.", url:"https://vegas.vdvm.net/n4W4LV" },
+    { name:"Rod Stewart: The Encore Shows",                emoji:"🎸", price:"Desde $99",  dur:"2 hrs",   rating:4.7, dates:["2026-05-27","2026-06-02","2026-06-04","2026-06-06","2026-08-18","2026-08-20","2026-08-22","2026-08-25","2026-08-27","2026-08-29"], desc:"El Caballero del rock en el Colosseum de Caesars Palace. Mayo, junio y agosto. Do Ya Think I'm Sexy y Tonight's the Night.", url:"https://vegas.vdvm.net/n4W4LV" },
     { name:"LISA — Viva La LISA",                          emoji:"💃", price:"Desde $100", dur:"90 min",  rating:4.8, dates:["2026-11-13","2026-11-28"], desc:"La estrella global de BLACKPINK en el Colosseum de Caesars Palace. 13 y 14 nov + 27 y 28 nov. Coreografía y pop de otro nivel.", url:"https://vegas.vdvm.net/7X1X5Y" },
     { name:"Rosalía — Lux Tour",                           emoji:"🌹", price:"Desde $46",  dur:"2 hrs",   rating:4.9, dates:["2026-06-27","2026-06-27"], desc:"La artista española más importante del momento. T-Mobile Arena. 27 de junio. Flamenco, avant-pop y electrónica. Sublime.", url:"https://vegas.vdvm.net/qWOgDY" },
     { name:"Keyshia Cole",                                 emoji:"🎵", price:"Desde $93",  dur:"2 hrs",   rating:4.7, dates:["2026-06-26","2026-06-27"], desc:"La reina del R&B de soul. Encore Theater — Wynn Las Vegas. 26 y 27 de junio. Love, I Just Want It to Be Over y más clásicos.", url:"https://vegas.vdvm.net/vDE2Z3" },
@@ -245,6 +245,7 @@ const SUBCATS = [
 
 const CATEGORIAS = Object.entries(CAT_META).map(([id, m]) => ({ id, label:m.label, emoji:m.emoji, hasFecha:m.hasFecha }));
 const MAX_SEL = 3;
+const MAX_SUBCAT = 2;
 
 // ─── ORDEN DE PRECIO ─────────────────────────────────────────────────────
 const PRECO_ORDER = { "$":1, "$$":2, "$$$":3, "$$$$":4 };
@@ -576,13 +577,11 @@ function ResultadosScreen({ sel, subcatRest, onVolver }) {
   const filtrarPorFecha = (items, catId) => {
     if (!CAT_META[catId]?.hasFecha) return items;
     if (!fecha) return items;
-    const d = new Date(fecha + "T00:00:00");
     return items.filter(item => {
-      // Itens sem datas específicas só aparecem sem filtro
-      if (!item.dates || item.dates.length === 0) return false;
-      const ini = new Date(item.dates[0] + "T00:00:00");
-      const fin = new Date(item.dates[item.dates.length - 1] + "T00:00:00");
-      return d >= ini && d <= fin;
+      // Sem datas = evento permanente/diário, sempre aparece
+      if (!item.dates || item.dates.length === 0) return true;
+      // Verifica se a data selecionada está na lista de datas específicas
+      return item.dates.includes(fecha);
     });
   };
 
