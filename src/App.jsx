@@ -242,12 +242,12 @@ const S = {
   header: { padding:"10px 24px 8px", textAlign:"center", borderBottom:"1px solid rgba(224,0,200,0.18)", flexShrink:0 },
   logo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"#fff" },
   logoSpan: { color:"#e000c8", textShadow:"0 0 18px rgba(200,0,180,1), 0 0 50px rgba(200,0,180,0.5)" },
-  headerSub: { fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.85)", marginTop:"3px" },
+  headerSub: { fontFamily:"'Inter', sans-serif", fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.85)", marginTop:"3px" },
   splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", padding:"20px 28px 28px", gap:"0", textAlign:"center" },
   city: { fontFamily:"'Playfair Display', serif", fontWeight:900, fontSize:"clamp(58px,18vw,78px)", lineHeight:0.85, color:"#fff", letterSpacing:"-2px" },
   subtitulo: { fontSize:"12px", fontWeight:700, letterSpacing:"5px", textTransform:"uppercase", color:"rgba(255,255,255,0.45)", margin:"18px 0 4px" },
   destaque: { fontFamily:"'Playfair Display', serif", fontSize:"26px", fontWeight:700, color:"#fff" },
-  deco: { width:"40px", height:"1px", background:"linear-gradient(90deg, transparent, #e000c8, transparent)", boxShadow:"0 0 8px rgba(200,0,180,0.5)", margin:"52px auto 16px" },
+  deco: { width:"40px", height:"1px", background:"linear-gradient(90deg, transparent, #e000c8, transparent)", boxShadow:"0 0 8px rgba(200,0,180,0.5)", margin:"148px auto 16px" },
   loquepasa: { fontFamily:"'Playfair Display', serif", fontSize:"28px", fontStyle:"italic", color:"#e000c8", lineHeight:1.3, marginBottom:"6px" },
   solopasa: { fontFamily:"'Playfair Display', serif", fontSize:"36px", fontStyle:"italic", fontWeight:900, color:"#fff", lineHeight:1.1 },
   categorias: { display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"nowrap", gap:"5px", fontSize:"10px", fontWeight:800, letterSpacing:"1.5px", textTransform:"uppercase", color:"#e000c8", textShadow:"0 0 10px rgba(200,0,180,0.7)", marginTop:"32px" },
@@ -379,17 +379,17 @@ function SplashScreen({ onStart }) {
         </div>
 
         {/* Meio — frase */}
-        <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", padding:"28px 20px 0", position:"relative", zIndex:2, textAlign:"center"}}>
+        <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", padding:"142px 20px 0", position:"relative", zIndex:2, textAlign:"center"}}>
           <div style={{fontFamily:"'Anton', sans-serif", fontSize:"7vw", lineHeight:1.1, color:"#fff", textShadow:"2px 2px 12px rgba(0,0,0,0.95)", display:"block", whiteSpace:"nowrap"}}>
             LO QUE PASA EN VEGAS,
           </div>
-          <div style={{fontFamily:"'Anton', sans-serif", fontSize:"7vw", lineHeight:1.1, color:"#cc44ff", textShadow:"0 0 15px rgba(180,50,255,1), 0 0 35px rgba(150,0,255,0.7), 2px 2px 8px rgba(0,0,0,0.9)", display:"block", whiteSpace:"nowrap", marginTop:"6px"}}>
+          <div style={{fontFamily:"'Anton', sans-serif", fontSize:"7vw", lineHeight:1.1, color:"#cc44ff", display:"block", whiteSpace:"nowrap", marginTop:"6px"}}>
             SOLO PASA EN VEGAS.
           </div>
         </div>
 
         {/* Fundo — badge + botão + categorias */}
-        <div style={{flexShrink:0, padding:"0 16px 16px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px", position:"relative", zIndex:2}}>
+        <div style={{flexShrink:0, padding:"0 16px 96px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px", position:"relative", zIndex:2}}>
           <div style={{display:"flex", alignItems:"center", gap:"6px", background:"rgba(0,0,0,0.5)", border:"1px solid rgba(200,160,40,0.5)", borderRadius:"20px", padding:"5px 16px", fontSize:"10px", fontWeight:700, letterSpacing:"1px", color:"#e0c060", fontFamily:"'Inter', sans-serif"}}>
             🔥 +500 EXPERIENCIAS DISPONIBLES
           </div>
