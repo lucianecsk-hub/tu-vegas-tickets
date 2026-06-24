@@ -159,7 +159,7 @@ const DB = {
     { name:"Virgil's Real BBQ",           emoji:"🍖", cat:"Casual",               tipo:"BBQ Americano",                  preco:"$$",   local:"LINQ",               rating:4.3, tags:[], desc:"BBQ americano de verdad en el corazón del Strip. Costillas, brisket y pulled pork que se deshacen solos. Vista al High Roller incluida.", maps:"https://www.google.com/maps/search/Virgils+Real+BBQ+LINQ+Las+Vegas" },
     { name:"The Cheesecake Factory",      emoji:"🍰", cat:"Casual",               tipo:"Americana · Internacional",      preco:"$$",   local:"Forum Shops, Caesars", rating:4.4, tags:["gf"], desc:"Menú enorme con más de 200 platos y porciones gigantes — comparte con alguien. El cheesecake de chocolate Godiva es obligatorio.", maps:"https://www.google.com/maps/search/Cheesecake+Factory+Forum+Shops+Las+Vegas" },
     { name:"Olive Garden",                emoji:"🍝", cat:"Casual",               tipo:"Italiana",                       preco:"$$",   local:"Las Vegas Strip",    rating:4.6, tags:["gf"], desc:"Pastas, sopas y el pan de ajo más famoso de América. Justo en el Strip, precio accesible y porciones generosas. Ideal para familias.", maps:"https://www.google.com/maps/search/Olive+Garden+Las+Vegas+Strip" },
-    { name:"Yardbird",                    emoji:"🍗", cat:"Casual",               tipo:"Pollo Frito Sureño",             preco:"$$",   local:"The Venetian",       rating:4.6, tags:["gf"], desc:"El mejor pollo frito de Las Vegas — con harina de arroz, es gluten friendly. Cocina sureña reconfortante y cócteles increíbles.", maps:"https://www.google.com/maps/search/Yardbird+Venetian+Las+Vegas" },
+    { name:"Yardbird",                    emoji:"🍗", cat:"Casual",               tipo:"Cocina Americana",             preco:"$$",   local:"The Venetian",       rating:4.6, tags:["gf"], desc:"El mejor pollo frito de Las Vegas — con harina de arroz, es gluten friendly. Cocina sureña reconfortante y cócteles increíbles.", maps:"https://www.google.com/maps/search/Yardbird+Venetian+Las+Vegas" },
     { name:"Shake Shack",                 emoji:"🍔", cat:"Casual",               tipo:"Hamburguesas",                   preco:"$$",   local:"New York-New York",   rating:4.4, tags:[], desc:"La hamburguesería más de moda de América. ShackBurger jugoso, papas crinkle y milkshakes espesos. Abierto desde las 6am hasta las 4am.", maps:"https://www.google.com/maps/search/Shake+Shack+New+York+New+York+Las+Vegas" },
     { name:"Black Tap CrazyShakes",       emoji:"🥤", cat:"Casual",               tipo:"Milkshakes · Hamburguesas",      preco:"$$",   local:"The Venetian",       rating:4.3, tags:[], desc:"Los milkshakes más absurdos del mundo — coronados con tortas enteras, algodón de azúcar y dulces. Instagram obligatorio. Abierto hasta la 1am.", maps:"https://www.google.com/maps/search/Black+Tap+Venetian+Las+Vegas" },
     { name:"In-N-Out Burger",             emoji:"🍔", cat:"Casual",               tipo:"Hamburguesas",                   preco:"$",    local:"Las Vegas Strip",    rating:4.8, tags:["gf"], desc:"La hamburguesa más famosa del Oeste americano. Pide el menú secreto 'Animal Style'. Para GF: pide 'Protein Style' en lechuga — sin cruces.", maps:"https://www.google.com/maps/search/In-N-Out+Burger+near+Las+Vegas+Strip" },
@@ -168,12 +168,12 @@ const DB = {
     // Desayuno
     { name:"Siegel's Bagelmania",         emoji:"🥯", cat:"Desayuno",             tipo:"Bagels · Deli",                  preco:"$$",   local:"Convention Center",  rating:4.6, tags:["gf"], desc:"El deli más querido de Las Vegas. Bagels frescos horneados cada mañana con docenas de cream cheese. Tienen bagels sin gluten. Abre a las 6am.", maps:"https://www.google.com/maps/search/Siegels+Bagelmania+Las+Vegas" },
     { name:"Urth Caffé",                  emoji:"☕", cat:"Desayuno",             tipo:"Café Orgánico",                  preco:"$$",   local:"Wynn Las Vegas",     rating:4.2, tags:[], desc:"El café más instagrameable de Las Vegas. Dentro del Wynn, con jardín interior, fuente y ambiente europeo. Lattes de pistacho y desayunos orgánicos.", maps:"https://www.google.com/maps/search/Urth+Caffe+Wynn+Las+Vegas" },
-    { name:"Denny's",                     emoji:"🍳", cat:"Desayuno",             tipo:"Desayuno Americano",             preco:"$",    local:"Las Vegas Strip",    rating:4.3, tags:[], desc:"Abierto 24 horas. El desayuno americano clásico: pancakes esponjosos, huevos y café sin límite. El lugar favorito de Vegas a las 3am.", maps:"https://www.google.com/maps/search/Denny's+near+me+Las+Vegas+Strip" },
+    { name:"Denny's",                     emoji:"🍳", cat:"Desayuno",             tipo:"Desayuno Americano",             preco:"$",    local:"Las Vegas Strip",    rating:4.3, tags:["gf"], desc:"Abierto 24 horas. El desayuno americano clásico: pancakes, huevos y café sin límite. Menú GF disponible — pide omelets y skillets. Cocina compartida, informa al servidor.", maps:"https://www.google.com/maps/search/Denny's+near+me+Las+Vegas+Strip" },
     { name:"Hash House A Go Go",          emoji:"🥞", cat:"Desayuno",             tipo:"Desayuno Gigante",               preco:"$$",   local:"The LINQ",           rating:4.8, tags:[], desc:"Las porciones más ridículas de Vegas — los pancakes son del tamaño de tu cara. Pollo con waffles legendario. Llega temprano porque la fila crece rápido.", maps:"https://www.google.com/maps/search/Hash+House+A+Go+Go+LINQ+Las+Vegas" },
     { name:"Eggslut",                     emoji:"🥚", cat:"Desayuno",             tipo:"Sándwiches de Huevo",            preco:"$$",   local:"Cosmopolitan",       rating:4.3, tags:["gf"], desc:"El sandwich de huevo más famoso de Instagram. Brioche suave, huevos sedosos y las truffle hashbrowns más adictivas del Strip. Pide el omelet bowl — es GF.", maps:"https://www.google.com/maps/search/Eggslut+Cosmopolitan+Las+Vegas" },
     { name:"Peppermill Restaurant",       emoji:"☕", cat:"Desayuno",             tipo:"Diner Americano",                preco:"$$",   local:"Las Vegas Strip",    rating:4.5, tags:[], desc:"El diner más icónico de Las Vegas desde 1972. Porciones enormes, ambiente retro de los 70s y el Fireside Lounge de fuego vivo. Abierto 24 horas los fines de semana.", maps:"https://www.google.com/maps/search/Peppermill+Restaurant+Las+Vegas" },
-    { name:"Black Bear Diner",            emoji:"🐻", cat:"Desayuno",             tipo:"Diner Familiar",                 preco:"$",    local:"Las Vegas Strip",    rating:4.5, tags:[], desc:"Diner familiar estilo cabaña americana con porciones gigantes. Desayuno todo el día, pancakes esponjosos y el chicken fried steak más generoso de Vegas.", maps:"https://www.google.com/maps/search/Black+Bear+Diner+Las+Vegas" },
-    { name:"IHOP",                        emoji:"🥞", cat:"Desayuno",             tipo:"Pancakes · Desayuno",            preco:"$",    local:"Las Vegas Strip",    rating:4.4, tags:[], desc:"El templo internacional de los pancakes. Abierto 24 horas. Prueba el Tres Leches off-menu que todos piden.", maps:"https://www.google.com/maps/search/IHOP+near+Las+Vegas+Strip" },
+    { name:"Black Bear Diner",            emoji:"🐻", cat:"Desayuno",             tipo:"Diner Familiar",                 preco:"$",    local:"Las Vegas Strip",    rating:4.5, tags:["gf"], desc:"Diner familiar con porciones gigantes. Omelets cocinados en sartén separada (GF seguro), pan GF Ancient Grain disponible bajo pedido. Desayuno todo el día.", maps:"https://www.google.com/maps/search/Black+Bear+Diner+Las+Vegas" },
+    { name:"IHOP",                        emoji:"🥞", cat:"Desayuno",             tipo:"Pancakes · Desayuno",            preco:"$",    local:"Las Vegas Strip",    rating:4.4, tags:["gf"], desc:"Menú GF dedicado con pancakes y waffles sin gluten. Abierto 24 horas. Prueba el Tres Leches off-menu que todos piden.", maps:"https://www.google.com/maps/search/IHOP+near+Las+Vegas+Strip" },
     // Famosos de la TV
     { name:"Big Chicken — Shaquille O'Neal", emoji:"🏀", cat:"Famosos de la TV",  tipo:"Pollo Frito",                    preco:"$$",   local:"Paradise Rd",        rating:4.6, tags:[], desc:"El restaurante del legendario Shaquille O'Neal. Sándwich de pollo doble empanado, mac & cheese y banana pudding. El más querido de los famosos de Vegas.", maps:"https://www.google.com/maps/search/Big+Chicken+Shaquille+ONeal+Las+Vegas" },
     { name:"Guy Fieri's Vegas Kitchen",   emoji:"🔥", cat:"Famosos de la TV",    tipo:"Americana Extrema",              preco:"$$",   local:"LINQ",               rating:3.9, tags:[], desc:"El rey del Food Network en el Strip. Trash Can Nachos, mac & cheese burgers y alas de pollo con whisky. Comida americana exagerada — exactamente como en TV.", maps:"https://www.google.com/maps/search/Guy+Fieri+Vegas+Kitchen+LINQ+Las+Vegas" },
@@ -216,8 +216,6 @@ const CAT_META = {
   restaurantes: { label:"Bares & Restaurantes",emoji:"🍻", destaque:"Comer & Beber",  hasFecha:false },
 };
 
-const CATEGORIAS = Object.entries(CAT_META).map(([id, m]) => ({ id, label:m.label, emoji:m.emoji, hasFecha:m.hasFecha }));
-const MAX_SEL = 3;
 
 // ─── COLORES POR SUBCATEGORÍA DE RESTAURANTE ─────────────────────────────
 const CAT_COLORS = {
@@ -232,17 +230,33 @@ const CAT_COLORS = {
   "Vegano":                { bg:"rgba(52,211,153,0.15)",  border:"rgba(52,211,153,0.6)",  text:"#6ee7b7" },
 };
 
+// SUBCATS emojis atualizados
+const SUBCATS = [
+  { id:"Desayuno",          label:"Desayuno",        emoji:"🍳" },
+  { id:"Casual",            label:"Casual",          emoji:"🍔" },
+  { id:"Con Vista al Bellagio", label:"Vista Bellagio", emoji:"⛲" },
+  { id:"Churrascaria",      label:"Churrascaria",    emoji:"🥩" },
+  { id:"Rooftop",           label:"Rooftop",         emoji:"🏙️" },
+  { id:"Fine Dining",       label:"Fine Dining",     emoji:"🍽️" },
+  { id:"Famosos de la TV",  label:"Famosos TV",      emoji:"📺" },
+  { id:"Confeitaria",       label:"Dulces & Pasteles",emoji:"🍰" },
+  { id:"Vegano",            label:"Vegano",          emoji:"🌿" },
+];
+
+const CATEGORIAS = Object.entries(CAT_META).map(([id, m]) => ({ id, label:m.label, emoji:m.emoji, hasFecha:m.hasFecha }));
+const MAX_SEL = 3;
+
 // ─── ORDEN DE PRECIO ─────────────────────────────────────────────────────
 const PRECO_ORDER = { "$":1, "$$":2, "$$$":3, "$$$$":4 };
 
 // ─── ESTILOS ──────────────────────────────────────────────────────────────
 const S = {
-  app: { minHeight:"100vh", height:"100vh", background:"#080808", display:"flex", flexDirection:"column", alignItems:"center", fontFamily:"'Inter', sans-serif", color:"#fff", position:"relative", overflow:"hidden" },
+  app: { minHeight:"100vh", height:"100vh", background:"#050014", display:"flex", flexDirection:"column", alignItems:"center", fontFamily:"'Inter', sans-serif", color:"#fff", position:"relative", overflow:"hidden" },
   inner: { width:"100%", maxWidth:"420px", display:"flex", flexDirection:"column", height:"100vh", position:"relative", zIndex:2 },
-  header: { padding:"10px 24px 8px", textAlign:"center", borderBottom:"1px solid rgba(224,0,200,0.18)", flexShrink:0 },
-  logo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"#fff" },
-  logoSpan: { color:"#e000c8", textShadow:"0 0 18px rgba(200,0,180,1), 0 0 50px rgba(200,0,180,0.5)" },
-  headerSub: { fontFamily:"'Inter', sans-serif", fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"rgba(255,255,255,0.85)", marginTop:"3px" },
+  header: { padding:"10px 24px 8px", textAlign:"center", borderBottom:"1px solid rgba(200,160,40,0.3)", flexShrink:0, background:"linear-gradient(180deg, rgba(5,0,20,0.97) 0%, rgba(10,0,35,0.88) 100%)" },
+  logo: { fontFamily:"'Inter', sans-serif", fontSize:"24px", fontWeight:900, letterSpacing:"3px", textTransform:"uppercase", color:"#fff" },
+  logoSpan: { color:"#cc44ff", textShadow:"0 0 15px rgba(180,50,255,1)" },
+  headerSub: { fontFamily:"'Inter', sans-serif", fontSize:"10px", fontWeight:700, letterSpacing:"4px", textTransform:"uppercase", color:"#c8a840", marginTop:"3px" },
   splashBody: { flex:1, display:"flex", flexDirection:"column", alignItems:"center", padding:"20px 28px 28px", gap:"0", textAlign:"center" },
   city: { fontFamily:"'Playfair Display', serif", fontWeight:900, fontSize:"clamp(58px,18vw,78px)", lineHeight:0.85, color:"#fff", letterSpacing:"-2px" },
   subtitulo: { fontSize:"12px", fontWeight:700, letterSpacing:"5px", textTransform:"uppercase", color:"rgba(255,255,255,0.45)", margin:"18px 0 4px" },
@@ -256,34 +270,34 @@ const S = {
   ctaMain: { display:"block", padding:"18px 24px 14px", fontSize:"19px", fontWeight:700, borderBottom:"1px solid rgba(255,255,255,0.12)" },
   ctaSub: { display:"block", padding:"10px 24px 13px", fontSize:"10px", fontWeight:600, letterSpacing:"2.5px", textTransform:"uppercase", color:"rgba(255,255,255,0.65)" },
   filtrosBody: { flex:1, display:"flex", flexDirection:"column", overflow:"hidden", minHeight:0 },
-  filtrosScroll: { flex:1, overflowY:"auto", padding:"24px 20px 8px", WebkitOverflowScrolling:"touch" },
-  filtrosFooter: { flexShrink:0, padding:"12px 20px 28px", background:"linear-gradient(to top, #080808 75%, rgba(8,8,8,0))", borderTop:"none" },
-  filtrosTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:700, color:"#fff", textAlign:"center", marginBottom:"8px" },
-  filtrosSub: { fontSize:"16px", fontWeight:700, color:"#fff", textAlign:"center", marginBottom:"24px", letterSpacing:"0.5px" },
-  filtrosGrid: { display:"grid", gridTemplateColumns:"1fr 1fr", gap:"10px", marginBottom:"28px" },
-  filtroBtn: (sel) => ({ background: sel ? "rgba(224,0,200,0.25)" : "rgba(255,255,255,0.09)", border: sel ? "2px solid #e000c8" : "1.5px solid rgba(255,255,255,0.25)", borderRadius:"12px", padding:"16px 10px", cursor:"pointer", fontFamily:"'Inter', sans-serif", color: sel ? "#fff" : "rgba(255,255,255,0.85)", fontSize:"12px", fontWeight:700, textAlign:"center", transition:"all 0.2s", display:"flex", flexDirection:"column", alignItems:"center", gap:"7px", boxShadow: sel ? "0 0 20px rgba(224,0,200,0.35)" : "0 2px 8px rgba(0,0,0,0.4)" }),
-  filtroEmoji: { fontSize:"26px", lineHeight:1 },
-  fechaBadge: { fontSize:"8px", background:"rgba(224,0,200,0.2)", color:"#e000c8", border:"1px solid rgba(224,0,200,0.4)", borderRadius:"10px", padding:"1px 6px", letterSpacing:"1px" },
-  contador: (ativo) => ({ textAlign:"center", fontSize:"11px", fontWeight:500, letterSpacing:"2px", textTransform:"uppercase", color: ativo ? "#e000c8" : "rgba(255,255,255,0.3)", marginBottom:"20px", minHeight:"18px", textShadow: ativo ? "0 0 8px rgba(200,0,180,0.5)" : "none" }),
-  resBody: { flex:1, overflowY:"auto", padding:"20px 16px 48px" },
-  resBack: { background:"linear-gradient(135deg, #d400bc 0%, #8800a0 100%)", border:"none", color:"#fff", fontSize:"16px", fontWeight:700, letterSpacing:"1px", cursor:"pointer", fontFamily:"'Inter', sans-serif", marginBottom:"24px", display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", padding:"14px 24px", borderRadius:"10px", width:"100%", boxShadow:"0 0 20px rgba(200,0,180,0.4)", transition:"all 0.2s" },
-  avisoLegal: { fontSize:"12px", color:"rgba(255,255,255,0.6)", fontStyle:"italic", lineHeight:1.6, marginBottom:"20px", padding:"12px 16px", background:"rgba(255,255,255,0.04)", borderRadius:"8px", border:"1px solid rgba(255,255,255,0.1)" },
-  catHeader: { marginBottom:"16px", paddingBottom:"10px", borderBottom:"2px solid rgba(224,0,200,0.3)" },
+  filtrosScroll: { flex:1, overflowY:"auto", padding:"16px 16px 8px", WebkitOverflowScrolling:"touch" },
+  filtrosFooter: { flexShrink:0, padding:"10px 16px 24px", background:"linear-gradient(to top, #050014 75%, rgba(5,0,20,0))", borderTop:"none" },
+  filtrosTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"22px", fontWeight:700, color:"#fff", textAlign:"center", marginBottom:"6px" },
+  filtrosSub: { fontSize:"15px", fontWeight:700, color:"#fff", textAlign:"center", marginBottom:"16px", letterSpacing:"0.5px" },
+  filtrosGrid: { display:"grid", gridTemplateColumns:"1fr 1fr", gap:"8px", marginBottom:"16px" },
+  filtroBtn: (sel) => ({ background: sel ? "rgba(204,68,255,0.25)" : "rgba(255,255,255,0.07)", border: sel ? "2px solid #cc44ff" : "1.5px solid rgba(200,160,40,0.3)", borderRadius:"10px", padding:"10px 8px", cursor:"pointer", fontFamily:"'Inter', sans-serif", color: sel ? "#fff" : "rgba(255,255,255,0.85)", fontSize:"11px", fontWeight:700, textAlign:"center", transition:"all 0.2s", display:"flex", flexDirection:"column", alignItems:"center", gap:"5px", boxShadow: sel ? "0 0 16px rgba(204,68,255,0.35)" : "0 2px 8px rgba(0,0,0,0.4)" }),
+  filtroEmoji: { fontSize:"22px", lineHeight:1 },
+  fechaBadge: { fontSize:"8px", background:"rgba(200,160,40,0.2)", color:"#c8a840", border:"1px solid rgba(200,160,40,0.4)", borderRadius:"10px", padding:"1px 6px", letterSpacing:"1px" },
+  contador: (ativo) => ({ textAlign:"center", fontSize:"11px", fontWeight:500, letterSpacing:"2px", textTransform:"uppercase", color: ativo ? "#cc44ff" : "rgba(255,255,255,0.3)", marginBottom:"12px", minHeight:"18px", textShadow: ativo ? "0 0 8px rgba(204,68,255,0.5)" : "none" }),
+  resBody: { flex:1, overflowY:"auto", padding:"16px 16px 48px" },
+  resBack: { background:"linear-gradient(135deg, #7700cc 0%, #440088 55%, #aa8800 100%)", border:"1.5px solid rgba(200,160,40,0.4)", color:"#fff", fontSize:"15px", fontWeight:700, letterSpacing:"1px", cursor:"pointer", fontFamily:"'Inter', sans-serif", marginBottom:"20px", display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", padding:"12px 24px", borderRadius:"10px", width:"100%", boxShadow:"0 0 20px rgba(100,0,200,0.4)", transition:"all 0.2s" },
+  avisoLegal: { fontSize:"12px", color:"rgba(255,255,255,0.5)", fontStyle:"italic", lineHeight:1.6, marginBottom:"16px", padding:"10px 14px", background:"rgba(255,255,255,0.03)", borderRadius:"8px", border:"1px solid rgba(200,160,40,0.2)" },
+  catHeader: { marginBottom:"16px", paddingBottom:"10px", borderBottom:"2px solid rgba(200,160,40,0.4)" },
   catTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"24px", fontWeight:700, color:"#fff", display:"block" },
-  catSubTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"18px", fontWeight:700, color:"rgba(255,255,255,0.85)", marginBottom:"12px", marginTop:"20px", paddingBottom:"6px", borderBottom:"1px solid rgba(255,255,255,0.08)" },
-  card: { background:"rgba(255,255,255,0.03)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"14px", padding:"16px", marginBottom:"10px", transition:"all 0.2s" },
-  cardEmoji: { fontSize:"32px", lineHeight:1, flexShrink:0 },
+  catSubTitulo: { fontFamily:"'Playfair Display', serif", fontSize:"17px", fontWeight:700, color:"rgba(255,255,255,0.85)", marginBottom:"10px", marginTop:"18px", paddingBottom:"6px", borderBottom:"1px solid rgba(200,160,40,0.2)" },
+  card: { background:"rgba(10,0,35,0.6)", border:"1px solid rgba(200,160,40,0.2)", borderRadius:"14px", padding:"14px", marginBottom:"10px", transition:"all 0.2s" },
+  cardEmoji: { fontSize:"28px", lineHeight:1, flexShrink:0 },
   cardTop: { display:"flex", alignItems:"flex-start", gap:"12px", marginBottom:"10px" },
   cardName: { fontFamily:"'Inter', sans-serif", fontSize:"14px", fontWeight:700, color:"#fff", marginBottom:"6px", lineHeight:1.3 },
   cardTags: { display:"flex", flexWrap:"wrap", gap:"4px" },
-  tagDur: { fontSize:"10px", padding:"2px 8px", borderRadius:"20px", fontWeight:500, background:"rgba(255,215,0,0.1)", color:"#ffd700", border:"1px solid rgba(255,215,0,0.2)" },
+  tagDur: { fontSize:"10px", padding:"2px 8px", borderRadius:"20px", fontWeight:500, background:"rgba(200,160,40,0.15)", color:"#c8a840", border:"1px solid rgba(200,160,40,0.3)" },
   tagRating: { fontSize:"10px", padding:"2px 8px", borderRadius:"20px", fontWeight:500, background:"rgba(255,255,255,0.06)", color:"rgba(255,255,255,0.6)", border:"1px solid rgba(255,255,255,0.1)" },
-  cardPrice: { fontSize:"16px", fontWeight:700, color:"#ffd700", whiteSpace:"nowrap", marginLeft:"8px", flexShrink:0 },
+  cardPrice: { fontSize:"16px", fontWeight:700, color:"#c8a840", whiteSpace:"nowrap", marginLeft:"8px", flexShrink:0 },
   cardDesc: { fontSize:"12px", color:"rgba(255,255,255,0.55)", lineHeight:1.7, marginBottom:"12px" },
-  cardBtn: { display:"block", background:"linear-gradient(135deg, #d400bc, #8800a0)", color:"#fff", textAlign:"center", padding:"12px", borderRadius:"8px", textDecoration:"none", fontSize:"13px", fontWeight:700, fontFamily:"'Inter', sans-serif", letterSpacing:"0.5px", boxShadow:"0 4px 16px rgba(200,0,180,0.3)" },
-  calWrap: { background:"rgba(224,0,200,0.08)", border:"2px solid rgba(224,0,200,0.4)", borderRadius:"12px", padding:"16px", marginBottom:"20px" },
-  calTitle: { fontSize:"14px", fontWeight:800, letterSpacing:"1px", textTransform:"uppercase", color:"#e000c8", marginBottom:"12px" },
-  calInput: { width:"100%", background:"rgba(255,255,255,0.08)", border:"1.5px solid rgba(224,0,200,0.4)", borderRadius:"8px", padding:"12px 14px", color:"#fff", fontSize:"16px", fontFamily:"'Inter', sans-serif", outline:"none", cursor:"pointer" },
+  cardBtn: { display:"block", background:"linear-gradient(135deg, #7700cc 0%, #440088 55%, #aa8800 100%)", color:"#fff", textAlign:"center", padding:"12px", borderRadius:"8px", textDecoration:"none", fontSize:"13px", fontWeight:700, fontFamily:"'Inter', sans-serif", letterSpacing:"0.5px", boxShadow:"0 4px 16px rgba(100,0,200,0.3)", border:"1px solid rgba(200,160,40,0.3)" },
+  calWrap: { background:"rgba(200,160,40,0.08)", border:"2px solid rgba(200,160,40,0.4)", borderRadius:"12px", padding:"16px", marginBottom:"20px" },
+  calTitle: { fontSize:"14px", fontWeight:800, letterSpacing:"1px", textTransform:"uppercase", color:"#c8a840", marginBottom:"12px" },
+  calInput: { width:"100%", background:"rgba(255,255,255,0.08)", border:"1.5px solid rgba(200,160,40,0.4)", borderRadius:"8px", padding:"12px 14px", color:"#fff", fontSize:"16px", fontFamily:"'Inter', sans-serif", outline:"none", cursor:"pointer" },
 };
 
 // ─── COMPONENTES ──────────────────────────────────────────────────────────
@@ -379,7 +393,7 @@ function SplashScreen({ onStart }) {
         </div>
 
         {/* Meio — frase */}
-        <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", padding:"104px 20px 0", position:"relative", zIndex:2, textAlign:"center"}}>
+        <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", padding:"66px 20px 0", position:"relative", zIndex:2, textAlign:"center"}}>
           <div style={{fontFamily:"'Anton', sans-serif", fontSize:"8.5vw", lineHeight:1.1, color:"#fff", textShadow:"2px 2px 12px rgba(0,0,0,0.95)", display:"block", whiteSpace:"nowrap"}}>
             LO QUE PASA EN VEGAS,
           </div>
@@ -497,7 +511,6 @@ function FiltrosScreen({ onResultados }) {
                         style={{...S.filtroBtn(isSel), gridColumn: isLast ? "1 / -1" : undefined}}>
                         <span style={S.filtroEmoji}>{cat.emoji}</span>
                         {cat.label}
-                        {cat.hasFecha && <span style={S.fechaBadge}>FECHAS</span>}
                       </button>
                     );
                   })}
@@ -688,26 +701,16 @@ function ResultadosScreen({ sel, subcatRest, onVolver }) {
               </div>
             );
           })}
+          {/* Mensagem de afiliação */}
+          <div style={{fontSize:"11px", color:"rgba(255,255,255,0.35)", fontStyle:"italic", lineHeight:1.6, marginTop:"8px", marginBottom:"24px", padding:"10px 14px", background:"rgba(200,160,40,0.05)", borderRadius:"8px", border:"1px solid rgba(200,160,40,0.15)", textAlign:"center"}}>
+            🔗 Algunos enlaces son de afiliación. Al reservar a través de ellos, apoyás este proyecto sin costo adicional para ti.
+          </div>
         </div>
       </div>
       <style>{`@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}`}</style>
     </div>
   );
 }
-
-// ─── PANTALLA SUBCATEGORÍAS RESTAURANTES ─────────────────────────────────
-const SUBCATS = [
-  { id:"Desayuno",          label:"Desayuno",        emoji:"🍳" },
-  { id:"Casual",            label:"Casual",          emoji:"🍔" },
-  { id:"Con Vista al Bellagio", label:"Vista Bellagio", emoji:"🌊" },
-  { id:"Churrascaria",      label:"Churrascaria",    emoji:"🔥" },
-  { id:"Rooftop",           label:"Rooftop",         emoji:"🏙️" },
-  { id:"Fine Dining",       label:"Fine Dining",     emoji:"✨" },
-  { id:"Famosos de la TV",  label:"Famosos TV",      emoji:"📺" },
-  { id:"Confeitaria",       label:"Dulces & Pasteles",emoji:"🍰" },
-  { id:"Vegano",            label:"Vegano",          emoji:"🌿" },
-];
-const MAX_SUBCAT = 2;
 
 function SubcatRestScreen({ onVolver, onResultados }) {
   const [sel, setSel] = useState([]);
