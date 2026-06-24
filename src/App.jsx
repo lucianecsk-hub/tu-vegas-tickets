@@ -379,17 +379,17 @@ function SplashScreen({ onStart }) {
         </div>
 
         {/* Meio — frase */}
-        <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", padding:"142px 20px 0", position:"relative", zIndex:2, textAlign:"center"}}>
-          <div style={{fontFamily:"'Anton', sans-serif", fontSize:"7vw", lineHeight:1.1, color:"#fff", textShadow:"2px 2px 12px rgba(0,0,0,0.95)", display:"block", whiteSpace:"nowrap"}}>
+        <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", padding:"104px 20px 0", position:"relative", zIndex:2, textAlign:"center"}}>
+          <div style={{fontFamily:"'Anton', sans-serif", fontSize:"8.5vw", lineHeight:1.1, color:"#fff", textShadow:"2px 2px 12px rgba(0,0,0,0.95)", display:"block", whiteSpace:"nowrap"}}>
             LO QUE PASA EN VEGAS,
           </div>
-          <div style={{fontFamily:"'Anton', sans-serif", fontSize:"7vw", lineHeight:1.1, color:"#cc44ff", display:"block", whiteSpace:"nowrap", marginTop:"6px"}}>
+          <div style={{fontFamily:"'Anton', sans-serif", fontSize:"8.5vw", lineHeight:1.1, color:"#cc44ff", display:"block", whiteSpace:"nowrap", marginTop:"6px"}}>
             SOLO PASA EN VEGAS.
           </div>
         </div>
 
         {/* Fundo — badge + botão + categorias */}
-        <div style={{flexShrink:0, padding:"0 16px 96px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px", position:"relative", zIndex:2}}>
+        <div style={{flexShrink:0, padding:"0 16px 134px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px", position:"relative", zIndex:2}}>
           <div style={{display:"flex", alignItems:"center", gap:"6px", background:"rgba(0,0,0,0.5)", border:"1px solid rgba(200,160,40,0.5)", borderRadius:"20px", padding:"5px 16px", fontSize:"10px", fontWeight:700, letterSpacing:"1px", color:"#e0c060", fontFamily:"'Inter', sans-serif"}}>
             🔥 +500 EXPERIENCIAS DISPONIBLES
           </div>
